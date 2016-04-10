@@ -1,7 +1,8 @@
 body {
-    background: url('../images/farmer.jpg') no-repeat fixed center;
+    background: url('../images/sila.jpg') no-repeat fixed center;
     background-size: 100%;
     text-align: center;
+    overflow-y: scroll;
 }
 
 #wrapper {
@@ -11,10 +12,32 @@ body {
 
 }
 
+article{
+    background-color: red;
+    margin: 15px;
+    display: inline-block;
+    border-radius: 10px;
+    border: solid white 3px;
+}
 
+article h3{
+    color: white;
+    border-bottom: double 10px;
+}
+
+article .image{
+    width:250px;
+    float: left;
+    vertical-align: top;
+    margin: 7px 7px 7px 7px;
+}
+article .image img{
+    width: inherit;
+}
 
 #currentPage {
     background-color: #00A000;
+    border: solid white 3px;
 }
 
 ul.menu {
@@ -42,4 +65,6 @@ ul.menu li a:hover {
 
 footer{
     background-color: #880000;
+    border: solid white 3px;
+    margin-top: 10px;
 }
