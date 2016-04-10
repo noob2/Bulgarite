@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.history', ['ngRoute'])
+angular.module('bulgarite.history', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/history', {

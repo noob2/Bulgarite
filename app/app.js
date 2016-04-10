@@ -1,15 +1,17 @@
 'use strict';
 
-// Declare app level module which depends on views, and components
-angular.module('myApp', [
-  'ngRoute',
-  'myApp.history',
-  'myApp.landmarks',
-  'myApp.version',
-  'myApp.population',
-  'myApp.economy'
+angular.module('bulgarite', [
+        'ngRoute',
+        'bulgarite.home',
+        'bulgarite.history',
+        'bulgarite.landmarks',
+        'bulgarite.version',
+        'bulgarite.population',
+        'bulgarite.economy',
+        'bulgarite.users.authentication'
 
-]).
-config(['$routeProvider', function($routeProvider) {
-  $routeProvider.otherwise({redirectTo: '/'});
-}]);
+    ])
+    .config(['$routeProvider', function ($routeProvider) {
+        $routeProvider.otherwise({redirectTo: '/'});
+    }])
+    .constant('BASE_URL', 'https://baas.kinvey.com/appdata/kid_-ycTI6Ul1b/books');

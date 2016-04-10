@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.population', ['ngRoute'])
+angular.module('bulgarite.population', ['ngRoute'])
 
     .config(['$routeProvider', function($routeProvider) {
         $routeProvider.when('/population', {

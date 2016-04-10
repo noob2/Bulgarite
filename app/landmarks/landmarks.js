@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.landmarks', ['ngRoute'])
+angular.module('bulgarite.landmarks', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/landmarks', {

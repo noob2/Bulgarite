@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.economy', ['ngRoute'])
+angular.module('bulgarite.economy', ['ngRoute'])
 
     .config(['$routeProvider', function($routeProvider) {
         $routeProvider.when('/economy', {
