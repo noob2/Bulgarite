@@ -11,7 +11,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="app/bower_components/html5-boilerplate/dist/css/normalize.css">
   <link rel="stylesheet" href="app/bower_components/html5-boilerplate/dist/css/main.css">
-  <link rel="stylesheet" href="app/style/app.css">
+
   <link rel="stylesheet" href="app/style/style.css">
   <script src="app/bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
@@ -19,18 +19,13 @@
 
 <div id="wrapper">
 
-  <ul id="menu">
-    <li><a href="/history">История</a></li>
-    <li><a href="/css/default.asp">Забележителности</a></li>
-    <li><a href="/js/default.asp">Население</a></li>
-    <li><a href="/php/default.asp">Икономика</a></li>
-    <li><a href="/php/default.asp">Инфраструктура</a></li>
+  <ul class="menu">
+    <li><a href="/">Начало</a></li>
+    <li><a href="#/history">История</a></li>
+    <li><a href="#/landmarks">Забележителности</a></li>
+    <li><a href="#/population">Население</a></li>
+    <li><a href="#/economy">Икономика</a></li>
   </ul>
-
-    <ul class="menu">
-      <li><a href="#/view1">view1</a></li>
-      <li><a href="#/view2">view2</a></li>
-    </ul>
 
     <!--[if lt IE 7]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -45,8 +40,12 @@
   <script src="app/bower_components/angular/angular.js"></script>
   <script src="app/bower_components/angular-route/angular-route.js"></script>
   <script src="app/app.js"></script>
-  <script src="app/view1/view1.js"></script>
-  <script src="app/view2/view2.js"></script>
+
+  <script src="app/history/history.js"></script>
+  <script src="app/landmarks/landmarks.js"></script>
+  <script src="app/population/population.js"></script>
+  <script src="app/economy/economy.js"></script>
+
   <script src="app/components/version/version.js"></script>
   <script src="app/components/version/version-directive.js"></script>
   <script src="app/components/version/interpolate-filter.js"></script>
