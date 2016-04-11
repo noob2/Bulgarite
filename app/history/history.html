@@ -1,60 +1,7 @@
-<article>
-    <h3>Prehistory and antiquity</h3>
+<article ng-repeat="article in articles">
+    <h3>{{article.header}}</h3>
     <div class="image">
-        <img src="app/images/bulgarianFlag.jpg">
+        <img ng-src="{{article.imgUrl}}">
     </div>
-    <p>
-        Human activity in the lands of modern Bulgaria can be traced back to the Paleolithic.
-        Animal bones incised with man-made markings from Kozarnika cave are assumed to be the
-        earliest examples of symbolic behaviour in humans.[6] Organised prehistoric societies
-        in Bulgarian lands include the Neolithic Hamangia culture,[7] Vinča culture[8] and the
-        eneolithic Varna culture (fifth millennium BC). The latter is credited with inventing
-        gold working and exploitation.[9][10] Some of these first gold smelters produced the
-        coins, weapons and jewellery of the Varna Necropolis treasure, the oldest in the world
-        with an approximate age of over 6,000 years.[11] This site also offers insights for
-        understanding the social hierarchy of the earliest European societies.
-
-        Thracians, one of the three primary ancestral groups of modern Bulgarians,
-        began appearing in the region during the Iron Age.[15] In the late 6th century BC, the
-        Persians conquered most of present-day Bulgaria.[16][17][18] and kept it until 479 BC.
-        With influence from the Persians,[18] the bulk of the Thracian tribes were united in the
-        Odrysian kingdom in the 470s BC by king Teres,[19][20][21] but were later subjugated by
-        Alexander the Great and by the Romans in 46 AD. After the division of the Roman Empire
-        in 5th century the area fell under Byzantine control. By this time, Christianity had
-        already spread in the region. A small Gothic community in Nicopolis ad Istrum produced the
-        first Germanic language book in the 4th century, the Wulfila Bible.[22][23] The first
-        Christian monastery in Europe was established around the same time by Saint Athanasius in
-        central Bulgaria.[24] From the 6th century the easternmost South Slavs gradually settled
-        in the region, assimilating the Hellenised or Romanised Thracians.
-    </p>
-</article>
-
-<article>
-    <h3>First Bulgarian Empire</h3>
-    <div class="image">
-        <img src="app/images/krum.jpg">
-    </div>
-    <p>
-        In 680 Bulgar tribes,[14] under the leadership of Asparukh moved south across the Danube
-        and settled in the area between the lower Danube and the Balkan, establishing their capital
-        at Pliska.[27][28] A peace treaty with Byzantium in 681 marked the beginning of the First Bulgarian
-        Empire. The Bulgars gradually mixed up with the local population, adopting a common language on
-        the basis of the local Slavic dialect.[29]
-
-        Succeeding rulers strengthened the Bulgarian state throughout the 8th and 9th centuries. Krum
-        doubled the country's territory, killed Byzantine emperor Nicephorus I in the Battle of Pliska,
-        [30] and introduced the first written code of law. Paganism was abolished in favour of Eastern
-        Orthodox Christianity under Boris I in 864. This conversion was followed by a Byzantine recognition
-        of the Bulgarian church[31] and the adoption of the Cyrillic alphabet developed at Preslav[32]
-        which strengthened central authority and helped fuse the Slavs and Bulgars into a unified
-        people.[33][34] A subsequent cultural golden age began during the 34-year rule of Simeon the
-        Great, who also achieved the largest territorial expansion of the state.[35]
-
-        Wars with Magyars and Pechenegs and the spread of the Bogomil heresy weakened Bulgaria after
-        Simeon's death.[36][37] Consecutive Rus' and Byzantine invasions resulted in the seizure of
-        the capital Preslav by the Byzantine army in 971.[38] Under Samuil, Bulgaria briefly recovered
-        from these attacks,[39] but this rise ended when Byzantine emperor Basil II defeated the Bulgarian
-        army at Klyuch in 1014. Samuil died shortly after the battle,[40] and by 1018 the Byzantines had
-        ended the First Bulgarian Empire.
-    </p>
+    <p>{{article.content.content}}</p>
 </article>
