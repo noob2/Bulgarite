@@ -1,34 +1,53 @@
 angular.module('bulgarite.users.authentication', [])
     .factory('authentication', [
         '$http',
-        'q',
-        function ($http, $q, BASE_URL) {
-            function registerUser(user) {
+        '$q',
+        'KINVEY_CONFIG',
+        'BASE_URL',
+        function ($http, $q, KINVEY_CONFIG, BASE_URL) {
+
+            function loginUser(user) {
                 var deferred = $q.defer();
 
-                $http.post(BASE_URL + 'users/register', user)
+                var loginRequest = {
+                    method: 'POST',
+                    url: BASE_URL + 'login',
+                    headers: KINVEY_CONFIG,
+                    data: user
+                };
+
+                $http(loginRequest)
                     .then(function (response) {
-                        deferred.resolve(response.data);
-                    }, function (error) {
-                    });
+                        console.log(response);
+                    }, function (err) {
+                });
 
                 return deferred.promise;
             }
 
-            function loginUser(user) {
+            function registerUser(user) {
+                var deferred = $q.defer();
 
-            }
+                var registerRequest = {
+                    method: 'POST',
+                    url: BASE_URL,
+                    headers: KINVEY_CONFIG,
+                    data: user
+                };
 
-            function logoutUser() {
+                $http(registerRequest)
+                    .then(function (response) {
+                        console.log(response);
+                    }, function (err) {
+                });
 
+                return deferred.promise;
             }
 
             return {
                 registerUser: registerUser,
-                loginUser: loginUser,
-                logoutUser: logoutUser
+                loginUser: loginUser
+                // logoutUser: logoutUser
             }
         }
-
-
     ]);

@@ -9,11 +9,17 @@ angular.module('bulgarite.home', ['bulgarite.users.authentication'])
         });
     }])
 
-    .controller('homeController', ['$scope', function ($scope) {
-        $scope.loginUser = function (user) {
-            console.log(user);
-        };
-        $scope.registerUser = function (user) {
-            console.log(user);
-        }
-    }]);
+    .controller('homeController', [
+        '$scope',
+        'authentication',
+        function ($scope, authentication) {
+
+            $scope.loginUser = function (user) {
+                authentication.loginUser(user);
+            };
+            
+            $scope.registerUser = function (user) {
+                authentication.registerUser(user);
+            }
+            
+        }]);
