@@ -18,7 +18,7 @@ angular.module('bulgarite.users.authentication', [])
 
                 $http(loginRequest)
                     .then(function (response) {
-                        console.log(response);
+                        console.log(response.data._kmd.authtoken);
                     }, function (err) {
                 });
 
