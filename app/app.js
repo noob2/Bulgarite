@@ -10,7 +10,7 @@ angular.module('bulgarite', [
         'bulgarite.economy',
         'bulgarite.users.authentication',
         'bulgarite.users.identity',
-    'bulgarite.common'
+        'bulgarite.common'
 
     ])
     .config(['$routeProvider', function ($routeProvider) {

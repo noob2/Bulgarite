@@ -14,8 +14,11 @@ angular.module('bulgarite.history', ['ngRoute'])
   '$q',
   'KINVEY_CONFIG',
   '$scope',
-  function($http,$q,KINVEY_CONFIG,$scope) {
-
+  'identity',
+  function($http,$q,KINVEY_CONFIG,$scope,identity) {
+    
+    identity.log();
+    
     var deferred = $q.defer();
 
     var articlesRequest = {
@@ -25,8 +28,6 @@ angular.module('bulgarite.history', ['ngRoute'])
     };
     $http(articlesRequest)
         .then(function (response) {
-
-          console.log(response.data);
           $scope.articles = response.data;
         }, function (err) {
         });

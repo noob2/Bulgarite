@@ -3,7 +3,7 @@ angular.module('bulgarite.common',[])
     '$scope',
     'identity',
     function ($scope, identity) {
-        console.log(23);
         $scope.isAuthenicated = identity.isAuthenicated();
+        console.log(isAuthenicated);
     }
 ]);

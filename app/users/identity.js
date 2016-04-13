@@ -2,25 +2,26 @@ angular.module('bulgarite.users.identity', [])
     .factory('identity', [
         '$http',
         'BASE_URL',
-        function ($http, BASE_URL) {
-            var accessToken = '7b859563-065c-4003-8269-86c761508940.L82pXRh5NmdtJCycLmw0D+eIBXiu1gLxgvcA90o0iO8=';
-            console.log(23);
-            $http.defaults.headers.common.Authorisation = 'Kinvey ' + accessToken;
-            $http.get(BASE_URL + '_me')
-                .then(function (response) {
-                    console.log(response.data);
-                }, function (err) {
-                    console.log(err);
-                });
+        '$q',
+        function ($http, BASE_URL, $q) {
+            
+            function log() {
+                var deferred = $q.defer();
+                var accessToken = 'e9f27996-324b-4c02-ba14-79311af21f19.KsEiA/VN4OtZOmuJ/EMbRJQkwqVERcQC2xM+Df/V49o=';
+                $http.defaults.headers.common.Authorisation = 'Basic ' + accessToken;
 
-            var username = 'gosho';
+
+                $http.get(BASE_URL + '_me')
+                    .then(function (response) {
+                        console.log(response.data);
+                    }, function (err) {
+                        console.log(err);
+                    });
+                return deferred.promise;
+            }
 
             return{
-                isAuthenicated: function () {
-                    return{
-                        username : username
-                    }
-                }
+                log: log
             }
         }
     ]);
