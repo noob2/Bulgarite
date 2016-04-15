@@ -13,16 +13,15 @@ angular.module('bulgarite.home', ['bulgarite.users.authentication'])
         '$scope',
         'authentication',
         'identity',
-        '$q',
-        function ($scope, authentication, identity, $q) {
-
-            if (identity.isAuthenicated()) {
-                
+        'mainController',
+        function ($scope, authentication, identity, mainController) {
+            mainController.set();
+            
+            if ($scope.authenicated) {
             } else {
-                $scope.unauthorised = 'Please log in to see the history articles';
+                
             }
-
-
+            
             $scope.loginUser = function (user) {
                 authentication.loginUser(user);
             };

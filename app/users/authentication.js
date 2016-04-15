@@ -4,8 +4,7 @@ angular.module('bulgarite.users.authentication', [])
         '$q',
         'KINVEY_CONFIG',
         'BASE_URL',
-        '$location',
-        function ($http, $q, KINVEY_CONFIG, BASE_URL,$scope,$location,$rootElement) {
+        function ($http, $q, KINVEY_CONFIG, BASE_URL) {
 
             function loginUser(user) {
                 var deferred = $q.defer();
@@ -20,11 +19,9 @@ angular.module('bulgarite.users.authentication', [])
                 $http(loginRequest)
                     .then(function (response) {
                         sessionStorage.setItem('authorisationToken',response.data._kmd.authtoken);
-                        console.log($location.path())
-                        $location.path('/history');
-                        $scope.auth = true;
+                        sessionStorage.setItem('user',response.data.username);
+                        console.log(response.data.username);
                     }, function (err) {
-                        $location.path('/history')
                 });
 
                 return deferred.promise;

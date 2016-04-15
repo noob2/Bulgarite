@@ -11,7 +11,6 @@ angular.module('bulgarite', [
         'bulgarite.users.authentication',
         'bulgarite.users.identity',
         'bulgarite.common'
-
     ])
     .config(['$routeProvider', function ($routeProvider) {
         $routeProvider.otherwise({redirectTo: '/'});

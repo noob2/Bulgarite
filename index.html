@@ -19,13 +19,13 @@
 
 <div id="wrapper">
 
-  <ul class="menu">
+  <ul class="menu" >
     <li><a href="#/">Начало</a></li>
     <li><a href="#/history">История</a></li>
     <li><a href="#/landmarks">Забележителности</a></li>
     <li><a href="#/population">Население</a></li>
     <li><a href="#/economy">Икономика</a></li>
-    <li ng-switch-when="{{auth}}"><a href="#/economy">login</a></li>
+    <li ng-hide="authenicated"><a href="#/economy">login</a></li>
   </ul>
 
     <!--[if lt IE 7]>
@@ -49,7 +49,7 @@
   <script src="app/economy/economy.js"></script>
   <script src="app/users/authentication.js"></script>
   <script src="app/users/identity.js"></script>
-  <script src="app/common/main-controller.js"></script>
+  <script src="app/common/common.js"></script>
   <script src="app/components/version/version.js"></script>
   <script src="app/components/version/version-directive.js"></script>
   <script src="app/components/version/interpolate-filter.js"></script>
