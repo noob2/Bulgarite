@@ -4,7 +4,8 @@ angular.module('bulgarite.users.authentication', [])
         '$q',
         'KINVEY_CONFIG',
         'BASE_URL',
-        function ($http, $q, KINVEY_CONFIG, BASE_URL) {
+        '$route',
+        function ($http, $q, KINVEY_CONFIG, BASE_URL, $route) {
 
             function loginUser(user) {
                 var deferred = $q.defer();
@@ -18,11 +19,13 @@ angular.module('bulgarite.users.authentication', [])
 
                 $http(loginRequest)
                     .then(function (response) {
-                        sessionStorage.setItem('authorisationToken',response.data._kmd.authtoken);
-                        sessionStorage.setItem('user',response.data.username);
-                        console.log(response.data.username);
+                        sessionStorage.setItem('authorisationToken', response.data._kmd.authtoken);
+                        sessionStorage.setItem('user', response.data.name);
+
+                        $route.reload();
                     }, function (err) {
-                });
+                        console.log(err);
+                    });
 
                 return deferred.promise;
             }
@@ -33,23 +36,54 @@ angular.module('bulgarite.users.authentication', [])
                 var registerRequest = {
                     method: 'POST',
                     url: BASE_URL,
-                    headers: KINVEY_CONFIG,
+                    headers: {
+                        'Authorization': 'Basic a2lkXy1rYW40aVAxYi06MDcyZjMwYjg4NjY1NDA0YmE4NjIyMTQ0YmM5OTQxMzc=',
+                        'Content-Type': 'application/json'
+                    },
                     data: user
                 };
 
                 $http(registerRequest)
                     .then(function (response) {
-                        sessionStorage.setItem('authorisationToken',response.data._kmd.authtoken);
+                        sessionStorage.setItem('authorisationToken', response.data._kmd.authtoken);
+                        sessionStorage.setItem('user', response.data.name);
+
+                        $route.reload();
                     }, function (err) {
-                });
+                        console.log(err);
+                    });
 
                 return deferred.promise;
             }
-            
+
+            function logoutUser() {
+                var deferred = $q.defer();
+
+                var logoutRequest = {
+                    method: 'POST',
+                    url: BASE_URL + '_logout',
+                    headers: {'Authorization': 'Kinvey ' + sessionStorage['authorisationToken']}
+                };
+
+                $http(logoutRequest)
+                    .then(function (response) {
+
+                        sessionStorage.clear();
+                        $route.reload();
+                    }, function (err) {
+
+                        sessionStorage.clear();
+                        $route.reload();
+                        console.log(err);
+                    });
+
+                return deferred.promise;
+            }
+
             return {
                 registerUser: registerUser,
-                loginUser: loginUser
-                // logoutUser: logoutUser
+                loginUser: loginUser,
+                logoutUser: logoutUser
             }
         }
     ]);

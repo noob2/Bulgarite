@@ -13,16 +13,32 @@ body {
 }
 
 #login{
+    position: relative;
+    right: 100px;
     margin: 15px;
     display: inline-flex;
-    background-color: white;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+33,ffffff+33,fafafa+59,ffffff+63,ffffff+67,f3f3f3+68,f3f3f3+68,fbfbfb+100 */
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(-45deg,  #ffffff 0%, #ffffff 33%, #ffffff 33%, #fafafa 59%, #ffffff 63%, #ffffff 67%, #f3f3f3 68%, #f3f3f3 68%, #fbfbfb 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg,  #ffffff 0%,#ffffff 33%,#ffffff 33%,#fafafa 59%,#ffffff 63%,#ffffff 67%,#f3f3f3 68%,#f3f3f3 68%,#fbfbfb 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg,  #ffffff 0%,#ffffff 33%,#ffffff 33%,#fafafa 59%,#ffffff 63%,#ffffff 67%,#f3f3f3 68%,#f3f3f3 68%,#fbfbfb 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#fbfbfb',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
     width: 33%;
     height: 200px;
 }
 #register{
+    position: relative;
+    left: 100px;
     margin: 15px;
     display: inline-flex;
-    background-color: darkred;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fb4e2f+0,f76d57+61,fa2508+67,f62d12+79,f02f1e+100 */
+    background: #fb4e2f; /* Old browsers */
+    background: -moz-linear-gradient(-45deg,  #fb4e2f 0%, #f76d57 61%, #fa2508 67%, #f62d12 79%, #f02f1e 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg,  #fb4e2f 0%,#f76d57 61%,#fa2508 67%,#f62d12 79%,#f02f1e 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg,  #fb4e2f 0%,#f76d57 61%,#fa2508 67%,#f62d12 79%,#f02f1e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fb4e2f', endColorstr='#f02f1e',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
     width: 33%;
     height: 200px;
 }

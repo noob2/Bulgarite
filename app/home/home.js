@@ -14,13 +14,9 @@ angular.module('bulgarite.home', ['bulgarite.users.authentication'])
         'authentication',
         'identity',
         'mainController',
+        '$route',
         function ($scope, authentication, identity, mainController) {
             mainController.set();
-            
-            if ($scope.authenicated) {
-            } else {
-                
-            }
             
             $scope.loginUser = function (user) {
                 authentication.loginUser(user);
@@ -30,4 +26,7 @@ angular.module('bulgarite.home', ['bulgarite.users.authentication'])
                 authentication.registerUser(user);
             };
 
+            $scope.$parent.logoutUser = function () {
+                authentication.logoutUser();
+            };
         }]);
