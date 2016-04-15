@@ -16,17 +16,11 @@ angular.module('bulgarite.home', ['bulgarite.users.authentication'])
         '$q',
         function ($scope, authentication, identity, $q) {
 
-            var deferred = $q.defer();
-
-            identity.isAuthenicated().then(function (isAuthenicated) {
-                if (isAuthenicated) {
-
-                    
-
-                } else {
-                    $scope.unauthorised = 'Please log in to see the history articles'
-                }
-            });
+            if (identity.isAuthenicated()) {
+                
+            } else {
+                $scope.unauthorised = 'Please log in to see the history articles';
+            }
 
 
             $scope.loginUser = function (user) {
@@ -37,5 +31,4 @@ angular.module('bulgarite.home', ['bulgarite.users.authentication'])
                 authentication.registerUser(user);
             };
 
-            return deferred.promise;
         }]);
