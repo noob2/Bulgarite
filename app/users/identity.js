@@ -4,24 +4,29 @@ angular.module('bulgarite.users.identity', [])
         'BASE_URL',
         '$q',
         function ($http, BASE_URL, $q) {
-            
-            function log() {
+
+            function isAuthenicated() {
                 var deferred = $q.defer();
-                var accessToken = 'e9f27996-324b-4c02-ba14-79311af21f19.KsEiA/VN4OtZOmuJ/EMbRJQkwqVERcQC2xM+Df/V49o=';
-                $http.defaults.headers.common.Authorisation = 'Basic ' + accessToken;
 
+                var authorisationRequest = {
+                    method: 'GET',
+                    url: BASE_URL + '_me',
+                    headers: {'Authorization': 'Kinvey ' + sessionStorage.getItem('authorisationToken')}
+                };
 
-                $http.get(BASE_URL + '_me')
+                $http(authorisationRequest)
                     .then(function (response) {
-                        console.log(response.data);
-                    }, function (err) {
-                        console.log(err);
+                        if (response.statusText == 'OK') {
+                            deferred.resolve(true);
+                        }
+                    }, function () {
+                        deferred.resolve(false);
                     });
                 return deferred.promise;
             }
 
-            return{
-                log: log
+            return {
+                isAuthenicated: isAuthenicated
             }
         }
     ]);

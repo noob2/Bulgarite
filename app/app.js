@@ -18,6 +18,5 @@ angular.module('bulgarite', [
     }])
     .constant('BASE_URL', 'https://baas.kinvey.com/user/kid_-kan4iP1b-/')
     .constant('KINVEY_CONFIG', {
-        'Content-Type': 'application/json',
         'Authorization': 'Basic cGVzaG86MTIzNA=='
     });
