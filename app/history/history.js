@@ -14,11 +14,11 @@ angular.module('bulgarite.history', ['ngRoute'])
         '$q',
         'KINVEY_CONFIG',
         '$scope',
-        'identity',
         'mainController',
-        function ($http, $q, KINVEY_CONFIG, $scope, identity, mainController) {
+        'authentication',
+        function ($http, $q, KINVEY_CONFIG, $scope, mainController, authentication) {
             mainController.set();
-            if (identity.isAuthenicated()) {
+            if (authentication.isLoggedIn()) {
                 $scope.loading = true;
 
                 var deferred = $q.defer();

@@ -1,4 +1,4 @@
-<div  ng-hide="authenicated">
+<div  ng-if="!isLoggedIn">
     <div id="login">
         <h3>login</h3>
         <br>
@@ -29,7 +29,7 @@
     </div>
 </div>
 
-<div ng-show="authenicated">
+<div ng-if="isLoggedIn">
     <p>Добре дошъл, {{user}}!</p>
     <button type="button"  ng-click="logoutUser()">logout</button>
 </div>
