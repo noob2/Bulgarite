@@ -11,10 +11,10 @@ angular.module('bulgarite.users.authentication', [])
                 var deferred = $q.defer();
 
                 $http.post(BASE_URL + 'login', user, {
-                    headers: {'Authorization': 'Basic cGVzaG86MTIzNA=='}
+                    headers: {'Authorization': 'Basic a2lkXy1rYW40aVAxYi06MDcyZjMwYjg4NjY1NDA0YmE4NjIyMTQ0YmM5OTQxMzc='}
                 }).then(function (response) {
                     sessionStorage.setItem('authorisationToken', response.data._kmd.authtoken);
-                    sessionStorage.setItem('name', response.data.user);
+                    sessionStorage.setItem('name', response.data.name);
                     deferred.resolve(response);
                 }, function (err) {
                     deferred.reject(err);
@@ -58,28 +58,8 @@ angular.module('bulgarite.users.authentication', [])
             }
 
             function isLoggedIn() {
-                return sessionStorage['authorisationToken'] !== undefined;
+                return !!sessionStorage['authorisationToken'];
             }
-
-            // function isAuthenicated() {
-            //     var deferred = $q.defer();
-            //
-            //     var authorisationRequest = {
-            //         method: 'GET',
-            //         url: BASE_URL + '_me',
-            //         headers: {'Authorization': 'Kinvey ' + sessionStorage.getItem('authorisationToken')}
-            //     };
-            //
-            //     $http(authorisationRequest)
-            //         .then(function (response) {
-            //             if (response.statusText == 'OK') {
-            //                 deferred.resolve(true);
-            //             }
-            //         }, function () {
-            //             deferred.resolve(false);
-            //         });
-            //     return deferred.promise;
-            // }
 
             return {
                 registerUser: registerUser,

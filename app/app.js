@@ -2,19 +2,29 @@
 
 angular.module('bulgarite', [
         'ngRoute',
+
         'bulgarite.home',
         'bulgarite.history',
         'bulgarite.landmarks',
-        'bulgarite.version',
         'bulgarite.population',
         'bulgarite.economy',
+
         'bulgarite.users.authentication',
-        'bulgarite.common'
+
+        'bulgarite.factory.article',
+
+        'bulgarite.version'
     ])
     .config(['$routeProvider', function ($routeProvider) {
         $routeProvider.otherwise({redirectTo: '/'});
     }])
     .constant('BASE_URL', 'https://baas.kinvey.com/user/kid_-kan4iP1b-/')
     .constant('KINVEY_CONFIG', {
-        'Authorization': 'Basic cGVzaG86MTIzNA=='
-    });
+        'MasterCredentials': 'Basic a2lkXy1rYW40aVAxYi06MDcyZjMwYjg4NjY1NDA0YmE4NjIyMTQ0YmM5OTQxMzc=',
+        'UserCredentials': 'Basic cGVzaG86MTIzNA=='
+    })
+    .run(['$rootScope', '$location','authentication', function ( $rootScope, $location ,authentication) {
+        $rootScope.$on('$routeChangeStart', function (ev, current, previous, rejection) {
+            $rootScope.isLoggedIn = !!authentication.isLoggedIn();
+        });
+    }]);

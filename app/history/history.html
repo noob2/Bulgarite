@@ -1,13 +1,20 @@
-<h2 ng-show="loading">Моля изчакайте . . .</h2>
+<h2 ng-hide="isLoaded">Моля изчакайте . . .</h2>
 
-<article ng-repeat="article in articles">
-    <h3>{{article.header}}</h3>
-    <div class="image">
-        <img ng-src="{{article.imgUrl}}">
+<div ng-show="isLoaded">
+    <article ng-repeat="article in articles">
+        <h3>{{article.header}}</h3>
+        <div class="image">
+            <img ng-src="{{article.imgUrl}}">
+        </div>
+        <p>{{article.content.content}}</p>
+    </article>
+
+    <div ng-if="!isLoggedIn">
+        <p>Искаш да добавиш статия или да редактираш някоя ? Влез в акаунта си</p>
     </div>
-    <p>{{article.content.content}}</p>
-</article>
 
-<div ng-hide="authenicated">
-    <p>Please log in to see the history articles</p>
+    <div ng-if="isLoggedIn">
+        <p>Dobavi statiq</p>
+    </div>
 </div>
+
