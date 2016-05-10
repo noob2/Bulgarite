@@ -23,8 +23,16 @@ angular.module('bulgarite', [
         'MasterCredentials': 'Basic a2lkXy1rYW40aVAxYi06MDcyZjMwYjg4NjY1NDA0YmE4NjIyMTQ0YmM5OTQxMzc=',
         'UserCredentials': 'Basic cGVzaG86MTIzNA=='
     })
-    .run(['$rootScope', '$location','authentication', function ( $rootScope, $location ,authentication) {
+    .run(['$rootScope', '$location', 'authentication', '$route', function ($rootScope, $location, authentication, $route) {
+
         $rootScope.$on('$routeChangeStart', function (ev, current, previous, rejection) {
+
             $rootScope.isLoggedIn = !!authentication.isLoggedIn();
+            $rootScope.logoutUser = function () {
+
+                authentication.logoutUser().then(function (response) {
+                    $route.reload();
+                });
+            };
         });
     }]);
