@@ -28,11 +28,13 @@ angular.module('bulgarite', [
         $rootScope.$on('$routeChangeStart', function (ev, current, previous, rejection) {
 
             $rootScope.isLoggedIn = !!authentication.isLoggedIn();
-            $rootScope.logoutUser = function () {
 
-                authentication.logoutUser().then(function (response) {
-                    $route.reload();
-                });
-            };
+            if ($rootScope.isLoggedIn) {
+                $rootScope.logoutUser = function () {
+                    authentication.logoutUser().then(function (response) {
+                        $route.reload();
+                    });
+                };
+            }
         });
     }]);

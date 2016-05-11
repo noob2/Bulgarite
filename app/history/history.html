@@ -10,11 +10,11 @@
     </article>
 
     <div ng-if="!isLoggedIn">
-        <p>Искаш да добавиш статия или да редактираш някоя ? Влез в акаунта си</p>
+        <p>Искаш да добавиш статия или да редактираш някоя ? <a href="#/home">Влез в акаунта си</a></p>
     </div>
 
     <div ng-if="isLoggedIn">
-        <p>Dobavi statiq</p>
+        <button type="button" ng-click="addArticle(register)">Добави статия</button>
     </div>
 </div>
 

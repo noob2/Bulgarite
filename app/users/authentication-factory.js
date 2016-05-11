@@ -10,15 +10,15 @@ angular.module('bulgarite.users.authentication', [])
             function loginUser(user) {
                 var deferred = $q.defer();
 
-                $http.post(BASE_URL + 'login', user, {
-                    headers: {'Authorization': 'Basic a2lkXy1rYW40aVAxYi06MDcyZjMwYjg4NjY1NDA0YmE4NjIyMTQ0YmM5OTQxMzc='}
-                }).then(function (response) {
-                    sessionStorage.setItem('authorisationToken', response.data._kmd.authtoken);
-                    sessionStorage.setItem('name', response.data.name);
-                    deferred.resolve(response);
-                }, function (err) {
-                    deferred.reject(err);
-                });
+                $http.defaults.headers.common.Authorization = KINVEY_CONFIG['MasterCredentials'];
+                $http.post(BASE_URL + 'login', user, {})
+                    .then(function (response) {
+                        sessionStorage.setItem('authorisationToken', response.data._kmd.authtoken);
+                        sessionStorage.setItem('name', response.data.name);
+                        deferred.resolve(response);
+                    }, function (err) {
+                        deferred.reject(err);
+                    });
 
                 return deferred.promise;
             }
@@ -26,9 +26,9 @@ angular.module('bulgarite.users.authentication', [])
             function registerUser(user) {
                 var deferred = $q.defer();
 
+                $http.defaults.headers.common.Authorization = KINVEY_CONFIG['MasterCredentials'];
                 $http.post(BASE_URL, user, {
                     headers: {
-                        'Authorization': 'Basic a2lkXy1rYW40aVAxYi06MDcyZjMwYjg4NjY1NDA0YmE4NjIyMTQ0YmM5OTQxMzc=',
                         'Content-Type': 'application/json'
                     }
                 }).then(function (response) {
@@ -48,11 +48,11 @@ angular.module('bulgarite.users.authentication', [])
                 $http.defaults.headers.common.Authorization = "Kinvey " + sessionStorage['authorisationToken'];
                 $http.post(BASE_URL + '_logout', {})
                     .then(function (response) {
-                    sessionStorage.clear();
-                    deferred.resolve(response);
-                }, function (err) {
-                    deferred.resolve(err);
-                });
+                        sessionStorage.clear();
+                        deferred.resolve(response);
+                    }, function (err) {
+                        deferred.resolve(err);
+                    });
 
                 return deferred.promise;
             }

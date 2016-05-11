@@ -1,35 +1,26 @@
 <div  ng-if="!isLoggedIn">
     <div id="login">
-        <h3>login</h3>
-        <br>
+
         <form name="loginUserForm">
-            <label for="username">Username</label>
-            <input type="text" id="username" required="required" ng-model="login.username"/>
-            <br>
-            <label for="password">Password</label>
-            <input type="password" id="password" required="required" ng-model="login.password"/>
+            <h3>login</h3>
+            <input type="text" placeholder="username" required="required" ng-model="login.username"/>
+            <input type="password" placeholder="password" required="required" ng-model="login.password"/>
             <button type="button" ng-disabled="loginUserForm.$invalid" ng-click="loginUser(login)">login</button>
         </form>
     </div>
 
     <div id="register">
-        <h3>register</h3>
-        <form name="registerUserForm">
-            <label for="registerUsername">Username</label>
-            <input type="text" id="registerUsername" required="required" ng-model="register.username"/>
-            <br>
-            <label for="registerName">Name</label>
-            <input type="text" id="registerName" required="required" ng-model="register.name"/>
-            <br>
-            <label for="registerPassword">Password</label>
-            <input type="password" id="registerPassword" required="required" ng-model="register.password"/>
-            <button type="button" ng-disabled="registerUserForm.$invalid" ng-click="registerUser(register)">register</button>
 
+        <form name="registerUserForm">
+            <h3>register</h3>
+            <input type="text" placeholder="Username" required="required" ng-model="register.username"/>
+            <input type="text" placeholder="Name" required="required" ng-model="register.name"/>
+            <input type="password" placeholder="Password" required="required" ng-model="register.password"/>
+            <button type="button" ng-disabled="registerUserForm.$invalid" ng-click="registerUser(register)">register</button>
         </form>
     </div>
 </div>
 
 <div ng-if="isLoggedIn">
     <p>Добре дошъл, {{user}}!</p>
-    <button type="button"  ng-click="logoutUser()">logout</button>
 </div>

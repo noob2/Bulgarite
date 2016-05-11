@@ -1,0 +1,117 @@
+body {
+  background: url('../images/sila.jpg') no-repeat fixed center;
+  background-size: 100%;
+  text-align: center;
+  overflow-y: scroll;
+
+  #wrapper {
+    width: 800px;
+    margin: 0 auto;
+    display: block;
+
+    .menu {
+      padding: 5px;
+      margin: 5px auto;
+      background-color: white;
+      display: inline-block;
+
+      li {
+        display: inline-flex;
+
+        a {
+          background-color: black;
+          color: gold;
+          font-weight: bold;
+          padding: 10px 20px;
+          text-decoration: none;
+          border-radius: 4px 4px 0 0;
+
+          &:hover {
+            background-color: orange;
+          }
+        }
+      }
+    }
+
+    #currentPage {
+      background-color: #00A000;
+      border: solid white 3px;
+
+      #login, #register {
+        display: inline-block;
+        margin: 5px;
+        border-radius: 10px;
+        form {
+          margin: auto;
+          h3 {
+            float: none;
+            margin: 5px;
+            display: inline-block;
+            text-align: center;
+            color: darkgreen;
+          }
+          input {
+            display: flex;
+            text-align: center;
+            margin: 5px;
+          }
+          button {
+            display: flex;
+            margin: 5px auto;
+            background-color: green;
+            padding: 6px 17px;
+            border-radius: 7px;
+            font-weight: bold;
+            color: gold;
+          }
+        }
+      }
+
+      #login {
+        background: #ffffff;
+        background: -moz-linear-gradient(-45deg, #ffffff 0%, #ffffff 33%, #ffffff 33%, #fafafa 59%, #ffffff 63%, #ffffff 67%, #f3f3f3 68%, #f3f3f3 68%, #fbfbfb 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(-45deg, #ffffff 0%, #ffffff 33%, #ffffff 33%, #fafafa 59%, #ffffff 63%, #ffffff 67%, #f3f3f3 68%, #f3f3f3 68%, #fbfbfb 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(135deg, #ffffff 0%, #ffffff 33%, #ffffff 33%, #fafafa 59%, #ffffff 63%, #ffffff 67%, #f3f3f3 68%, #f3f3f3 68%, #fbfbfb 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#fbfbfb', GradientType=1); /* IE6-9 fallback on horizontal gradient */
+      }
+
+      #register {
+        background: #fb4e2f;
+        background: -moz-linear-gradient(-45deg, #fb4e2f 0%, #f76d57 61%, #fa2508 67%, #f62d12 79%, #f02f1e 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(-45deg, #fb4e2f 0%, #f76d57 61%, #fa2508 67%, #f62d12 79%, #f02f1e 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(135deg, #fb4e2f 0%, #f76d57 61%, #fa2508 67%, #f62d12 79%, #f02f1e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fb4e2f', endColorstr='#f02f1e', GradientType=1); /* IE6-9 fallback on horizontal gradient */
+      }
+
+      article {
+        background-color: red;
+        margin: 15px;
+        display: inline-block;
+        border-radius: 10px;
+        border: solid white 3px;
+
+        h3 {
+          color: white;
+          border-bottom: double 10px;
+        }
+
+        .image {
+          width: 250px;
+          float: left;
+          vertical-align: top;
+          margin: 7px 7px 7px 7px;
+
+          img {
+            width: inherit;
+          }
+        }
+      }
+    }
+
+    footer {
+      background-color: #880000;
+      border: solid white 3px;
+      margin-top: 10px;
+    }
+  }
+}
