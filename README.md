@@ -1,8 +1,8 @@
 # Bulgarite.bg
 
 This project is a typical AngularJS (http://angularjs.org/)single page web app.
-You can use it to quickly bootstrap your angular webapp projects and dev environment for these
-projects.
+Bulgarite should become self-developing website, in wich every registered user can add articles,
+in different categories.
 
 ### How to install
 
