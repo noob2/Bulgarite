@@ -34,9 +34,12 @@ body #wrapper #currentPage {
   border: solid white 3px;
 }
 body #wrapper #currentPage #login, body #wrapper #currentPage #register {
+  height: 180px;
   display: inline-block;
   margin: 5px;
   border-radius: 10px;
+  vertical-align: top;
+  position: relative;
 }
 body #wrapper #currentPage #login form, body #wrapper #currentPage #register form {
   margin: auto;
@@ -54,13 +57,16 @@ body #wrapper #currentPage #login form input, body #wrapper #currentPage #regist
   margin: 5px;
 }
 body #wrapper #currentPage #login form button, body #wrapper #currentPage #register form button {
-  display: flex;
+  bottom: 0;
   margin: 5px auto;
   background-color: green;
   padding: 6px 17px;
   border-radius: 7px;
   font-weight: bold;
   color: gold;
+  display: block;
+  width: 100%;
+  position: absolute;
 }
 body #wrapper #currentPage #login {
   background: #ffffff;
@@ -103,6 +109,35 @@ body #wrapper #currentPage article .image {
 }
 body #wrapper #currentPage article .image img {
   width: inherit;
+}
+body #wrapper #currentPage #add-article {
+  bottom: 0;
+  margin: 5px auto;
+  background-color: green;
+  padding: 6px 17px;
+  border-radius: 7px;
+  font-weight: bold;
+  color: gold;
+  text-decoration: none;
+  display: inline-block;
+}
+body #wrapper #currentPage #add-article-form input {
+  display: block;
+  margin: 5px auto;
+}
+body #wrapper #currentPage #add-article-form textarea {
+  display: block;
+  margin: 5px auto;
+  width: 550px;
+  height: 260px;
+}
+body #wrapper #currentPage #add-article-form button {
+  display: block;
+  margin: 5px auto;
+}
+body #wrapper #currentPage #add-article-form img {
+  max-height: 300px;
+  border-radius: 20px;
 }
 body #wrapper footer {
   background-color: #880000;

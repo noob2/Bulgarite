@@ -2,19 +2,17 @@
 
 <div ng-show="isLoaded">
     <article ng-repeat="article in articles">
-        <h3>{{article.header}}</h3>
+        <h3>{{article.header}} - - - - - - Година:{{article.year}}</h3>
         <div class="image">
             <img ng-src="{{article.imgUrl}}">
         </div>
-        <p>{{article.content.content}}</p>
+        <p>{{article.content}}</p>
     </article>
 
     <div ng-if="!isLoggedIn">
         <p>Искаш да добавиш статия или да редактираш някоя ? <a href="#/home">Влез в акаунта си</a></p>
     </div>
 
-    <div ng-if="isLoggedIn">
-        <button type="button" ng-click="addArticle(register)">Добави статия</button>
-    </div>
+    <a href="#/history/add-article" ng-if="isLoggedIn" id="add-article" type="button" ng-click="addArticle()">Добави статия</a>
 </div>
 

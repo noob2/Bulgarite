@@ -1,5 +1,18 @@
-<p>This is the partial for view 2.</p>
-<p>
-  Showing of 'interpolate' filter:
-  {{ 'Current version is v%VERSION%.' | interpolate }}
-</p>
+<h2 ng-hide="isLoaded">Моля изчакайте . . .</h2>
+
+<div ng-show="isLoaded">
+  <article ng-repeat="article in articles">
+    <h3>{{article.header}}</h3>
+    <div class="image">
+      <img ng-src="{{article.imgUrl}}">
+    </div>
+    <p>{{article.content}}</p>
+  </article>
+
+  <div ng-if="!isLoggedIn">
+    <p>Искаш да добавиш статия или да редактираш някоя ? <a href="#/home">Влез в акаунта си</a></p>
+  </div>
+
+  <a href="#/landmarks/add-article" ng-if="isLoggedIn" id="add-article" type="button" ng-click="addArticle()">Добави статия</a>
+</div>
+

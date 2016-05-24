@@ -1,4 +1,15 @@
+@mixin green-button{
+  bottom: 0;
+  margin: 5px auto;
+  background-color: green;
+  padding: 6px 17px;
+  border-radius: 7px;
+  font-weight: bold;
+  color: gold;
+}
+
 body {
+
   background: url('../images/sila.jpg') no-repeat fixed center;
   background-size: 100%;
   text-align: center;
@@ -38,9 +49,12 @@ body {
       border: solid white 3px;
 
       #login, #register {
+        height:180px;
         display: inline-block;
         margin: 5px;
         border-radius: 10px;
+        vertical-align: top;
+        position: relative;
         form {
           margin: auto;
           h3 {
@@ -56,13 +70,10 @@ body {
             margin: 5px;
           }
           button {
-            display: flex;
-            margin: 5px auto;
-            background-color: green;
-            padding: 6px 17px;
-            border-radius: 7px;
-            font-weight: bold;
-            color: gold;
+            @include green-button;
+            display: block;
+            width:100%;
+            position: absolute;
           }
         }
       }
@@ -104,6 +115,31 @@ body {
           img {
             width: inherit;
           }
+        }
+      }
+      #add-article{
+        @include green-button;
+        text-decoration: none;
+        display: inline-block;
+      }
+      #add-article-form{
+        input{
+          display: block;
+          margin: 5px auto;
+        }
+        textarea{
+          display: block;
+          margin: 5px auto;
+          width: 550px;
+          height:260px;
+        }
+        button{
+          display: block;
+          margin: 5px auto;
+        }
+        img{
+          max-height:300px;
+          border-radius: 20px;
         }
       }
     }
