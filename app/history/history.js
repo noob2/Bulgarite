@@ -4,11 +4,11 @@ angular.module('bulgarite.history', ['ngRoute'])
 
     .config(['$routeProvider', function ($routeProvider) {
 
-        $routeProvider.when('/:history', {
+        $routeProvider.when('/history', {
             templateUrl: 'app/history/history.html',
             controller: 'historyController'
         });
-        $routeProvider.when('/:history/add-article', {
+        $routeProvider.when('/history/add-article', {
             templateUrl: 'app/addArticle/addArticle.html',
             controller: 'historyController'
         });

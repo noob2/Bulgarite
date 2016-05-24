@@ -25,7 +25,7 @@ angular.module('bulgarite.factory.article', [])
                 var deferred = $q.defer();
 
                 $http.defaults.headers.common.Authorization = KINVEY_CONFIG['UserCredentials'];
-                $http.get('https://baas.kinvey.com/appdata/kid_-kan4iP1b-/landmarkArticles', {})
+                $http.get('https://baas.kinvey.com/appdata/kid_-kan4iP1b-/landmarksArticles', {})
                     .then(function (articles) {
                         deferred.resolve(articles)
                     }, function (err) {
