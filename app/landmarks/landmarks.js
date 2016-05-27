@@ -7,10 +7,6 @@ angular.module('bulgarite.landmarks', ['ngRoute'])
             templateUrl: 'app/landmarks/landmarks.html',
             controller: 'landmarksController'
         });
-        $routeProvider.when('/landmarks/add-article', {
-            templateUrl: 'app/addArticle/addArticle.html',
-            controller: 'landmarksController'
-        });
     }])
 
     .controller('landmarksController', [
@@ -21,24 +17,26 @@ angular.module('bulgarite.landmarks', ['ngRoute'])
         'article',
         '$location',
         function ($http, $q, KINVEY_CONFIG, $scope, article, $location) {
-            if ($location.path().match('landmarks$')) {
 
+            if ($location.path().match('landmarks$')) {
+                console.log(4)
                 article.getAllLandmarksArticles()
                     .then(function (articles) {
                         $scope.articles = articles.data;
                     }).finally(function () {
                     $scope.isLoaded = true;
                 })
-            } else if ($location.path().match('landmarks/add-article$')) {
+            } else if ($location.path().match('history/add-article$')) {
                 $scope.addArticle = function (art) {
-                    article.addArticle(art, 'landmarks')
+                    article.addArticle(art, 'history')
                         .then(function (success) {
                             console.log(success);
-                            $location.path('landmarks');
+                            $location.path('history');
                         });
                 };
 
                 $scope.isLoaded = true;
+                console.log(34)
             }
 
         }]);

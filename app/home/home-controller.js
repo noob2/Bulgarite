@@ -14,7 +14,14 @@ angular.module('bulgarite.home', ['ngRoute'])
         '$rootScope',
         'authentication',
         '$route',
-        function ($scope, $rootScope, authentication, $route) {
+        'article',
+        function ($scope, $rootScope, authentication, $route, article) {
+
+                article.getLastArticles(3)
+                    .then(function (articles) {
+                        console.log(articles)
+                    });
+            
             if ($scope.isLoggedIn) {
                 $scope.user = sessionStorage['name'];
 

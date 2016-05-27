@@ -1,18 +1,18 @@
-<p>This is the partial for view 2.</p>
-<p>
-    Showing of 'interpolate' filter:
-    Showing of 'interpolate' filter:
-    Showing of 'interpolate' filter:
-    vvShowing of 'interpolate' filter:Showing of 'interpolate' filter:
-    v
-    Showing of 'interpolate' filter:Showing of 'interpolate' filter:Showing of 'interpolate' filter:
-    Showing of 'interpolate' filter:
-    Showing of 'interpolate' filter:Showing of 'interpolate' filter:
+<h2 ng-hide="isLoaded">Моля изчакайте . . .</h2>
 
+<div ng-show="isLoaded">
+    <article ng-repeat="article in articles">
+        <h3>{{article.header}} - - - - - - Година:{{article.year}}</h3>
+        <div class="image">
+            <img ng-src="{{article.imgUrl}}">
+        </div>
+        <p>{{article.content}}</p>
+    </article>
 
+    <div ng-if="!isLoggedIn">
+        <p>Искаш да добавиш статия или да редактираш някоя ? <a href="#/home">Влез в акаунта си</a></p>
+    </div>
 
+    <a href="#/population/add-article" ng-if="isLoggedIn" id="add-article" type="button" ng-click="addArticle()">Добави статия</a>
+</div>
 
-
-
-    {{ 'Current version is v%VERSION%.' | interpolate }}
-</p>
