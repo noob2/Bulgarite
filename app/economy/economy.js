@@ -22,10 +22,9 @@ angular.module('bulgarite.economy', ['ngRoute'])
         '$location',
         function ($http, $q, KINVEY_CONFIG, $scope, article, $location) {
             if ($location.path().match('economy$')){
-                article.getAllEconomyArticles()
+                article.getAllArticlesFromCategory('economy')
                     .then(function (articles) {
                         $scope.articles = articles.data;
-
                     }).finally(function () {
                     $scope.isLoaded = true;
                 })

@@ -22,7 +22,7 @@ angular.module('bulgarite.population', ['ngRoute'])
         '$location',
         function ($http, $q, KINVEY_CONFIG, $scope, article, $location) {
             if ($location.path().match('population$')){
-                article.getAllPopulationArticles()
+                article.getAllArticlesFromCategory('population')
                     .then(function (articles) {
                         $scope.articles = articles.data;
 

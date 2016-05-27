@@ -24,3 +24,13 @@
 <div ng-if="isLoggedIn">
     <p>Добре дошъл, {{user}}!</p>
 </div>
+
+<div id="latest-articles">
+    <article ng-repeat="article in articles">
+        <h3>{{article.header}}</h3>
+        <div class="image">
+            <img ng-src="{{article.imgUrl}}">
+        </div>
+        <p>{{article.content}}</p>
+    </article>
+</div>
