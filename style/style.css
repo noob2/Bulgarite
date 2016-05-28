@@ -33,6 +33,9 @@ body #wrapper #currentPage {
   background-color: #00A000;
   border: solid white 3px;
 }
+body #wrapper #currentPage #welcome-header {
+  color: chartreuse;
+}
 body #wrapper #currentPage #login, body #wrapper #currentPage #register {
   height: 180px;
   display: inline-block;
@@ -90,25 +93,115 @@ body #wrapper #currentPage #register {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fb4e2f', endColorstr='#f02f1e', GradientType=1);
   /* IE6-9 fallback on horizontal gradient */
 }
-body #wrapper #currentPage article {
+body #wrapper #currentPage .economy-article {
   background-color: red;
   margin: 15px;
   display: inline-block;
   border-radius: 10px;
   border: solid white 3px;
 }
-body #wrapper #currentPage article h3 {
+body #wrapper #currentPage .economy-article h3 {
   color: white;
   border-bottom: double 10px;
 }
-body #wrapper #currentPage article .image {
+body #wrapper #currentPage .economy-article .image {
   width: 250px;
   float: left;
   vertical-align: top;
   margin: 7px 7px 7px 7px;
 }
-body #wrapper #currentPage article .image img {
+body #wrapper #currentPage .economy-article .image img {
   width: inherit;
+}
+body #wrapper #currentPage .history-article {
+  background-color: red;
+  margin: 15px;
+  display: inline-block;
+  border-radius: 10px;
+  border: solid white 3px;
+}
+body #wrapper #currentPage .history-article h3 {
+  color: white;
+  border-bottom: double 10px;
+}
+body #wrapper #currentPage .history-article .image {
+  width: 250px;
+  float: left;
+  vertical-align: top;
+  margin: 7px 7px 7px 7px;
+}
+body #wrapper #currentPage .history-article .image img {
+  width: inherit;
+}
+body #wrapper #currentPage .landmarks-article {
+  background-color: red;
+  margin: 15px;
+  display: inline-block;
+  border-radius: 10px;
+  border: solid white 3px;
+}
+body #wrapper #currentPage .landmarks-article h3 {
+  color: white;
+  border-bottom: double 10px;
+}
+body #wrapper #currentPage .landmarks-article .image {
+  width: 250px;
+  float: left;
+  vertical-align: top;
+  margin: 7px 7px 7px 7px;
+}
+body #wrapper #currentPage .landmarks-article .image img {
+  width: inherit;
+}
+body #wrapper #currentPage .population-articles {
+  background-color: red;
+  margin: 15px;
+  display: inline-block;
+  border-radius: 10px;
+  border: solid white 3px;
+}
+body #wrapper #currentPage .population-articles h3 {
+  color: white;
+  border-bottom: double 10px;
+}
+body #wrapper #currentPage .population-articles .image {
+  width: 250px;
+  float: left;
+  vertical-align: top;
+  margin: 7px 7px 7px 7px;
+}
+body #wrapper #currentPage .population-articles .image img {
+  width: inherit;
+}
+body #wrapper #currentPage #last-added-articles {
+  color: white;
+  margin-bottom: 0px;
+}
+body #wrapper #currentPage .latest-articles {
+  background-color: darkgreen;
+  margin: 5px;
+  display: inline-flex;
+  width: 47%;
+  height: 500px;
+  border: dashed white 3px;
+}
+body #wrapper #currentPage .latest-articles:hover {
+  background-color: #363636;
+}
+body #wrapper #currentPage .latest-articles h3 {
+  color: white;
+  border-bottom: dashed 3px;
+  margin: 4px;
+}
+body #wrapper #currentPage .latest-articles img {
+  height: 200px;
+  max-width: 97%;
+}
+body #wrapper #currentPage .latest-articles p {
+  color: gold;
+  font-weight: bold;
+  overflow: auto;
+  height: 247px;
 }
 body #wrapper #currentPage #add-article {
   bottom: 0;

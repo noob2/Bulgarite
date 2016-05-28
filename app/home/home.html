@@ -1,4 +1,4 @@
-<div  ng-if="!isLoggedIn">
+<div ng-if="!isLoggedIn">
     <div id="login">
 
         <form name="loginUserForm">
@@ -16,21 +16,22 @@
             <input type="text" placeholder="Username" required="required" ng-model="register.username"/>
             <input type="text" placeholder="Name" required="required" ng-model="register.name"/>
             <input type="password" placeholder="Password" required="required" ng-model="register.password"/>
-            <button type="button" ng-disabled="registerUserForm.$invalid" ng-click="registerUser(register)">register</button>
+            <button type="button" ng-disabled="registerUserForm.$invalid" ng-click="registerUser(register)">register
+            </button>
         </form>
     </div>
 </div>
 
 <div ng-if="isLoggedIn">
-    <p>Добре дошъл, {{user}}!</p>
+    <h2 id="welcome-header">Добре дошъл, {{user}}!</h2>
 </div>
 
-<div id="latest-articles">
-    <article ng-repeat="article in articles">
+<h2 id="last-added-articles">Последно добавени статии:</h2>
+<article ng-repeat="article in articles" class="latest-articles">
+    <div>
         <h3>{{article.header}}</h3>
-        <div class="image">
-            <img ng-src="{{article.imgUrl}}">
-        </div>
+        <img ng-src="{{article.imgUrl}}">
         <p>{{article.content}}</p>
-    </article>
-</div>
+    </div>
+
+</article>

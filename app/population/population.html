@@ -1,7 +1,7 @@
 <h2 ng-hide="isLoaded">Моля изчакайте . . .</h2>
 
 <div ng-show="isLoaded">
-    <article ng-repeat="article in articles">
+    <article ng-repeat="article in articles" class="population-articles">
         <h3>{{article.header}} - - - - - - Година:{{article.year}}</h3>
         <div class="image">
             <img ng-src="{{article.imgUrl}}">

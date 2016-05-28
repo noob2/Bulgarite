@@ -1,4 +1,4 @@
-@mixin green-button{
+@mixin green-button {
   bottom: 0;
   margin: 5px auto;
   background-color: green;
@@ -48,8 +48,12 @@ body {
       background-color: #00A000;
       border: solid white 3px;
 
+      #welcome-header{
+        color: chartreuse;
+      }
+
       #login, #register {
-        height:180px;
+        height: 180px;
         display: inline-block;
         margin: 5px;
         border-radius: 10px;
@@ -72,7 +76,7 @@ body {
           button {
             @include green-button;
             display: block;
-            width:100%;
+            width: 100%;
             position: absolute;
           }
         }
@@ -94,7 +98,7 @@ body {
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fb4e2f', endColorstr='#f02f1e', GradientType=1); /* IE6-9 fallback on horizontal gradient */
       }
 
-      article {
+      .economy-article {
         background-color: red;
         margin: 15px;
         display: inline-block;
@@ -117,28 +121,135 @@ body {
           }
         }
       }
-      #add-article{
+
+      .history-article {
+        background-color: red;
+        margin: 15px;
+        display: inline-block;
+        border-radius: 10px;
+        border: solid white 3px;
+
+        h3 {
+          color: white;
+          border-bottom: double 10px;
+        }
+
+        .image {
+          width: 250px;
+          float: left;
+          vertical-align: top;
+          margin: 7px 7px 7px 7px;
+
+          img {
+            width: inherit;
+          }
+        }
+      }
+
+      .landmarks-article {
+        background-color: red;
+        margin: 15px;
+        display: inline-block;
+        border-radius: 10px;
+        border: solid white 3px;
+
+        h3 {
+          color: white;
+          border-bottom: double 10px;
+        }
+
+        .image {
+          width: 250px;
+          float: left;
+          vertical-align: top;
+          margin: 7px 7px 7px 7px;
+
+          img {
+            width: inherit;
+          }
+        }
+      }
+
+      .population-articles {
+        background-color: red;
+        margin: 15px;
+        display: inline-block;
+        border-radius: 10px;
+        border: solid white 3px;
+
+        h3 {
+          color: white;
+          border-bottom: double 10px;
+        }
+
+        .image {
+          width: 250px;
+          float: left;
+          vertical-align: top;
+          margin: 7px 7px 7px 7px;
+
+          img {
+            width: inherit;
+          }
+        }
+      }
+
+      #last-added-articles{
+        color: white;
+        margin-bottom: 0px;
+      }
+
+      .latest-articles {
+        background-color: darkgreen;
+        margin: 5px;
+        display: inline-flex;
+        width: 47%;
+        height: 500px;
+        border: dashed white 3px;
+        &:hover{
+          background-color: #363636;
+        }
+        h3 {
+          color: white;
+          border-bottom: dashed 3px;
+          margin: 4px;
+        }
+
+        img {
+          height: 200px;
+          max-width: 97%;
+        }
+        p {
+          color: gold;
+          font-weight: bold;
+          overflow: auto;
+          height: 247px;
+        }
+      }
+
+      #add-article {
         @include green-button;
         text-decoration: none;
         display: inline-block;
       }
-      #add-article-form{
-        input{
+
+      #add-article-form {
+        input {
           display: block;
           margin: 5px auto;
         }
-        textarea{
+        textarea {
           display: block;
           margin: 5px auto;
           width: 550px;
-          height:260px;
+          height: 260px;
         }
-        button{
+        button {
           display: block;
           margin: 5px auto;
         }
-        img{
-          max-height:300px;
+        img {
+          max-height: 300px;
           border-radius: 20px;
         }
       }
