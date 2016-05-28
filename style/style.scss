@@ -104,7 +104,10 @@ body {
         display: inline-block;
         border-radius: 10px;
         border: solid white 3px;
-
+        &:hover{
+          background-color: #363636;
+          cursor: pointer;
+        }
         h3 {
           color: white;
           border-bottom: double 10px;
@@ -128,7 +131,10 @@ body {
         display: inline-block;
         border-radius: 10px;
         border: solid white 3px;
-
+        &:hover{
+          background-color: #363636;
+          cursor: pointer;
+        }
         h3 {
           color: white;
           border-bottom: double 10px;
@@ -152,7 +158,10 @@ body {
         display: inline-block;
         border-radius: 10px;
         border: solid white 3px;
-
+        &:hover{
+          background-color: #363636;
+          cursor: pointer;
+        }
         h3 {
           color: white;
           border-bottom: double 10px;
@@ -176,7 +185,10 @@ body {
         display: inline-block;
         border-radius: 10px;
         border: solid white 3px;
-
+        &:hover{
+          background-color: #363636;
+          cursor: pointer;
+        }
         h3 {
           color: white;
           border-bottom: double 10px;
@@ -198,7 +210,36 @@ body {
         color: white;
         margin-bottom: 0px;
       }
-
+      #this-article{
+        background-color: black;
+        border: 17px solid black;
+        h2{
+          margin: 7px;
+          color: gold;
+        }h3{
+          margin: 7px;
+          color: gold;
+        }
+        p{
+          margin: 0 0 15px 0;
+          color: #c8def4;
+          width: 90%;
+          margin: 0 auto
+        }
+        div{
+          img{
+            border-radius: 70px 5px;
+            width: 100%;
+          }
+        }
+        button{
+          color: gold;
+          background-color: black;
+          border-radius: 5px;
+          font-weight: bold;
+          margin-top: 20px;
+        }
+      }
       .latest-articles {
         background-color: darkgreen;
         margin: 5px;
@@ -208,6 +249,7 @@ body {
         border: dashed white 3px;
         &:hover{
           background-color: #363636;
+          cursor: pointer;
         }
         h3 {
           color: white;

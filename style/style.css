@@ -100,6 +100,10 @@ body #wrapper #currentPage .economy-article {
   border-radius: 10px;
   border: solid white 3px;
 }
+body #wrapper #currentPage .economy-article:hover {
+  background-color: #363636;
+  cursor: pointer;
+}
 body #wrapper #currentPage .economy-article h3 {
   color: white;
   border-bottom: double 10px;
@@ -119,6 +123,10 @@ body #wrapper #currentPage .history-article {
   display: inline-block;
   border-radius: 10px;
   border: solid white 3px;
+}
+body #wrapper #currentPage .history-article:hover {
+  background-color: #363636;
+  cursor: pointer;
 }
 body #wrapper #currentPage .history-article h3 {
   color: white;
@@ -140,6 +148,10 @@ body #wrapper #currentPage .landmarks-article {
   border-radius: 10px;
   border: solid white 3px;
 }
+body #wrapper #currentPage .landmarks-article:hover {
+  background-color: #363636;
+  cursor: pointer;
+}
 body #wrapper #currentPage .landmarks-article h3 {
   color: white;
   border-bottom: double 10px;
@@ -160,6 +172,10 @@ body #wrapper #currentPage .population-articles {
   border-radius: 10px;
   border: solid white 3px;
 }
+body #wrapper #currentPage .population-articles:hover {
+  background-color: #363636;
+  cursor: pointer;
+}
 body #wrapper #currentPage .population-articles h3 {
   color: white;
   border-bottom: double 10px;
@@ -177,6 +193,35 @@ body #wrapper #currentPage #last-added-articles {
   color: white;
   margin-bottom: 0px;
 }
+body #wrapper #currentPage #this-article {
+  background-color: black;
+  border: 17px solid black;
+}
+body #wrapper #currentPage #this-article h2 {
+  margin: 7px;
+  color: gold;
+}
+body #wrapper #currentPage #this-article h3 {
+  margin: 7px;
+  color: gold;
+}
+body #wrapper #currentPage #this-article p {
+  margin: 0 0 15px 0;
+  color: #c8def4;
+  width: 90%;
+  margin: 0 auto;
+}
+body #wrapper #currentPage #this-article div img {
+  border-radius: 70px 5px;
+  width: 100%;
+}
+body #wrapper #currentPage #this-article button {
+  color: gold;
+  background-color: black;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-top: 20px;
+}
 body #wrapper #currentPage .latest-articles {
   background-color: darkgreen;
   margin: 5px;
@@ -187,6 +232,7 @@ body #wrapper #currentPage .latest-articles {
 }
 body #wrapper #currentPage .latest-articles:hover {
   background-color: #363636;
+  cursor: pointer;
 }
 body #wrapper #currentPage .latest-articles h3 {
   color: white;
