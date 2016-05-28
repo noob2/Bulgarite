@@ -1,0 +1,9 @@
+<div id="this-article">
+    <h2>{{article.header}}</h2>
+    <h3 ng-if="article.year">{{article.year}}</h3>
+    <div>
+        <img ng-src="{{article.imgUrl}}">
+    </div>
+    <p>{{article.content}}</p>
+<button ng-click="editArticle()">Редактирай</button>
+</div>

@@ -1,20 +1,20 @@
 'use strict';
 
 angular.module('bulgarite', [
-        'ngRoute',
+    'ngRoute',
 
-        'bulgarite.home',
-        'bulgarite.history',
-        'bulgarite.landmarks',
-        'bulgarite.population',
-        'bulgarite.economy',
+    'bulgarite.home',
+    'bulgarite.history',
+    'bulgarite.landmarks',
+    'bulgarite.population',
+    'bulgarite.economy',
+    'bulgarite.article',
+    'bulgarite.users.authentication',
 
-        'bulgarite.users.authentication',
+    'bulgarite.factory.article',
 
-        'bulgarite.factory.article',
-
-        'bulgarite.version'
-    ])
+    'bulgarite.version'
+])
     .config(['$routeProvider', function ($routeProvider) {
         $routeProvider.otherwise({redirectTo: '/'});
     }])

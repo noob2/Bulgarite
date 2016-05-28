@@ -9,7 +9,7 @@ angular.module('bulgarite.history', ['ngRoute'])
             controller: 'historyController'
         });
         $routeProvider.when('/history/add-article', {
-            templateUrl: 'app/addArticle/addArticle.html',
+            templateUrl: 'app/article/addArticle/addArticle.html',
             controller: 'historyController'
         });
     }])
@@ -22,6 +22,12 @@ angular.module('bulgarite.history', ['ngRoute'])
         '$location',
         function ($http, $q, KINVEY_CONFIG, $scope, article, $location) {
             if ($location.path().match('history$')) {
+                
+                $scope.goToArticle = function (id) {
+                    $location.path('article/'+id);
+                    console.log(id);
+                };
+                
                 article.getAllArticlesFromCategory('history')
                     .then(function (articles) {
                         $scope.articles = articles.data;

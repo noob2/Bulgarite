@@ -8,7 +8,7 @@ angular.module('bulgarite.population', ['ngRoute'])
             controller: 'populationController'
         });
         $routeProvider.when('/population/add-article', {
-            templateUrl: 'app/addArticle/addArticle.html',
+            templateUrl: 'app/article/addArticle/addArticle.html',
             controller: 'populationController'
         });
     }])
@@ -22,6 +22,12 @@ angular.module('bulgarite.population', ['ngRoute'])
         '$location',
         function ($http, $q, KINVEY_CONFIG, $scope, article, $location) {
             if ($location.path().match('population$')){
+                
+                $scope.goToArticle = function (id) {
+                    $location.path('article/'+id);
+                    console.log(id);
+                };
+                
                 article.getAllArticlesFromCategory('population')
                     .then(function (articles) {
                         $scope.articles = articles.data;

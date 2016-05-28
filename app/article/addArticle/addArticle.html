@@ -1,0 +1,14 @@
+<h2 ng-hide="isLoaded">Моля изчакайте . . .</h2>
+
+<div ng-show="isLoaded">
+    <form id="add-article-form" ng-controller="historyController" name="articleForm">
+
+        <input type="text" ng-model="article.header" placeholder="Заглавие" required/>
+        <input type="number" ng-model="article.year" placeholder="Година" required/>
+        <input type="text" ng-model="article.imgUrl" placeholder="URL на картинка" required/>
+        <img ng-src="{{article.imgUrl}}"/>
+        <textarea ng-model="article.content" placeholder="Съдържание" required></textarea>
+        <button type="submit" ng-click="addArticle(article)" ng-disabled="articleForm.$invalid">Добави статията</button>
+    </form>
+</div>
+

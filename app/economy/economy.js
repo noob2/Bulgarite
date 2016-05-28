@@ -8,7 +8,7 @@ angular.module('bulgarite.economy', ['ngRoute'])
             controller: 'economyController'
         });
         $routeProvider.when('/economy/add-article', {
-            templateUrl: 'app/addArticle/addArticle.html',
+            templateUrl: 'app/article/addArticle/addArticle.html',
             controller: 'economyController'
         });
     }])
@@ -22,6 +22,12 @@ angular.module('bulgarite.economy', ['ngRoute'])
         '$location',
         function ($http, $q, KINVEY_CONFIG, $scope, article, $location) {
             if ($location.path().match('economy$')){
+                
+                $scope.goToArticle = function (id) {
+                    $location.path('article/'+id);
+                    console.log(id);
+                };
+                
                 article.getAllArticlesFromCategory('economy')
                     .then(function (articles) {
                         $scope.articles = articles.data;
