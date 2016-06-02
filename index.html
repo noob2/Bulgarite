@@ -13,8 +13,8 @@
     <title>Bulgarite BG</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="app/bower_components/html5-boilerplate/dist/css/normalize.css">
-    <link rel="stylesheet" href="app/bower_components/html5-boilerplate/dist/css/main.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
 
     <link rel="stylesheet" href="style/style.css">
     <script src="app/bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
@@ -34,23 +34,25 @@
 
     <div ng-view id="currentPage"></div>
 
-    <footer>Angular seed app: v<span app-version></span></footer>
+    <footer>Copyright</footer>
 </div>
 
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.min.js"></script>
 
-<script src="app/bower_components/angular/angular.js"></script>
-<script src="app/bower_components/angular-route/angular-route.js"></script>
 <script src="app/app.js"></script>
+
 <script src="app/users/authentication-factory.js"></script>
 <script src="app/home/home.js"></script>
 
-<script src="app/factory/article-factory.js"></script>
+<script src="app/article/article-factory.js"></script>
+<script src="app/article/articlePage/articlePage.js"></script>
 
 <script src="app/history/history.js"></script>
 <script src="app/landmarks/landmarks.js"></script>
 <script src="app/population/population.js"></script>
 <script src="app/economy/economy.js"></script>
-<script src="app/article/articlePage/articlePage.js"></script>
+
 
 
 <script src="app/components/version/version.js"></script>

@@ -20,7 +20,6 @@ angular.module('bulgarite.home', ['ngRoute'])
             article.getLatestArticles(4)
                 .then(function (articles) {
                     $scope.articles = articles.data;
-                    console.log(articles)
                 }).finally(function () {
                 $scope.isLoaded = true;
             });
