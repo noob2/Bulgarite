@@ -118,14 +118,15 @@ body #wrapper #currentPage .economy-article .image img {
   width: inherit;
 }
 body #wrapper #currentPage .history-article {
-  background-color: red;
+  color: gold;
+  background-color: #363636;
   margin: 15px;
   display: inline-block;
   border-radius: 10px;
   border: solid white 3px;
 }
 body #wrapper #currentPage .history-article:hover {
-  background-color: #363636;
+  background-color: darkgoldenrod;
   cursor: pointer;
 }
 body #wrapper #currentPage .history-article h3 {
@@ -140,6 +141,14 @@ body #wrapper #currentPage .history-article .image {
 }
 body #wrapper #currentPage .history-article .image img {
   width: inherit;
+}
+body #wrapper #currentPage .rzslider .rz-pointer {
+  cursor: w-resize;
+  background-color: transparent;
+  color: black;
+}
+body #wrapper #currentPage .rzslider .rz-bar.rz-selection {
+  background-color: brown;
 }
 body #wrapper #currentPage .landmarks-article {
   background-color: red;
@@ -165,28 +174,28 @@ body #wrapper #currentPage .landmarks-article .image {
 body #wrapper #currentPage .landmarks-article .image img {
   width: inherit;
 }
-body #wrapper #currentPage .population-articles {
+body #wrapper #currentPage .population-article {
   background-color: red;
   margin: 15px;
   display: inline-block;
   border-radius: 10px;
   border: solid white 3px;
 }
-body #wrapper #currentPage .population-articles:hover {
+body #wrapper #currentPage .population-article:hover {
   background-color: #363636;
   cursor: pointer;
 }
-body #wrapper #currentPage .population-articles h3 {
+body #wrapper #currentPage .population-article h3 {
   color: white;
   border-bottom: double 10px;
 }
-body #wrapper #currentPage .population-articles .image {
+body #wrapper #currentPage .population-article .image {
   width: 250px;
   float: left;
   vertical-align: top;
   margin: 7px 7px 7px 7px;
 }
-body #wrapper #currentPage .population-articles .image img {
+body #wrapper #currentPage .population-article .image img {
   width: inherit;
 }
 body #wrapper #currentPage #last-added-articles {
@@ -226,28 +235,22 @@ body #wrapper #currentPage .latest-articles {
   background-color: darkgreen;
   margin: 5px;
   display: inline-flex;
-  width: 47%;
-  height: 500px;
-  border: dashed white 3px;
+  width: 250px;
 }
 body #wrapper #currentPage .latest-articles:hover {
   background-color: #363636;
   cursor: pointer;
 }
-body #wrapper #currentPage .latest-articles h3 {
-  color: white;
-  border-bottom: dashed 3px;
+body #wrapper #currentPage .latest-articles div {
+  width: 100%;
+}
+body #wrapper #currentPage .latest-articles div h3 {
+  color: floralwhite;
   margin: 4px;
 }
-body #wrapper #currentPage .latest-articles img {
+body #wrapper #currentPage .latest-articles div img {
   height: 200px;
   max-width: 97%;
-}
-body #wrapper #currentPage .latest-articles p {
-  color: gold;
-  font-weight: bold;
-  overflow: auto;
-  height: 247px;
 }
 body #wrapper #currentPage #add-article {
   bottom: 0;

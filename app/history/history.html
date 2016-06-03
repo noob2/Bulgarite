@@ -1,6 +1,13 @@
 <h2 ng-hide="isLoaded">Моля изчакайте . . .</h2>
 
 <div ng-show="isLoaded">
+    <h4>Изберете период от историята:</h4>
+    <rzslider
+            rz-slider-model="slider.min"
+            rz-slider-high="slider.max"
+            rz-slider-options="slider.options">
+    </rzslider>
+
     <article ng-repeat="article in articles" class="history-article" ng-click="goToArticle(article._id)">
         <h3>{{article.header}} - - - - - - Година:{{article.year}}</h3>
         <div class="image">
@@ -13,6 +20,7 @@
         <p>Искаш да добавиш статия или да редактираш някоя ? <a href="#/home">Влез в акаунта си</a></p>
     </div>
 
-    <a href="#/history/add-article" ng-if="isLoggedIn" id="add-article" type="button" ng-click="addArticle()">Добави статия</a>
+    <a href="#/history/add-article" ng-if="isLoggedIn" id="add-article" type="button" ng-click="addArticle()">Добави
+        статия</a>
 </div>
 

@@ -30,8 +30,10 @@
 <article ng-repeat="article in articles" class="latest-articles" ng-click="goToArticle(article._id)">
     <div>
         <h3>{{article.header}}</h3>
-        <img ng-src="{{article.imgUrl}}">
-        <p>{{article.content}}</p>
+        <div>
+            <img ng-src="{{article.imgUrl}}">
+        </div>
+
     </div>
 
 </article>

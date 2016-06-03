@@ -126,32 +126,38 @@ body {
       }
 
       .history-article {
-        background-color: red;
+        color: gold;
+        background-color: #363636;
         margin: 15px;
         display: inline-block;
         border-radius: 10px;
         border: solid white 3px;
         &:hover{
-          background-color: #363636;
+          background-color: darkgoldenrod;
           cursor: pointer;
         }
         h3 {
           color: white;
           border-bottom: double 10px;
         }
-
         .image {
           width: 250px;
           float: left;
           vertical-align: top;
           margin: 7px 7px 7px 7px;
-
           img {
             width: inherit;
           }
         }
       }
-
+      .rzslider .rz-pointer {
+        cursor: w-resize;
+        background-color: transparent;
+        color: black;
+      }
+      .rzslider .rz-bar.rz-selection {
+        background-color: brown;
+      }
       .landmarks-article {
         background-color: red;
         margin: 15px;
@@ -179,7 +185,7 @@ body {
         }
       }
 
-      .population-articles {
+      .population-article {
         background-color: red;
         margin: 15px;
         display: inline-block;
@@ -244,29 +250,24 @@ body {
         background-color: darkgreen;
         margin: 5px;
         display: inline-flex;
-        width: 47%;
-        height: 500px;
-        border: dashed white 3px;
+        width: 250px;
         &:hover{
           background-color: #363636;
           cursor: pointer;
         }
-        h3 {
-          color: white;
-          border-bottom: dashed 3px;
-          margin: 4px;
+        div{
+          width:100%;
+          h3 {
+            color: floralwhite;
+            margin: 4px;
+          }
+
+          img {
+            height: 200px;
+            max-width: 97%;
+          }
         }
 
-        img {
-          height: 200px;
-          max-width: 97%;
-        }
-        p {
-          color: gold;
-          font-weight: bold;
-          overflow: auto;
-          height: 247px;
-        }
       }
 
       #add-article {

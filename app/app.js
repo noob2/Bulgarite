@@ -2,7 +2,7 @@
 
 angular.module('bulgarite', [
     'ngRoute',
-
+    'rzModule',
     'bulgarite.home',
     'bulgarite.history',
     'bulgarite.landmarks',

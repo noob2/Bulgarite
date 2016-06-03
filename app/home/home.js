@@ -17,7 +17,7 @@ angular.module('bulgarite.home', ['ngRoute'])
         'article',
         '$location',
         function ($scope, $rootScope, authentication, $route, article, $location) {
-            article.getLatestArticles(4)
+            article.getLatestArticles(6)
                 .then(function (articles) {
                     $scope.articles = articles.data;
                 }).finally(function () {
