@@ -1,22 +1,22 @@
-<div ng-if="!isLoggedIn">
+﻿<div ng-if="!isLoggedIn">
     <div id="login">
 
         <form name="loginUserForm">
-            <h3>login</h3>
-            <input type="text" placeholder="username" required="required" ng-model="login.username"/>
-            <input type="password" placeholder="password" required="required" ng-model="login.password"/>
-            <button type="button" ng-disabled="loginUserForm.$invalid" ng-click="loginUser(login)">login</button>
+            <h3>Вход</h3>
+            <input type="text" placeholder="Потребител" required="required" ng-model="login.username"/>
+            <input type="password" placeholder="Парола" required="required" ng-model="login.password"/>
+            <button type="button" ng-disabled="loginUserForm.$invalid" ng-click="loginUser(login)">Вход</button>
         </form>
     </div>
 
     <div id="register">
 
         <form name="registerUserForm">
-            <h3>register</h3>
-            <input type="text" placeholder="Username" required="required" ng-model="register.username"/>
-            <input type="text" placeholder="Name" required="required" ng-model="register.name"/>
-            <input type="password" placeholder="Password" required="required" ng-model="register.password"/>
-            <button type="button" ng-disabled="registerUserForm.$invalid" ng-click="registerUser(register)">register
+            <h3>Регистрация</h3>
+            <input type="text" placeholder="Потребител" required="required" ng-model="register.username"/>
+            <input type="text" placeholder="Име" required="required" ng-model="register.name"/>
+            <input type="password" placeholder="Парола" required="required" ng-model="register.password"/>
+            <button type="button" ng-disabled="registerUserForm.$invalid" ng-click="registerUser(register)">Регистрирай се
             </button>
         </form>
     </div>
