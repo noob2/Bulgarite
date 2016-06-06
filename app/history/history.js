@@ -2,7 +2,7 @@
 
 angular.module('bulgarite.history', ['ngRoute'])
 
-    .config(['$routeProvider', function ($routeProvider) {
+    .config(['$routeProvider','$locationProvider', function ($routeProvider,$locationProvider) {
 
         $routeProvider.when('/history', {
             templateUrl: 'app/history/history.html',
@@ -12,6 +12,7 @@ angular.module('bulgarite.history', ['ngRoute'])
             templateUrl: 'app/article/addArticle/addArticle.html',
             controller: 'historyController'
         });
+        $locationProvider.html5Mode(true);
     }])
     .controller('historyController', [
         '$http',

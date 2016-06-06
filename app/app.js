@@ -15,8 +15,9 @@ angular.module('bulgarite', [
 
     'bulgarite.version'
 ])
-    .config(['$routeProvider', function ($routeProvider) {
+    .config(['$routeProvider','$locationProvider', function ($routeProvider,$locationProvider) {
         $routeProvider.otherwise({redirectTo: '/'});
+        $locationProvider.html5Mode(true);
     }])
     .constant('BASE_URL', 'https://baas.kinvey.com/user/kid_-kan4iP1b-/')
     .constant('KINVEY_CONFIG', {

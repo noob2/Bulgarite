@@ -1,3 +1,4 @@
+﻿
 <!DOCTYPE html>
 <!--[if lt IE 7]>
 <html lang="en" ng-app="bulgarite" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -9,6 +10,7 @@
 <html lang="en" ng-app="bulgarite" class="no-js"> <!--<![endif]-->
 <head>
     <meta charset="utf-8">
+    <base href="/">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Bulgarite BG</title>
     <meta name="description" content="">
@@ -24,18 +26,18 @@
 
 <div id="wrapper">
     <ul class="menu">
-        <li><a href="#/">Начало</a></li>
-        <li><a href="#/history">История</a></li>
-        <li><a href="#/landmarks">Забележителности</a></li>
-        <li><a href="#/population">Население</a></li>
-        <li><a href="#/economy">Икономика</a></li>
-        <li ng-hide="isLoggedIn"><a href="#/">Вход</a></li>
+        <li><a href="/">Начало</a></li>
+        <li><a href="/history">История</a></li>
+        <li><a href="/landmarks">Забележителности</a></li>
+        <li><a href="/population">Население</a></li>
+        <li><a href="/economy">Икономика</a></li>
+        <li ng-hide="isLoggedIn"><a href="/">Вход</a></li>
         <li ng-show="isLoggedIn"><a href="" ng-click="logoutUser()">Изход</a></li>
     </ul>
 
     <div ng-view id="currentPage"></div>
 
-    <footer>Copyright</footer>
+    <footer>&copy; Всички права не са запазени &copy;</footer>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>

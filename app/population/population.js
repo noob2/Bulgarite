@@ -2,7 +2,7 @@
 
 angular.module('bulgarite.population', ['ngRoute'])
 
-    .config(['$routeProvider', function($routeProvider) {
+    .config(['$routeProvider','$locationProvider', function($routeProvider,$locationProvider) {
         $routeProvider.when('/population', {
             templateUrl: 'app/population/population.html',
             controller: 'populationController'
@@ -11,6 +11,7 @@ angular.module('bulgarite.population', ['ngRoute'])
             templateUrl: 'app/article/addArticle/addArticle.html',
             controller: 'populationController'
         });
+        $locationProvider.html5Mode(true);
     }])
 
     .controller('populationController', [

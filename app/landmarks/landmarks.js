@@ -2,7 +2,7 @@
 
 angular.module('bulgarite.landmarks', ['ngRoute'])
 
-    .config(['$routeProvider', function ($routeProvider) {
+    .config(['$routeProvider','$locationProvider', function ($routeProvider,$locationProvider) {
         $routeProvider.when('/landmarks', {
             templateUrl: 'app/landmarks/landmarks.html',
             controller: 'landmarksController'
@@ -11,6 +11,7 @@ angular.module('bulgarite.landmarks', ['ngRoute'])
             templateUrl: 'app/article/addArticle/addArticle.html',
             controller: 'landmarksController'
         });
+        $locationProvider.html5Mode(true);
     }])
 
     .controller('landmarksController', [

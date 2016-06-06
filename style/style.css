@@ -118,7 +118,6 @@ body #wrapper #currentPage .economy-article .image img {
   width: inherit;
 }
 body #wrapper #currentPage .history-article {
-  color: gold;
   background-color: #363636;
   margin: 15px;
   display: inline-block;
@@ -132,6 +131,9 @@ body #wrapper #currentPage .history-article:hover {
 body #wrapper #currentPage .history-article h3 {
   color: white;
   border-bottom: double 10px;
+}
+body #wrapper #currentPage .history-article p {
+  color: gold;
 }
 body #wrapper #currentPage .history-article .image {
   width: 250px;
@@ -218,7 +220,6 @@ body #wrapper #currentPage #this-article p {
   margin: 0 0 15px 0;
   color: #c8def4;
   width: 90%;
-  margin: 0 auto;
 }
 body #wrapper #currentPage #this-article div img {
   border-radius: 70px 5px;
@@ -235,7 +236,7 @@ body #wrapper #currentPage .latest-articles {
   background-color: darkgreen;
   margin: 5px;
   display: inline-flex;
-  width: 250px;
+  width: 380px;
 }
 body #wrapper #currentPage .latest-articles:hover {
   background-color: #363636;
@@ -283,6 +284,7 @@ body #wrapper #currentPage #add-article-form img {
 }
 body #wrapper footer {
   background-color: #880000;
+  color: gold;
   border: solid white 3px;
   margin-top: 10px;
 }

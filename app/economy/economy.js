@@ -2,7 +2,7 @@
 
 angular.module('bulgarite.economy', ['ngRoute'])
 
-    .config(['$routeProvider', function($routeProvider) {
+    .config(['$routeProvider','$locationProvider', function($routeProvider,$locationProvider) {
         $routeProvider.when('/economy', {
             templateUrl: 'app/economy/economy.html',
             controller: 'economyController'
@@ -11,6 +11,7 @@ angular.module('bulgarite.economy', ['ngRoute'])
             templateUrl: 'app/article/addArticle/addArticle.html',
             controller: 'economyController'
         });
+        $locationProvider.html5Mode(true);
     }])
 
     .controller('economyController', [

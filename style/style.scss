@@ -126,7 +126,6 @@ body {
       }
 
       .history-article {
-        color: gold;
         background-color: #363636;
         margin: 15px;
         display: inline-block;
@@ -139,6 +138,9 @@ body {
         h3 {
           color: white;
           border-bottom: double 10px;
+        }
+        p{
+          color: gold;
         }
         .image {
           width: 250px;
@@ -230,7 +232,6 @@ body {
           margin: 0 0 15px 0;
           color: #c8def4;
           width: 90%;
-          margin: 0 auto
         }
         div{
           img{
@@ -250,7 +251,7 @@ body {
         background-color: darkgreen;
         margin: 5px;
         display: inline-flex;
-        width: 250px;
+        width: 380px;
         &:hover{
           background-color: #363636;
           cursor: pointer;
@@ -300,6 +301,7 @@ body {
 
     footer {
       background-color: #880000;
+      color: gold;
       border: solid white 3px;
       margin-top: 10px;
     }
