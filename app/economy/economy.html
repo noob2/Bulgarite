@@ -1,4 +1,4 @@
-<h2 ng-hide="isLoaded">Моля изчакайте . . .</h2>
+<h2 ng-hide="isLoaded" class="first-element">Моля изчакайте . . .</h2>
 
 <div ng-show="isLoaded">
     <article ng-repeat="article in articles" class="economy-article" ng-click="goToArticle(article._id)">
@@ -9,11 +9,11 @@
         <p>{{article.content}}</p>
     </article>
 
-    <div ng-if="!isLoggedIn">
-        <p>Искаш да добавиш статия или да редактираш някоя ? <a href="/home">Влез в акаунта си</a></p>
-    </div>
+    <p class="last-element" ng-if="!isLoggedIn">Искаш да добавиш статия или да редактираш някоя ? <a href="/home">Влез в акаунта си</a></p>
 
-    <a href="/economy/add-article" ng-if="isLoggedIn" id="add-article" type="button" ng-click="addArticle()">Добави
+
+    <a href="/economy/add-article" ng-if="isLoggedIn" id="add-article" type="button" ng-click="addArticle()"
+       class="last-element">Добави
         статия</a>
 </div>
 

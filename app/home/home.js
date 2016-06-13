@@ -20,14 +20,13 @@ angular.module('bulgarite.home', ['ngRoute'])
         function ($scope, $rootScope, authentication, $route, article, $location) {
             article.getLatestArticles(6)
                 .then(function (articles) {
-                    $scope.articles = articles.data;
+                    $scope.latestArticles = articles.data;
                 }).finally(function () {
                 $scope.isLoaded = true;
             });
 
             $scope.goToArticle = function (id) {
                 $location.path('article/'+id);
-                console.log(id);
             };
             
             if ($scope.isLoggedIn) {

@@ -1,0 +1,15 @@
+<div class="slider">
+    <div class="slide" ng-repeat="article in latestArticles" ng-show="article.visible" ng-click="goToArticle(article._id)">
+        <img ng-src="{{article.imgUrl}}">
+        <h3>{{article.header}}</h3>
+    </div>
+
+    <div class="arrows">
+        <a href="#" ng-click="prev()" id="left">
+            <img src="images/left-arrow.png"/>
+        </a>
+        <a href="#" ng-click="next()" id="right">
+            <img src="images/right-arrow.png"/>
+        </a>
+    </div>
+</div>

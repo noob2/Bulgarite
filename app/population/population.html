@@ -1,6 +1,7 @@
-<h2 ng-hide="isLoaded">Моля изчакайте . . .</h2>
+<h2 ng-hide="isLoaded" class="first-element">Моля изчакайте . . .</h2>
 
 <div ng-show="isLoaded">
+    <p class="first-element">hola</p>
     <article ng-repeat="article in articles" class="population-article" ng-click="goToArticle(article._id)">
         <h3>{{article.header}} - - - - - - Година:{{article.year}}</h3>
         <div class="image">
@@ -9,10 +10,11 @@
         <p>{{article.content}}</p>
     </article>
 
-    <div ng-if="!isLoggedIn">
-        <p>Искаш да добавиш статия или да редактираш някоя ? <a href="/home">Влез в акаунта си</a></p>
-    </div>
+    <p ng-if="!isLoggedIn" class="last-element">Искаш да добавиш статия или да редактираш някоя ? <a href="/home">Влез в
+        акаунта си</a></p>
 
-    <a href="/population/add-article" ng-if="isLoggedIn" id="add-article" type="button" ng-click="addArticle()">Добави статия</a>
+    <a href="/population/add-article" ng-if="isLoggedIn" id="add-article" type="button" ng-click="addArticle()"
+       class="last-element">Добави
+        статия</a>
 </div>
 

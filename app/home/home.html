@@ -26,14 +26,7 @@
     <h2 id="welcome-header">Добре дошъл, {{user}}!</h2>
 </div>
 
-<h2 id="last-added-articles">Последно добавени статии:</h2>
-<article ng-repeat="article in articles" class="latest-articles" ng-click="goToArticle(article._id)">
-    <div>
-        <h3>{{article.header}}</h3>
-        <div>
-            <img ng-src="{{article.imgUrl}}">
-        </div>
-
-    </div>
-
-</article>
+<div ng-controller="sliderController">
+    <h1>Последно добавени статии</h1>
+    <div slider></div>
+</div>

@@ -1,6 +1,7 @@
 'use strict';
 
 angular.module('bulgarite', [
+
     'ngRoute',
     'rzModule',
     'bulgarite.home',
@@ -13,7 +14,9 @@ angular.module('bulgarite', [
 
     'bulgarite.factory.article',
 
-    'bulgarite.version'
+    'bulgarite.directives.slider',
+
+    'ngAnimate'
 ])
     .config(['$routeProvider','$locationProvider', function ($routeProvider,$locationProvider) {
         $routeProvider.otherwise({redirectTo: '/'});

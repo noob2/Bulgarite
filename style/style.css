@@ -1,40 +1,50 @@
 body {
   background: url("../images/sila.jpg") no-repeat fixed center;
   background-size: 100%;
-  text-align: center;
   overflow-y: scroll;
 }
-body #wrapper {
-  width: 800px;
-  margin: 0 auto;
-  display: block;
-}
 body #wrapper .menu {
-  padding: 5px;
-  margin: 5px auto;
-  background-color: white;
-  display: inline-block;
+  margin: 0;
+  background-color: black;
+}
+body #wrapper .menu img {
+  height: 50px;
+  float: left;
 }
 body #wrapper .menu li {
   display: inline-flex;
 }
+body #wrapper .menu li:first-of-type {
+  margin-left: 55px;
+}
+body #wrapper .menu li:nth-last-of-type(-n+2) {
+  float: right;
+}
 body #wrapper .menu li a {
-  background-color: black;
   color: gold;
   font-weight: bold;
-  padding: 10px 20px;
+  padding: 17px 20px;
   text-decoration: none;
-  border-radius: 4px 4px 0 0;
 }
 body #wrapper .menu li a:hover {
-  background-color: orange;
+  background-color: #00A000;
 }
 body #wrapper #currentPage {
+  text-align: center;
   background-color: #00A000;
-  border: solid white 3px;
 }
 body #wrapper #currentPage #welcome-header {
   color: chartreuse;
+  margin-top: 0;
+}
+body #wrapper #currentPage .first-element {
+  margin: 0;
+  padding: 13px;
+  color: gold;
+  font-weight: 900;
+}
+body #wrapper #currentPage .last-element {
+  margin: 0;
 }
 body #wrapper #currentPage #login, body #wrapper #currentPage #register {
   height: 180px;
@@ -94,6 +104,8 @@ body #wrapper #currentPage #register {
   /* IE6-9 fallback on horizontal gradient */
 }
 body #wrapper #currentPage .economy-article {
+  height: 294px;
+  overflow: hidden;
   background-color: red;
   margin: 15px;
   display: inline-block;
@@ -118,6 +130,8 @@ body #wrapper #currentPage .economy-article .image img {
   width: inherit;
 }
 body #wrapper #currentPage .history-article {
+  height: 294px;
+  overflow: hidden;
   background-color: #363636;
   margin: 15px;
   display: inline-block;
@@ -152,7 +166,14 @@ body #wrapper #currentPage .rzslider .rz-pointer {
 body #wrapper #currentPage .rzslider .rz-bar.rz-selection {
   background-color: brown;
 }
+body #wrapper #currentPage #bulgaria-map {
+  width: 95%;
+  border-radius: 125px;
+  border: 10px solid black;
+}
 body #wrapper #currentPage .landmarks-article {
+  height: 294px;
+  overflow: hidden;
   background-color: red;
   margin: 15px;
   display: inline-block;
@@ -177,6 +198,8 @@ body #wrapper #currentPage .landmarks-article .image img {
   width: inherit;
 }
 body #wrapper #currentPage .population-article {
+  height: 294px;
+  overflow: hidden;
   background-color: red;
   margin: 15px;
   display: inline-block;
@@ -285,8 +308,75 @@ body #wrapper #currentPage #add-article-form img {
 body #wrapper footer {
   background-color: #880000;
   color: gold;
-  border: solid white 3px;
-  margin-top: 10px;
+  border-top: solid white 3px;
+  padding: 7px;
+  text-align: center;
+}
+
+.slide.ng-hide-add,
+.slide.ng-hide-remove {
+  -webkit-transition: all linear 0.5s;
+  -moz-transition: all linear 0.5s;
+  -o-transition: all linear 0.5s;
+  transition: all linear 0.5s;
+  display: block !important;
+}
+
+.slide.ng-hide-add.ng-hide-add-active,
+.slide.ng-hide-remove {
+  opacity: 0;
+}
+
+.slide.ng-hide-add,
+.slide.ng-hide-remove.ng-hide-remove-active {
+  opacity: 1;
+}
+
+.slider {
+  cursor: pointer;
+  position: relative;
+  width: 800px;
+  margin: 0 auto;
+  height: 550px;
+}
+.slider .slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+.slider .slide img {
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  margin: -5px -10px -10px -5px;
+  height: 500px;
+  margin: 0 auto;
+  width: 800px;
+}
+.slider .slide h3 {
+  position: inherit;
+  top: 30px;
+  margin: 0 auto;
+  width: 100%;
+  color: gold;
+  background-color: rgba(70, 219, 73, 0.4);
+}
+.slider .arrows {
+  position: inherit;
+  top: 217px;
+}
+.slider .arrows img {
+  height: 58px;
+}
+.slider .arrows #left {
+  margin-left: 10px;
+  float: left;
+}
+.slider .arrows #right {
+  float: right;
 }
 
 /*# sourceMappingURL=style.css.map */

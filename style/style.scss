@@ -8,48 +8,70 @@
   color: gold;
 }
 
+@mixin blur-by($px) {
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  margin: -5px -10px -10px -5px;
+}
+
 body {
 
   background: url('../images/sila.jpg') no-repeat fixed center;
   background-size: 100%;
-  text-align: center;
+
   overflow-y: scroll;
 
   #wrapper {
-    width: 800px;
-    margin: 0 auto;
-    display: block;
-
     .menu {
-      padding: 5px;
-      margin: 5px auto;
-      background-color: white;
-      display: inline-block;
+      margin: 0;
+      background-color: black;
+      img {
+        height: 50px;
+        float: left;
+      }
 
       li {
         display: inline-flex;
 
+        &:first-of-type {
+          margin-left: 55px;
+        }
+        &:nth-last-of-type(-n+2) {
+          float: right;
+        }
         a {
-          background-color: black;
           color: gold;
           font-weight: bold;
-          padding: 10px 20px;
+          padding: 17px 20px;
           text-decoration: none;
-          border-radius: 4px 4px 0 0;
 
           &:hover {
-            background-color: orange;
+            background-color: #00A000;
           }
         }
       }
     }
 
     #currentPage {
+      text-align: center;
       background-color: #00A000;
-      border: solid white 3px;
 
-      #welcome-header{
+      #welcome-header {
         color: chartreuse;
+        margin-top: 0;
+      }
+
+      .first-element {
+        margin: 0;
+        padding: 13px;
+        color: gold;
+        font-weight: 900;
+      }
+      .last-element {
+        margin: 0;
       }
 
       #login, #register {
@@ -99,12 +121,14 @@ body {
       }
 
       .economy-article {
+        height: 294px;
+        overflow: hidden;
         background-color: red;
         margin: 15px;
         display: inline-block;
         border-radius: 10px;
         border: solid white 3px;
-        &:hover{
+        &:hover {
           background-color: #363636;
           cursor: pointer;
         }
@@ -126,12 +150,14 @@ body {
       }
 
       .history-article {
+        height: 294px;
+        overflow: hidden;
         background-color: #363636;
         margin: 15px;
         display: inline-block;
         border-radius: 10px;
         border: solid white 3px;
-        &:hover{
+        &:hover {
           background-color: darkgoldenrod;
           cursor: pointer;
         }
@@ -139,7 +165,7 @@ body {
           color: white;
           border-bottom: double 10px;
         }
-        p{
+        p {
           color: gold;
         }
         .image {
@@ -160,13 +186,23 @@ body {
       .rzslider .rz-bar.rz-selection {
         background-color: brown;
       }
+
+      #bulgaria-map{
+        width: 95%;
+        border-radius: 125px;
+        border: 10px solid black;
+      }
       .landmarks-article {
+        height: 294px;
+        overflow: hidden;
         background-color: red;
         margin: 15px;
         display: inline-block;
         border-radius: 10px;
         border: solid white 3px;
-        &:hover{
+
+
+        &:hover {
           background-color: #363636;
           cursor: pointer;
         }
@@ -188,12 +224,15 @@ body {
       }
 
       .population-article {
+        height: 294px;
+        overflow: hidden;
+
         background-color: red;
         margin: 15px;
         display: inline-block;
         border-radius: 10px;
         border: solid white 3px;
-        &:hover{
+        &:hover {
           background-color: #363636;
           cursor: pointer;
         }
@@ -214,32 +253,33 @@ body {
         }
       }
 
-      #last-added-articles{
+      #last-added-articles {
         color: white;
         margin-bottom: 0px;
       }
-      #this-article{
+      #this-article {
         background-color: black;
         border: 17px solid black;
-        h2{
-          margin: 7px;
-          color: gold;
-        }h3{
+        h2 {
           margin: 7px;
           color: gold;
         }
-        p{
+        h3 {
+          margin: 7px;
+          color: gold;
+        }
+        p {
           margin: 0 0 15px 0;
           color: #c8def4;
           width: 90%;
         }
-        div{
-          img{
+        div {
+          img {
             border-radius: 70px 5px;
             width: 100%;
           }
         }
-        button{
+        button {
           color: gold;
           background-color: black;
           border-radius: 5px;
@@ -252,12 +292,12 @@ body {
         margin: 5px;
         display: inline-flex;
         width: 380px;
-        &:hover{
+        &:hover {
           background-color: #363636;
           cursor: pointer;
         }
-        div{
-          width:100%;
+        div {
+          width: 100%;
           h3 {
             color: floralwhite;
             margin: 4px;
@@ -302,8 +342,73 @@ body {
     footer {
       background-color: #880000;
       color: gold;
-      border: solid white 3px;
-      margin-top: 10px;
+      border-top: solid white 3px;
+
+      padding: 7px;
+      text-align: center;
     }
   }
+}
+
+.slide.ng-hide-add,
+.slide.ng-hide-remove {
+  -webkit-transition: all linear 0.5s;
+  -moz-transition: all linear 0.5s;
+  -o-transition: all linear 0.5s;
+  transition: all linear 0.5s;
+  display: block !important;
+}
+
+.slide.ng-hide-add.ng-hide-add-active,
+.slide.ng-hide-remove {
+  opacity: 0;
+}
+
+.slide.ng-hide-add,
+.slide.ng-hide-remove.ng-hide-remove-active {
+  opacity: 1;
+}
+
+.slider {
+  cursor: pointer;
+  position: relative;
+  width: 800px;
+  margin: 0 auto;
+  height: 550px;
+  .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    img {
+      @include blur-by(5px);
+      height: 500px;
+      margin: 0 auto;
+      width: 800px;
+    }
+    h3 {
+      position: inherit;
+      top: 30px;
+      margin: 0 auto;
+      width: 100%;
+      color: gold;
+      background-color: rgba(70, 219, 73, 0.4);
+    }
+  }
+  .arrows {
+    position: inherit;
+    top: 217px;
+    img {
+      height: 58px;
+
+    }
+    #left {
+      margin-left: 10px;
+      float: left;
+    }
+    #right {
+      float: right;
+    }
+  }
+
 }

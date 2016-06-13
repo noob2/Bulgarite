@@ -1,7 +1,7 @@
-<h2 ng-hide="isLoaded">Моля изчакайте . . .</h2>
+<h2 ng-hide="isLoaded" class="first-element">Моля изчакайте . . .</h2>
 
 <div ng-show="isLoaded">
-    <h4>Изберете период от историята:</h4>
+    <h4 class="first-element">Изберете период от историята:</h4>
     <rzslider
             rz-slider-model="slider.min"
             rz-slider-high="slider.max"
@@ -16,11 +16,9 @@
         <p>{{article.content}}</p>
     </article>
 
-    <div ng-if="!isLoggedIn">
-        <p>Искаш да добавиш статия или да редактираш някоя ? <a href="/home">Влез в акаунта си</a></p>
-    </div>
+        <p ng-if="!isLoggedIn" class="last-element">Искаш да добавиш статия или да редактираш някоя ? <a href="/home">Влез в акаунта си</a></p>
 
-    <a href="/history/add-article" ng-if="isLoggedIn" id="add-article" type="button" ng-click="addArticle()">Добави
+    <a href="/history/add-article" ng-if="isLoggedIn" id="add-article" type="button" ng-click="addArticle()" class="last-element">Добави
         статия</a>
 </div>
 
