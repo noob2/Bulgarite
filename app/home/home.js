@@ -7,7 +7,6 @@ angular.module('bulgarite.home', ['ngRoute'])
             templateUrl: 'app/home/home.html',
             controller: 'homeController'
         });
-        $locationProvider.html5Mode(true);
     }])
 
     .controller('homeController', [

@@ -167,9 +167,15 @@ body #wrapper #currentPage .rzslider .rz-bar.rz-selection {
   background-color: brown;
 }
 body #wrapper #currentPage #bulgaria-map {
-  width: 95%;
-  border-radius: 125px;
-  border: 10px solid black;
+  position: relative;
+}
+body #wrapper #currentPage #bulgaria-map img, body #wrapper #currentPage #bulgaria-map canvas {
+  width: 90%;
+}
+body #wrapper #currentPage #bulgaria-map canvas {
+  left: 5%;
+  position: absolute;
+  height: 99%;
 }
 body #wrapper #currentPage .landmarks-article {
   height: 294px;
@@ -302,7 +308,6 @@ body #wrapper #currentPage #add-article-form button {
   margin: 5px auto;
 }
 body #wrapper #currentPage #add-article-form img {
-  max-height: 300px;
   border-radius: 20px;
 }
 body #wrapper footer {

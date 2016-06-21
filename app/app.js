@@ -1,14 +1,21 @@
 'use strict';
 
 angular.module('bulgarite', [
-
     'ngRoute',
+    
     'rzModule',
     'bulgarite.home',
+    
     'bulgarite.history',
+    'bulgarite.history.addArticle',
+    
     'bulgarite.landmarks',
+    'bulgarite.landmarks.addArticle',
+    
     'bulgarite.population',
+    
     'bulgarite.economy',
+    
     'bulgarite.article',
     'bulgarite.users.authentication',
 
@@ -20,7 +27,6 @@ angular.module('bulgarite', [
 ])
     .config(['$routeProvider','$locationProvider', function ($routeProvider,$locationProvider) {
         $routeProvider.otherwise({redirectTo: '/'});
-        $locationProvider.html5Mode(true);
     }])
     .constant('BASE_URL', 'https://baas.kinvey.com/user/kid_-kan4iP1b-/')
     .constant('KINVEY_CONFIG', {

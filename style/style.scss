@@ -188,9 +188,18 @@ body {
       }
 
       #bulgaria-map{
-        width: 95%;
-        border-radius: 125px;
-        border: 10px solid black;
+        position: relative;
+        img,canvas{
+          width: 90%;
+        }
+        img{
+        }
+        canvas{
+          left: 5%;
+          position: absolute;
+          height: 99%;
+        }
+
       }
       .landmarks-article {
         height: 294px;
@@ -333,7 +342,6 @@ body {
           margin: 5px auto;
         }
         img {
-          max-height: 300px;
           border-radius: 20px;
         }
       }

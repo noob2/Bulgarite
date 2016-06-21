@@ -8,10 +8,9 @@ angular.module('bulgarite.population', ['ngRoute'])
             controller: 'populationController'
         });
         $routeProvider.when('/population/add-article', {
-            templateUrl: 'app/article/addArticle/addArticle.html',
+            templateUrl: 'app/article/addArticle/add-history-article.html',
             controller: 'populationController'
         });
-        $locationProvider.html5Mode(true);
     }])
 
     .controller('populationController', [

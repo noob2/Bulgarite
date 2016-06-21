@@ -8,10 +8,9 @@ angular.module('bulgarite.economy', ['ngRoute'])
             controller: 'economyController'
         });
         $routeProvider.when('/economy/add-article', {
-            templateUrl: 'app/article/addArticle/addArticle.html',
+            templateUrl: 'app/article/addArticle/add-history-article.html',
             controller: 'economyController'
         });
-        $locationProvider.html5Mode(true);
     }])
 
     .controller('economyController', [

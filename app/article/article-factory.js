@@ -73,13 +73,31 @@ angular.module('bulgarite.factory.article', [])
 
                 return deferred.promise;
             }
+            function addLandmarkArticle(article, parallel, meridian) {
+                var deferred = $q.defer();
+
+                article.coordinate = {};
+                article.coordinate.parallel = parallel;
+                article.coordinate.meridian = meridian;
+
+                $http.defaults.headers.common.Authorization = KINVEY_CONFIG['UserCredentials'];
+                $http.post('https://baas.kinvey.com/appdata/kid_-kan4iP1b-/articles', article)
+                    .then(function (articles) {
+                        deferred.resolve(articles)
+                    }, function (err) {
+                        deferred.resolve(err)
+                    });
+
+                return deferred.promise;
+            }
 
             return {
                 getAllArticlesFromCategory: getAllArticlesFromCategory,
                 getAllHistoryArticlesFromPeriod: getAllHistoryArticlesFromPeriod,
                 getLatestArticles: getLatestArticles,
                 getArticleById: getArticleById,
-                addArticle: addArticle
+                addArticle: addArticle,
+                addLandmarkArticle: addLandmarkArticle
             }
         }
     ]);

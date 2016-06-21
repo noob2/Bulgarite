@@ -4,7 +4,6 @@ angular.module('bulgarite.directives.slider', ['ngRoute'])
             .then(function (articles) {
                 $scope.latestArticles = articles.data;
             })
-
     }])
     .directive('slider', function ($timeout) {
         return {

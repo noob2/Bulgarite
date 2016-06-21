@@ -9,16 +9,17 @@
     </rzslider>
 
     <article ng-repeat="article in articles" class="history-article" ng-click="goToArticle(article._id)">
-        <h3>{{article.header}} - - - - - - Година:{{article.year}}</h3>
+        <h3>{{article.header}}</h3>
+        <h3>Година: {{article.year}}</h3>
         <div class="image">
             <img ng-src="{{article.imgUrl}}">
         </div>
         <p>{{article.content}}</p>
     </article>
 
-        <p ng-if="!isLoggedIn" class="last-element">Искаш да добавиш статия или да редактираш някоя ? <a href="/home">Влез в акаунта си</a></p>
+        <p ng-if="!isLoggedIn" class="last-element">Искаш да добавиш статия или да редактираш някоя ? <a href="#/home">Влез в акаунта си</a></p>
 
-    <a href="/history/add-article" ng-if="isLoggedIn" id="add-article" type="button" ng-click="addArticle()" class="last-element">Добави
+    <a href="#/history/add-article" ng-if="isLoggedIn" id="add-article" type="button" ng-click="addArticle()" class="last-element">Добави
         статия</a>
 </div>
 
