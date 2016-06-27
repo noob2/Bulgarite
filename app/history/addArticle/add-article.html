@@ -2,7 +2,7 @@
     <input type="text" ng-model="article.header" placeholder="Заглавие" required/>
     <input type="number" ng-model="article.year" placeholder="Година" required/>
     <input type="text" ng-model="article.imgUrl" placeholder="URL на картинка" required/>
-    <img ng-src="{{article.imgUrl}}"/>
+    <img ng-src="{{article.imgUrl}}" id="article-image"/>
     <textarea ng-model="article.content" placeholder="Съдържание на статията" required></textarea>
     <button type="submit" ng-click="addArticle(article)" ng-disabled="articleForm.$invalid">Добави статията</button>
 </form>

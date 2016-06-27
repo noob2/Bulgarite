@@ -45,6 +45,6 @@ angular.module('bulgarite.directives.slider', ['ngRoute'])
                     $timeout.cancel(timer); // when the scope is getting destroyed, cancel the timer
                 });
             },
-            templateUrl: 'app/directives/slider-template.html'
+            templateUrl: 'app/directives/slideshow/slideshow-template.html'
         };
     });

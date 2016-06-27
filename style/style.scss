@@ -8,15 +8,6 @@
   color: gold;
 }
 
-@mixin blur-by($px) {
-  filter: blur(5px);
-  -webkit-filter: blur(5px);
-  -moz-filter: blur(5px);
-  -o-filter: blur(5px);
-  -ms-filter: blur(5px);
-  margin: -5px -10px -10px -5px;
-}
-
 body {
 
   background: url('../images/sila.jpg') no-repeat fixed center;
@@ -60,7 +51,7 @@ body {
       background-color: #00A000;
 
       #welcome-header {
-        color: chartreuse;
+        color: gold;
         margin-top: 0;
       }
 
@@ -72,6 +63,10 @@ body {
       }
       .last-element {
         margin: 0;
+      }
+
+      h4{
+        color: gold;
       }
 
       #login, #register {
@@ -187,20 +182,6 @@ body {
         background-color: brown;
       }
 
-      #bulgaria-map{
-        position: relative;
-        img,canvas{
-          width: 90%;
-        }
-        img{
-        }
-        canvas{
-          left: 5%;
-          position: absolute;
-          height: 99%;
-        }
-
-      }
       .landmarks-article {
         height: 294px;
         overflow: hidden;
@@ -209,7 +190,6 @@ body {
         display: inline-block;
         border-radius: 10px;
         border: solid white 3px;
-
 
         &:hover {
           background-color: #363636;
@@ -266,7 +246,7 @@ body {
         color: white;
         margin-bottom: 0px;
       }
-      #this-article {
+      #article-page {
         background-color: black;
         border: 17px solid black;
         h2 {
@@ -284,8 +264,7 @@ body {
         }
         div {
           img {
-            border-radius: 70px 5px;
-            width: 100%;
+            width: 90%;
           }
         }
         button {
@@ -326,7 +305,7 @@ body {
         display: inline-block;
       }
 
-      #add-article-form {
+      #add-article-form,#edit-article-form {
         input {
           display: block;
           margin: 5px auto;
@@ -341,8 +320,55 @@ body {
           display: block;
           margin: 5px auto;
         }
-        img {
-          border-radius: 20px;
+        #article-image {
+          max-width: 80%;
+          border: 7px solid black;
+        }
+      }
+
+      #bulgaria-map {
+        margin: 0 auto;
+        width: 90%;
+        position: relative;
+        #map {
+          position: relative;
+          width: 100%;
+        }
+        div {
+          position: absolute;
+          p{
+            display: none;
+            transition: width 2s;
+          }
+          .landmark-image {
+            transition: all .2s ease-in-out;
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+          }
+
+          &:hover {
+            cursor: pointer;
+            p{
+              width: 200px;
+              display: block;
+              position: inherit;
+              background-color: gold;
+              color: forestgreen;
+              z-index: 2;
+              left: -74px;
+              top: -80px;
+            }
+            img{
+              transform: scale(3.5);
+            }
+          }
+        }
+
+        #location-pointer {
+          width: 50px;
+          height: 50px;
+          position: absolute;
         }
       }
     }
@@ -389,7 +415,6 @@ body {
     left: 0;
     overflow: hidden;
     img {
-      @include blur-by(5px);
       height: 500px;
       margin: 0 auto;
       width: 800px;
@@ -406,10 +431,11 @@ body {
   .arrows {
     position: inherit;
     top: 217px;
-    img {
-      height: 58px;
 
+    #left,#right{
+      height: 58px;
     }
+
     #left {
       margin-left: 10px;
       float: left;

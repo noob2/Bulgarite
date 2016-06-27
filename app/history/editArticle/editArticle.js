@@ -1,15 +1,15 @@
 'use strict';
 
-angular.module('bulgarite.article.page', ['ngRoute'])
+angular.module('bulgarite.history.editArticle', ['ngRoute'])
 
     .config(['$routeProvider', function ($routeProvider) {
-        $routeProvider.when('/article/:id', {
-            templateUrl: 'app/article/articlePage/articlePage.html',
-            controller: 'articlePageController'
+        $routeProvider.when('/history/article/:id/editArticle', {
+            templateUrl: 'app/history/editArticle/editArticle.html',
+            controller: 'editHistoryArticleController'
         });
     }])
 
-    .controller('articlePageController', [
+    .controller('editHistoryArticleController', [
         '$scope',
         '$rootScope',
         'authentication',
@@ -25,7 +25,10 @@ angular.module('bulgarite.article.page', ['ngRoute'])
                 $scope.isLoaded = true;
             });
 
-            $scope.editArticle = function (category) {
-                $location.path(category+'/article/'+$routeParams.id+'/editArticle');
-            }
+            $scope.editArticle = function (art) {
+                article.editHistoryArticle(art)
+                    .then(function (success) {
+                        $location.path('/history');
+                    });
+            };
         }]);

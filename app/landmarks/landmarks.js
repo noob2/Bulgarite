@@ -17,7 +17,6 @@ angular.module('bulgarite.landmarks', ['ngRoute'])
             
             $scope.goToArticle = function (id) {
                 $location.path('article/' + id);
-                console.log(id);
             };
 
             article.getAllArticlesFromCategory('landmarks')
@@ -25,5 +24,5 @@ angular.module('bulgarite.landmarks', ['ngRoute'])
                     $scope.articles = articles.data;
                 }).finally(function () {
                 $scope.isLoaded = true;
-            })
+            });
         }]);

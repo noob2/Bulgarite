@@ -73,9 +73,10 @@ angular.module('bulgarite.factory.article', [])
 
                 return deferred.promise;
             }
+
             function addLandmarkArticle(article, parallel, meridian) {
                 var deferred = $q.defer();
-
+                article.category = 'landmarks';
                 article.coordinate = {};
                 article.coordinate.parallel = parallel;
                 article.coordinate.meridian = meridian;
@@ -91,13 +92,44 @@ angular.module('bulgarite.factory.article', [])
                 return deferred.promise;
             }
 
+            function editLandmarkArticle(article, parallel, meridian, id) {
+                var deferred = $q.defer();
+                article.coordinate = {};
+                article.coordinate.parallel = parallel;
+                article.coordinate.meridian = meridian;
+                
+                $http.defaults.headers.common.Authorization = KINVEY_CONFIG['UserCredentials'];
+                $http.put('https://baas.kinvey.com/appdata/kid_-kan4iP1b-/articles/'+id , article)
+                    .then(function (articles) {
+                        deferred.resolve(articles)
+                    }, function (err) {
+                        deferred.resolve(err)
+                    });
+                return deferred.promise;
+            }
+
+            function editHistoryArticle(article) {
+                var deferred = $q.defer();
+
+                $http.defaults.headers.common.Authorization = KINVEY_CONFIG['UserCredentials'];
+                $http.put('https://baas.kinvey.com/appdata/kid_-kan4iP1b-/articles/'+article._id , article)
+                    .then(function (articles) {
+                        deferred.resolve(articles)
+                    }, function (err) {
+                        deferred.resolve(err)
+                    });
+                return deferred.promise;
+            }
+
             return {
                 getAllArticlesFromCategory: getAllArticlesFromCategory,
                 getAllHistoryArticlesFromPeriod: getAllHistoryArticlesFromPeriod,
                 getLatestArticles: getLatestArticles,
                 getArticleById: getArticleById,
                 addArticle: addArticle,
-                addLandmarkArticle: addLandmarkArticle
+                addLandmarkArticle: addLandmarkArticle,
+                editLandmarkArticle: editLandmarkArticle,
+                editHistoryArticle: editHistoryArticle
             }
         }
     ]);

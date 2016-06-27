@@ -8,20 +8,23 @@ angular.module('bulgarite', [
     
     'bulgarite.history',
     'bulgarite.history.addArticle',
+    'bulgarite.history.editArticle',
     
     'bulgarite.landmarks',
     'bulgarite.landmarks.addArticle',
+    'bulgarite.landmarks.editArticle',
     
     'bulgarite.population',
     
     'bulgarite.economy',
     
-    'bulgarite.article',
+    'bulgarite.article.page',
     'bulgarite.users.authentication',
 
     'bulgarite.factory.article',
 
     'bulgarite.directives.slider',
+    'bulgarite.directives.bulgariaMap',
 
     'ngAnimate'
 ])

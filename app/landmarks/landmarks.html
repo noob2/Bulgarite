@@ -1,18 +1,23 @@
 <h2 ng-hide="isLoaded" class="first-element">Моля изчакайте . . .</h2>
 
 <div ng-show="isLoaded">
-  <h4 class="first-element">Изберете забележителност на картата:</h4>
-  <img ng-src="images/bulgaria-map.png" id="bulgaria-map">
-  <article ng-repeat="article in articles" class="landmarks-article" ng-click="goToArticle(article._id)">
-    <h3>{{article.header}}</h3>
-    <div class="image">
-      <img ng-src="{{article.imgUrl}}">
-    </div>
-    <p>{{article.content}}</p>
-  </article>
+    <h4 class="first-element">Забележителности на картата:</h4>
+    <div bulgaria-map></div>
 
-    <p ng-if="!isLoggedIn" class="last-element">Искаш да добавиш статия или да редактираш някоя ? <a href="#/home">Влез в акаунта си</a></p>
+    <h4>Последно добавени:</h4>
 
-  <a href="#/landmarks/add-article" ng-if="isLoggedIn" id="add-article" type="button" ng-click="addArticle()" class="last-element">Добави статия</a>
+    <article ng-repeat="article in articles" class="landmarks-article" ng-click="goToArticle(article._id)">
+        <h3>{{article.header}}</h3>
+        <div class="image">
+            <img ng-src="{{article.imgUrl}}">
+        </div>
+        <p>{{article.content}}</p>
+    </article>
+
+    <p ng-if="!isLoggedIn" class="last-element">Искаш да добавиш статия или да редактираш някоя ? <a href="#/home">Влез
+        в акаунта си</a></p>
+
+    <a href="#/landmarks/add-article" ng-if="isLoggedIn" id="add-article" type="button" ng-click="addArticle()"
+       class="last-element">Добави статия</a>
 </div>
 

@@ -34,7 +34,7 @@ body #wrapper #currentPage {
   background-color: #00A000;
 }
 body #wrapper #currentPage #welcome-header {
-  color: chartreuse;
+  color: gold;
   margin-top: 0;
 }
 body #wrapper #currentPage .first-element {
@@ -45,6 +45,9 @@ body #wrapper #currentPage .first-element {
 }
 body #wrapper #currentPage .last-element {
   margin: 0;
+}
+body #wrapper #currentPage h4 {
+  color: gold;
 }
 body #wrapper #currentPage #login, body #wrapper #currentPage #register {
   height: 180px;
@@ -166,17 +169,6 @@ body #wrapper #currentPage .rzslider .rz-pointer {
 body #wrapper #currentPage .rzslider .rz-bar.rz-selection {
   background-color: brown;
 }
-body #wrapper #currentPage #bulgaria-map {
-  position: relative;
-}
-body #wrapper #currentPage #bulgaria-map img, body #wrapper #currentPage #bulgaria-map canvas {
-  width: 90%;
-}
-body #wrapper #currentPage #bulgaria-map canvas {
-  left: 5%;
-  position: absolute;
-  height: 99%;
-}
 body #wrapper #currentPage .landmarks-article {
   height: 294px;
   overflow: hidden;
@@ -233,28 +225,27 @@ body #wrapper #currentPage #last-added-articles {
   color: white;
   margin-bottom: 0px;
 }
-body #wrapper #currentPage #this-article {
+body #wrapper #currentPage #article-page {
   background-color: black;
   border: 17px solid black;
 }
-body #wrapper #currentPage #this-article h2 {
+body #wrapper #currentPage #article-page h2 {
   margin: 7px;
   color: gold;
 }
-body #wrapper #currentPage #this-article h3 {
+body #wrapper #currentPage #article-page h3 {
   margin: 7px;
   color: gold;
 }
-body #wrapper #currentPage #this-article p {
+body #wrapper #currentPage #article-page p {
   margin: 0 0 15px 0;
   color: #c8def4;
   width: 90%;
 }
-body #wrapper #currentPage #this-article div img {
-  border-radius: 70px 5px;
-  width: 100%;
+body #wrapper #currentPage #article-page div img {
+  width: 90%;
 }
-body #wrapper #currentPage #this-article button {
+body #wrapper #currentPage #article-page button {
   color: gold;
   background-color: black;
   border-radius: 5px;
@@ -293,22 +284,66 @@ body #wrapper #currentPage #add-article {
   text-decoration: none;
   display: inline-block;
 }
-body #wrapper #currentPage #add-article-form input {
+body #wrapper #currentPage #add-article-form input, body #wrapper #currentPage #edit-article-form input {
   display: block;
   margin: 5px auto;
 }
-body #wrapper #currentPage #add-article-form textarea {
+body #wrapper #currentPage #add-article-form textarea, body #wrapper #currentPage #edit-article-form textarea {
   display: block;
   margin: 5px auto;
   width: 550px;
   height: 260px;
 }
-body #wrapper #currentPage #add-article-form button {
+body #wrapper #currentPage #add-article-form button, body #wrapper #currentPage #edit-article-form button {
   display: block;
   margin: 5px auto;
 }
-body #wrapper #currentPage #add-article-form img {
-  border-radius: 20px;
+body #wrapper #currentPage #add-article-form #article-image, body #wrapper #currentPage #edit-article-form #article-image {
+  max-width: 80%;
+  border: 7px solid black;
+}
+body #wrapper #currentPage #bulgaria-map {
+  margin: 0 auto;
+  width: 90%;
+  position: relative;
+}
+body #wrapper #currentPage #bulgaria-map #map {
+  position: relative;
+  width: 100%;
+}
+body #wrapper #currentPage #bulgaria-map div {
+  position: absolute;
+}
+body #wrapper #currentPage #bulgaria-map div p {
+  display: none;
+  transition: width 2s;
+}
+body #wrapper #currentPage #bulgaria-map div .landmark-image {
+  transition: all .2s ease-in-out;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+}
+body #wrapper #currentPage #bulgaria-map div:hover {
+  cursor: pointer;
+}
+body #wrapper #currentPage #bulgaria-map div:hover p {
+  width: 200px;
+  display: block;
+  position: inherit;
+  background-color: gold;
+  color: forestgreen;
+  z-index: 2;
+  left: -74px;
+  top: -80px;
+}
+body #wrapper #currentPage #bulgaria-map div:hover img {
+  transform: scale(3.5);
+}
+body #wrapper #currentPage #bulgaria-map #location-pointer {
+  width: 50px;
+  height: 50px;
+  position: absolute;
 }
 body #wrapper footer {
   background-color: #880000;
@@ -351,12 +386,6 @@ body #wrapper footer {
   overflow: hidden;
 }
 .slider .slide img {
-  filter: blur(5px);
-  -webkit-filter: blur(5px);
-  -moz-filter: blur(5px);
-  -o-filter: blur(5px);
-  -ms-filter: blur(5px);
-  margin: -5px -10px -10px -5px;
   height: 500px;
   margin: 0 auto;
   width: 800px;
@@ -373,7 +402,7 @@ body #wrapper footer {
   position: inherit;
   top: 217px;
 }
-.slider .arrows img {
+.slider .arrows #left, .slider .arrows #right {
   height: 58px;
 }
 .slider .arrows #left {

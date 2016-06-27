@@ -36,7 +36,6 @@ angular.module('bulgarite.history', ['ngRoute'])
 
             $scope.goToArticle = function (id) {
                 $location.path('article/' + id);
-                console.log(id);
             };
 
             article.getAllArticlesFromCategory('history')

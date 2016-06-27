@@ -1,14 +1,12 @@
 <form id="add-article-form" ng-controller="historyController" name="articleForm" class="first-element">
-    <p>Изберете върху картата местоположението на забележителността:</p>
-    <div id="bulgaria-map">
-        <img ng-src="images/bulgaria-map.png">
-        <canvas id="bulgaria-map-canvas" ng-click="setCoordinates($event)"></canvas>
-    </div>
+    <p>Изберете местоположението на забележителността:</p>
+    <div bulgaria-map></div>
     <p>Координати:</p>
-    <input type="text" ng-model="parallel" id="parallel" ng-change="updateDot()" placeholder="Широта" required/>
-    <input type="text" ng-model="meridian" id="meridian" ng-change="updateDot()" placeholder="Дължина" required/>
+    <input type="text" ng-model="parallel" id="parallel" placeholder="Широта" required/>
+    <input type="text" ng-model="meridian" id="meridian" placeholder="Дължина" required/>
     <input type="text" ng-model="article.header" placeholder="Заглавие" required/>
     <input type="text" ng-model="article.imgUrl" placeholder="URL на картинка" required/>
+    <img ng-src="{{article.imgUrl}}" id="article-image"/>
     <textarea ng-model="article.content" placeholder="Съдържание на статията" required></textarea>
     <button type="submit" ng-click="addLandmarkArticle(article,parallel,meridian)" ng-disabled="articleForm.$invalid">Добави статията</button>
 </form>
