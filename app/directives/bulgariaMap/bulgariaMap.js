@@ -44,7 +44,7 @@ angular.module('bulgarite.directives.bulgariaMap', ['ngRoute'])
                     var clickedMeridian = mapTopLeftDegreeY + ((mapLowerRightDegreeY - mapTopLeftDegreeY) * ($event.offsetY / $event.srcElement.clientHeight ));
 
                     scope.clicked = true;
-                    
+
 
                     //if it is add article page
                     var $parallel = $("#parallel");
