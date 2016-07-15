@@ -26,6 +26,7 @@ angular.module('bulgarite', [
 
     'bulgarite.directives.slider',
     'bulgarite.directives.bulgariaMap',
+    'bulgarite.directives.loginOrAddArticle',
 
     'ngAnimate'
 ])

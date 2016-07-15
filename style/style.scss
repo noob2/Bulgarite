@@ -308,6 +308,9 @@ html {
           @include green-button;
           text-decoration: none;
           display: inline-block;
+          &:hover{
+            cursor: pointer;
+          }
         }
 
         #add-article-form,#edit-article-form {

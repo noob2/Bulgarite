@@ -292,6 +292,9 @@ html body #wrapper #currentPage #add-article {
   text-decoration: none;
   display: inline-block;
 }
+html body #wrapper #currentPage #add-article:hover {
+  cursor: pointer;
+}
 html body #wrapper #currentPage #add-article-form input, html body #wrapper #currentPage #edit-article-form input {
   display: block;
   margin: 5px auto;

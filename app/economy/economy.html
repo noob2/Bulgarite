@@ -9,11 +9,6 @@
         <p>{{article.content}}</p>
     </article>
 
-    <p class="last-element" ng-if="!isLoggedIn">Искаш да добавиш статия или да редактираш някоя ? <a href="/home">Влез в акаунта си</a></p>
-
-
-    <a href="/economy/add-article" ng-if="isLoggedIn" id="add-article" type="button" ng-click="addArticle()"
-       class="last-element">Добави
-        статия</a>
+    <login-or-add-article>
 </div>
 
