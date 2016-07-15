@@ -14,7 +14,8 @@ angular.module('bulgarite.landmarks', ['ngRoute'])
         'article',
         '$location',
         function ($scope, article, $location) {
-            
+
+
             $scope.goToArticle = function (id) {
                 $location.path('article/' + id);
             };

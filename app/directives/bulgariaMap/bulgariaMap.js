@@ -28,7 +28,7 @@ angular.module('bulgarite.directives.bulgariaMap', ['ngRoute'])
             })
         }
     }])
-    .directive('bulgariaMap', function () {
+    .directive('bulgariaMap', function ($timeout) {
         return {
             controller: 'bulgariaMapController',
             restrict: 'AE',

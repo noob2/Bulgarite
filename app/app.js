@@ -5,6 +5,7 @@ angular.module('bulgarite', [
     
     'rzModule',
     'bulgarite.home',
+    'bulgarite.account',
     
     'bulgarite.history',
     'bulgarite.history.addArticle',

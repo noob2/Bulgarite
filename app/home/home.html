@@ -1,32 +1,8 @@
-﻿<div ng-if="!isLoggedIn">
-    <div id="login">
-
-        <form name="loginUserForm">
-            <h3>Вход</h3>
-            <input type="text" placeholder="Потребител" required="required" ng-model="login.username"/>
-            <input type="password" placeholder="Парола" required="required" ng-model="login.password"/>
-            <button type="button" ng-disabled="loginUserForm.$invalid" ng-click="loginUser(login)">Вход</button>
-        </form>
-    </div>
-
-    <div id="register">
-
-        <form name="registerUserForm">
-            <h3>Регистрация</h3>
-            <input type="text" placeholder="Потребител" required="required" ng-model="register.username"/>
-            <input type="text" placeholder="Име" required="required" ng-model="register.name"/>
-            <input type="password" placeholder="Парола" required="required" ng-model="register.password"/>
-            <button type="button" ng-disabled="registerUserForm.$invalid" ng-click="registerUser(register)">Регистрирай се
-            </button>
-        </form>
-    </div>
+﻿<div ng-if="isLoggedIn" class="first-element">
+    <h2 id="welcome-header" >Добре дошъл, {{user}}!</h2>
 </div>
 
-<div ng-if="isLoggedIn">
-    <h2 id="welcome-header">Добре дошъл, {{user}}!</h2>
-</div>
-
-<div ng-controller="sliderController">
+<div ng-controller="sliderController" class="first-element">
     <h1>Последно добавени статии</h1>
     <div slider></div>
 </div>
