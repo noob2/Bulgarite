@@ -114,60 +114,47 @@ html body #wrapper #currentPage #register {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fb4e2f', endColorstr='#f02f1e', GradientType=1);
   /* IE6-9 fallback on horizontal gradient */
 }
-html body #wrapper #currentPage .economy-article {
-  height: 294px;
+html body #wrapper #currentPage .economy-article, html body #wrapper #currentPage .history-article, html body #wrapper #currentPage .landmarks-article, html body #wrapper #currentPage .population-article {
+  height: 300px;
+  width: 80%;
   overflow: hidden;
-  background-color: red;
-  margin: 15px;
-  display: inline-block;
-  border-radius: 10px;
-  border: solid white 3px;
-}
-html body #wrapper #currentPage .economy-article:hover {
-  background-color: #363636;
-  cursor: pointer;
-}
-html body #wrapper #currentPage .economy-article h3 {
-  color: white;
-  border-bottom: double 10px;
-}
-html body #wrapper #currentPage .economy-article .image {
-  width: 250px;
-  float: left;
-  vertical-align: top;
-  margin: 7px 7px 7px 7px;
-}
-html body #wrapper #currentPage .economy-article .image img {
-  width: inherit;
-}
-html body #wrapper #currentPage .history-article {
-  height: 294px;
-  overflow: hidden;
-  background-color: #363636;
-  margin: 15px;
-  display: inline-block;
-  border-radius: 10px;
-  border: solid white 3px;
-}
-html body #wrapper #currentPage .history-article:hover {
-  background-color: darkgoldenrod;
-  cursor: pointer;
-}
-html body #wrapper #currentPage .history-article h3 {
-  color: white;
-  border-bottom: double 10px;
-}
-html body #wrapper #currentPage .history-article p {
+  background-color: black;
+  margin: 15px auto;
+  border: solid 1px;
   color: gold;
+  box-shadow: 8px 8px 13px black;
 }
-html body #wrapper #currentPage .history-article .image {
+html body #wrapper #currentPage .economy-article:hover, html body #wrapper #currentPage .history-article:hover, html body #wrapper #currentPage .landmarks-article:hover, html body #wrapper #currentPage .population-article:hover {
+  background-color: brown;
+  cursor: pointer;
+}
+html body #wrapper #currentPage .economy-article h3, html body #wrapper #currentPage .history-article h3, html body #wrapper #currentPage .landmarks-article h3, html body #wrapper #currentPage .population-article h3 {
+  color: white;
+  border-bottom: solid gold 1px;
+}
+html body #wrapper #currentPage .economy-article .image, html body #wrapper #currentPage .history-article .image, html body #wrapper #currentPage .landmarks-article .image, html body #wrapper #currentPage .population-article .image {
   width: 250px;
   float: left;
   vertical-align: top;
   margin: 7px 7px 7px 7px;
 }
-html body #wrapper #currentPage .history-article .image img {
+html body #wrapper #currentPage .economy-article .image img, html body #wrapper #currentPage .history-article .image img, html body #wrapper #currentPage .landmarks-article .image img, html body #wrapper #currentPage .population-article .image img {
   width: inherit;
+}
+html body #wrapper #currentPage .history-article .year {
+  position: absolute;
+}
+html body #wrapper #currentPage .history-article .year img {
+  position: absolute;
+  top: -78px;
+  left: -15px;
+  width: 80px;
+}
+html body #wrapper #currentPage .history-article .year p {
+  position: absolute;
+  top: -52px;
+  left: 7px;
+  color: black;
 }
 html body #wrapper #currentPage .rzslider .rz-pointer {
   cursor: w-resize;
@@ -176,58 +163,6 @@ html body #wrapper #currentPage .rzslider .rz-pointer {
 }
 html body #wrapper #currentPage .rzslider .rz-bar.rz-selection {
   background-color: brown;
-}
-html body #wrapper #currentPage .landmarks-article {
-  height: 294px;
-  overflow: hidden;
-  background-color: red;
-  margin: 15px;
-  display: inline-block;
-  border-radius: 10px;
-  border: solid white 3px;
-}
-html body #wrapper #currentPage .landmarks-article:hover {
-  background-color: #363636;
-  cursor: pointer;
-}
-html body #wrapper #currentPage .landmarks-article h3 {
-  color: white;
-  border-bottom: double 10px;
-}
-html body #wrapper #currentPage .landmarks-article .image {
-  width: 250px;
-  float: left;
-  vertical-align: top;
-  margin: 7px 7px 7px 7px;
-}
-html body #wrapper #currentPage .landmarks-article .image img {
-  width: inherit;
-}
-html body #wrapper #currentPage .population-article {
-  height: 294px;
-  overflow: hidden;
-  background-color: red;
-  margin: 15px;
-  display: inline-block;
-  border-radius: 10px;
-  border: solid white 3px;
-}
-html body #wrapper #currentPage .population-article:hover {
-  background-color: #363636;
-  cursor: pointer;
-}
-html body #wrapper #currentPage .population-article h3 {
-  color: white;
-  border-bottom: double 10px;
-}
-html body #wrapper #currentPage .population-article .image {
-  width: 250px;
-  float: left;
-  vertical-align: top;
-  margin: 7px 7px 7px 7px;
-}
-html body #wrapper #currentPage .population-article .image img {
-  width: inherit;
 }
 html body #wrapper #currentPage #last-added-articles {
   color: white;

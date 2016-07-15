@@ -10,7 +10,10 @@
 
     <article ng-repeat="article in articles" class="history-article" ng-click="goToArticle(article._id)">
         <h3>{{article.header}}</h3>
-        <h3>Година: {{article.year}}</h3>
+        <div class="year">
+            <img src="../../images/year_background.png">
+            <p>{{article.year}} г.</p>
+        </div>
         <div class="image">
             <img ng-src="{{article.imgUrl}}">
         </div>

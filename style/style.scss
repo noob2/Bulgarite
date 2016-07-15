@@ -7,6 +7,7 @@
   font-weight: bold;
   color: gold;
 }
+
 html {
   height: 100%;
 
@@ -69,7 +70,7 @@ html {
           margin: 0;
         }
 
-        h4{
+        h4 {
           color: gold;
         }
 
@@ -120,21 +121,23 @@ html {
           filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fb4e2f', endColorstr='#f02f1e', GradientType=1); /* IE6-9 fallback on horizontal gradient */
         }
 
-        .economy-article {
-          height: 294px;
+        .economy-article, .history-article, .landmarks-article, .population-article {
+          height: 300px;
+          width: 80%;
           overflow: hidden;
-          background-color: red;
-          margin: 15px;
-          display: inline-block;
-          border-radius: 10px;
-          border: solid white 3px;
+          background-color: black;
+          margin: 15px auto;
+          border: solid 1px;
+          color: gold;
+          box-shadow: 8px 8px 13px black;
+
           &:hover {
-            background-color: #363636;
+            background-color: brown;
             cursor: pointer;
           }
           h3 {
             color: white;
-            border-bottom: double 10px;
+            border-bottom: solid gold 1px;
           }
 
           .image {
@@ -147,37 +150,35 @@ html {
               width: inherit;
             }
           }
+        }
+        .economy-article {
         }
 
         .history-article {
-          height: 294px;
-          overflow: hidden;
-          background-color: #363636;
-          margin: 15px;
-          display: inline-block;
-          border-radius: 10px;
-          border: solid white 3px;
-          &:hover {
-            background-color: darkgoldenrod;
-            cursor: pointer;
-          }
-          h3 {
-            color: white;
-            border-bottom: double 10px;
-          }
-          p {
-            color: gold;
-          }
-          .image {
-            width: 250px;
-            float: left;
-            vertical-align: top;
-            margin: 7px 7px 7px 7px;
+          .year {
+            position: absolute;
             img {
-              width: inherit;
+              position: absolute;
+              top: -78px;
+              left: -15px;
+              width: 80px;
+            }
+            p {
+              position: absolute;
+              top: -52px;
+              left: 7px;
+              color: black;
             }
           }
         }
+
+        .landmarks-article {
+
+        }
+
+        .population-article {
+        }
+
         .rzslider .rz-pointer {
           cursor: w-resize;
           background-color: transparent;
@@ -186,67 +187,6 @@ html {
         .rzslider .rz-bar.rz-selection {
           background-color: brown;
         }
-
-        .landmarks-article {
-          height: 294px;
-          overflow: hidden;
-          background-color: red;
-          margin: 15px;
-          display: inline-block;
-          border-radius: 10px;
-          border: solid white 3px;
-
-          &:hover {
-            background-color: #363636;
-            cursor: pointer;
-          }
-          h3 {
-            color: white;
-            border-bottom: double 10px;
-          }
-
-          .image {
-            width: 250px;
-            float: left;
-            vertical-align: top;
-            margin: 7px 7px 7px 7px;
-
-            img {
-              width: inherit;
-            }
-          }
-        }
-
-        .population-article {
-          height: 294px;
-          overflow: hidden;
-
-          background-color: red;
-          margin: 15px;
-          display: inline-block;
-          border-radius: 10px;
-          border: solid white 3px;
-          &:hover {
-            background-color: #363636;
-            cursor: pointer;
-          }
-          h3 {
-            color: white;
-            border-bottom: double 10px;
-          }
-
-          .image {
-            width: 250px;
-            float: left;
-            vertical-align: top;
-            margin: 7px 7px 7px 7px;
-
-            img {
-              width: inherit;
-            }
-          }
-        }
-
         #last-added-articles {
           color: white;
           margin-bottom: 0px;
@@ -308,12 +248,12 @@ html {
           @include green-button;
           text-decoration: none;
           display: inline-block;
-          &:hover{
+          &:hover {
             cursor: pointer;
           }
         }
 
-        #add-article-form,#edit-article-form {
+        #add-article-form, #edit-article-form {
           input {
             display: block;
             margin: 5px auto;
@@ -344,7 +284,7 @@ html {
           }
           div {
             position: absolute;
-            p{
+            p {
               display: none;
               transition: width 2s;
             }
@@ -357,7 +297,7 @@ html {
 
             &:hover {
               cursor: pointer;
-              p{
+              p {
                 width: 200px;
                 display: block;
                 position: inherit;
@@ -367,7 +307,7 @@ html {
                 left: -74px;
                 top: -80px;
               }
-              img{
+              img {
                 transform: scale(3.5);
               }
             }
@@ -440,7 +380,7 @@ html {
       position: inherit;
       top: 217px;
 
-      #left,#right{
+      #left, #right {
         height: 58px;
       }
 
