@@ -110,7 +110,7 @@ angular.module('bulgarite.factory.article', [])
 
             function editHistoryArticle(article) {
                 var deferred = $q.defer();
-
+                article.year = parseInt(article.year);
                 $http.defaults.headers.common.Authorization = KINVEY_CONFIG['UserCredentials'];
                 $http.put('https://baas.kinvey.com/appdata/kid_-kan4iP1b-/articles/'+article._id , article)
                     .then(function (articles) {

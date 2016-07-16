@@ -1,9 +1,7 @@
-<div id="article-page">
+<div id="article-page" class="first-element">
     <h2>{{article.header}}</h2>
     <h3 ng-if="article.year">{{article.year}}</h3>
-    <div>
-        <img ng-src="{{article.imgUrl}}">
-    </div>
+    <img ng-src="{{article.imgUrl}}">
     <p>{{article.content}}</p>
-<button ng-click="editArticle(article.category)">Редактирай</button>
+    <button ng-click="editArticle(article.category)">Редактирай</button>
 </div>

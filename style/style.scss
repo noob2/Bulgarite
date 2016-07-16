@@ -165,9 +165,10 @@ html {
             }
             p {
               position: absolute;
-              top: -52px;
-              left: 7px;
+              top: -53px;
+              left: -2px;
               color: black;
+              width: 60px;
             }
           }
         }
@@ -192,8 +193,7 @@ html {
           margin-bottom: 0px;
         }
         #article-page {
-          background-color: black;
-          border: 17px solid black;
+
           h2 {
             margin: 7px;
             color: gold;
@@ -203,15 +203,12 @@ html {
             color: gold;
           }
           p {
-            margin: 0 0 15px 0;
-            color: #c8def4;
+            color: gold;
             width: 90%;
           }
-          div {
             img {
-              width: 90%;
+              width: 60%;
             }
-          }
           button {
             color: gold;
             background-color: black;
@@ -276,7 +273,7 @@ html {
 
         #bulgaria-map {
           margin: 0 auto;
-          width: 90%;
+          width: 75%;
           position: relative;
           #map {
             position: relative;
