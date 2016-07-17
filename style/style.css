@@ -44,6 +44,17 @@ html body #wrapper #currentPage {
   min-height: 90%;
   text-align: center;
 }
+html body #wrapper #currentPage table {
+  color: gold;
+  display: inline-table;
+  border: greenyellow;
+  margin: 4px;
+  border-spacing: 5px;
+  background-color: green;
+}
+html body #wrapper #currentPage table thead {
+  color: floralwhite;
+}
 html body #wrapper #currentPage #welcome-header {
   color: gold;
   margin-top: 0;
@@ -132,6 +143,7 @@ html body #wrapper #currentPage .economy-article:hover, html body #wrapper #curr
   cursor: pointer;
 }
 html body #wrapper #currentPage .economy-article h3, html body #wrapper #currentPage .history-article h3, html body #wrapper #currentPage .landmarks-article h3, html body #wrapper #currentPage .population-article h3 {
+  margin: 5px;
   color: white;
   border-bottom: solid gold 1px;
 }
@@ -149,13 +161,13 @@ html body #wrapper #currentPage .history-article .year {
 }
 html body #wrapper #currentPage .history-article .year img {
   position: absolute;
-  top: -78px;
+  top: -53px;
   left: -15px;
   width: 80px;
 }
 html body #wrapper #currentPage .history-article .year p {
   position: absolute;
-  top: -53px;
+  top: -28px;
   left: -2px;
   color: black;
   width: 60px;
@@ -172,6 +184,13 @@ html body #wrapper #currentPage #last-added-articles {
   color: white;
   margin-bottom: 0px;
 }
+html body #wrapper #currentPage #article-page {
+  margin: 26px auto 0;
+  color: gold;
+  width: 90%;
+  border-radius: 30px;
+  background-color: black;
+}
 html body #wrapper #currentPage #article-page h2 {
   margin: 7px;
   color: gold;
@@ -181,18 +200,20 @@ html body #wrapper #currentPage #article-page h3 {
   color: gold;
 }
 html body #wrapper #currentPage #article-page p {
+  margin: 0 auto;
   color: gold;
   width: 90%;
 }
 html body #wrapper #currentPage #article-page img {
   width: 60%;
+  border-radius: 10px;
 }
 html body #wrapper #currentPage #article-page button {
   color: gold;
   background-color: black;
   border-radius: 5px;
   font-weight: bold;
-  margin-top: 20px;
+  margin: 20px;
 }
 html body #wrapper #currentPage .latest-articles {
   background-color: darkgreen;

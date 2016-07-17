@@ -1,4 +1,4 @@
-<h2 ng-hide="isLoaded" class="first-element">Моля изчакайте . . .</h2>
+<h2 ng-hide="isLoaded">Моля изчакайте . . .</h2>
 
 <div ng-show="isLoaded">
     <table border="1">
@@ -8,7 +8,8 @@
         <tr>
             <th scope="row" style="text-align:left">Ранг</th>
             <td style=";">74-то място (номинален)<br style="clear:both">
-                66-то място (ППС)</td>
+                66-то място (ППС)
+            </td>
         </tr>
         <tr>
             <th>Търговски организации</th>
@@ -121,10 +122,13 @@
             <td>17,781 милиарда долара (април 2011)</td>
         </tr>
         <tr>
-            <td colspan="2"><a href="https://www.cia.gov/library/publications/the-world-factbook/geos/bu.html">Страница в CIA The World Factbook</a><br></td>
-        </tr></table>
+            <td colspan="2"><a href="https://www.cia.gov/library/publications/the-world-factbook/geos/bu.html">Страница
+                в CIA The World Factbook</a><br></td>
+        </tr>
+    </table>
+    <h4>Последно добавени статии:</h4>
     <article ng-repeat="article in articles" class="economy-article" ng-click="goToArticle(article._id)">
-        <h3>{{article.header}} - - - - - - Година:{{article.year}}</h3>
+        <h3>{{article.header}}</h3>
         <div class="image">
             <img ng-src="{{article.imgUrl}}">
         </div>

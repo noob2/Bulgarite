@@ -40,7 +40,6 @@ angular.module('bulgarite.history', ['ngRoute'])
 
             article.getAllArticlesFromCategory('history')
                 .then(function (articles) {
-                    console.log(articles);
                     $scope.articles = articles.data;
                 }).finally(function () {
                 $scope.isLoaded = true;
