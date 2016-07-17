@@ -74,6 +74,7 @@ angular.module('bulgarite.factory.article', [])
                 return deferred.promise;
             }
 
+            //TODO: remove this finction and integrate it in function addArticle(article, articleCategory){...}
             function addLandmarkArticle(article, parallel, meridian) {
                 var deferred = $q.defer();
                 article.category = 'landmarks';

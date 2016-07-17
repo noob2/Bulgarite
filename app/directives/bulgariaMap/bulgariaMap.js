@@ -39,14 +39,13 @@ angular.module('bulgarite.directives.bulgariaMap', ['ngRoute'])
                 const mapLowerRightDegreeX = 28.227929;
                 const mapLowerRightDegreeY = 41.222366;
 
+                //todo: check if it is necessary to pin point on the map
                 scope.setCoordinates = function ($event) {
+                    scope.clicked = true;
+
                     var clickedParallel = mapTopLeftDegreeX + ((mapLowerRightDegreeX - mapTopLeftDegreeX) * ($event.offsetX / $event.srcElement.clientWidth ));
                     var clickedMeridian = mapTopLeftDegreeY + ((mapLowerRightDegreeY - mapTopLeftDegreeY) * ($event.offsetY / $event.srcElement.clientHeight ));
 
-                    scope.clicked = true;
-
-
-                    //if it is add article page
                     var $parallel = $("#parallel");
                     var $meridian = $("#meridian");
 
