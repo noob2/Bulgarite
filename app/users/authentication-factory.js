@@ -15,6 +15,7 @@ angular.module('bulgarite.users.authentication', [])
                     .then(function (response) {
                         sessionStorage.setItem('authorisationToken', response.data._kmd.authtoken);
                         sessionStorage.setItem('name', response.data.name);
+                        sessionStorage.setItem('UserCredentials', btoa(user.username+':'+user.password));
                         deferred.resolve(response);
                     }, function (err) {
                         deferred.reject(err);

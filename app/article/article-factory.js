@@ -9,7 +9,7 @@ angular.module('bulgarite.factory.article', [])
 
             function getAllArticlesFromCategory(category) {
                 var deferred = $q.defer();
-                $http.defaults.headers.common.Authorization = KINVEY_CONFIG['UserCredentials'];
+                $http.defaults.headers.common.Authorization = KINVEY_CONFIG['UnauthorizedUserCredentials'];
                 $http.get('https://baas.kinvey.com/appdata/kid_-kan4iP1b-/articles?query={"category":"' + category + '"}', {})
                     .then(function (articles) {
                         deferred.resolve(articles)
@@ -22,7 +22,7 @@ angular.module('bulgarite.factory.article', [])
             function getLatestArticles(numberOfArticles) {
                 var deferred = $q.defer();
 
-                $http.defaults.headers.common.Authorization = KINVEY_CONFIG['UserCredentials'];
+                $http.defaults.headers.common.Authorization = KINVEY_CONFIG['UnauthorizedUserCredentials'];
                 $http.get('https://baas.kinvey.com/appdata/kid_-kan4iP1b-/articles?query={}&limit=' + numberOfArticles + '?query={}&sort={"_kmd.ect": -1}', {})
                     .then(function (articles) {
                         deferred.resolve(articles)
@@ -36,7 +36,7 @@ angular.module('bulgarite.factory.article', [])
             function getAllHistoryArticlesFromPeriod(min, max) {
                 var deferred = $q.defer();
 
-                $http.defaults.headers.common.Authorization = KINVEY_CONFIG['UserCredentials'];
+                $http.defaults.headers.common.Authorization = 'Basic ' + sessionStorage["UnauthorizedUserCredentials"];
                 $http.get('https://baas.kinvey.com/appdata/kid_-kan4iP1b-/articles?query={"$and":[{"category":"history","year":{"$lte": ' + max + ',"$gte": ' + min + '}}]}', {})
                     .then(function (articles) {
                         deferred.resolve(articles)
@@ -49,7 +49,7 @@ angular.module('bulgarite.factory.article', [])
             function getArticleById(id) {
                 var deferred = $q.defer();
 
-                $http.defaults.headers.common.Authorization = KINVEY_CONFIG['UserCredentials'];
+                $http.defaults.headers.common.Authorization = 'Basic ' + sessionStorage["UnauthorizedUserCredentials"];
                 $http.get('https://baas.kinvey.com/appdata/kid_-kan4iP1b-/articles/' + id, {})
                     .then(function (articles) {
                         deferred.resolve(articles)
@@ -99,7 +99,7 @@ angular.module('bulgarite.factory.article', [])
                 article.coordinate.parallel = parallel;
                 article.coordinate.meridian = meridian;
                 
-                $http.defaults.headers.common.Authorization = KINVEY_CONFIG['UserCredentials'];
+                $http.defaults.headers.common.Authorization = 'Basic ' + sessionStorage["UserCredentials"];
                 $http.put('https://baas.kinvey.com/appdata/kid_-kan4iP1b-/articles/'+id , article)
                     .then(function (articles) {
                         deferred.resolve(articles)

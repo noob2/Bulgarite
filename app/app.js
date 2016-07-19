@@ -36,7 +36,7 @@ angular.module('bulgarite', [
     .constant('BASE_URL', 'https://baas.kinvey.com/user/kid_-kan4iP1b-/')
     .constant('KINVEY_CONFIG', {
         'MasterCredentials': 'Basic a2lkXy1rYW40aVAxYi06MDcyZjMwYjg4NjY1NDA0YmE4NjIyMTQ0YmM5OTQxMzc=',
-        'UserCredentials': 'Basic cGVzaG86MTIzNA=='
+        'UnauthorizedUserCredentials': 'Basic cGVzaG86MTIzNA=='
     })
     .run(['$rootScope', '$location', 'authentication', '$route', function ($rootScope, $location, authentication, $route) {
 

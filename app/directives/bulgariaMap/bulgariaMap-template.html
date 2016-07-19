@@ -1,15 +1,14 @@
 <div id="bulgaria-map">
     <img ng-src="images/bulgaria-map.png" id="map" ng-click="setCoordinates($event)">
 
-<div ng-repeat="article in landmarkArticles" class="article-on-map"
-     style="left: {{article.curentImageOffsetLeft}}px;top: {{article.currentImageOffsetTop}}px"
-     ng-click="goToArticle(article._id)"
->
-    <p>{{article.header}}</p>
-    <img ng-src="{{article.imgUrl}}"
-         ng-if="isLoaded"
-         class="landmark-image">
-</div>
+    <div ng-repeat="article in landmarkArticles" class="article-on-map"
+         style="left: {{article.curentImageOffsetLeft}}px;top: {{article.currentImageOffsetTop}}px"
+         ng-click="goToArticle(article._id)">
+        <p>{{article.header}}</p>
+        <img ng-src="{{article.imgUrl}}"
+             ng-if="isLoaded"
+             class="landmark-image">
+    </div>
     <img ng-src="images/location-pointer.png" id="location-pointer" ng-show="clicked">
 
 </div>

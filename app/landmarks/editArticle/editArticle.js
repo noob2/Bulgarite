@@ -18,6 +18,9 @@ angular.module('bulgarite.landmarks.editArticle', ['ngRoute'])
         '$routeParams',
         '$location',
         function ($scope, $rootScope, authentication, $route, article, $routeParams, $location) {
+
+            $scope.shouldSetCoordinates = true;
+
             article.getArticleById($routeParams.id)
                 .then(function (article) {
                     $scope.article = article.data;

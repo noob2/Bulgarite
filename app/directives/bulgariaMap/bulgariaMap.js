@@ -39,31 +39,33 @@ angular.module('bulgarite.directives.bulgariaMap', ['ngRoute'])
                 const mapLowerRightDegreeX = 28.227929;
                 const mapLowerRightDegreeY = 41.222366;
 
-                //todo: check if it is necessary to pin point on the map
-                scope.setCoordinates = function ($event) {
-                    scope.clicked = true;
+                if (scope.shouldSetCoordinates) {
+                    scope.setCoordinates = function ($event) {
+                        scope.clicked = true;
 
-                    var clickedParallel = mapTopLeftDegreeX + ((mapLowerRightDegreeX - mapTopLeftDegreeX) * ($event.offsetX / $event.srcElement.clientWidth ));
-                    var clickedMeridian = mapTopLeftDegreeY + ((mapLowerRightDegreeY - mapTopLeftDegreeY) * ($event.offsetY / $event.srcElement.clientHeight ));
+                        var clickedParallel = mapTopLeftDegreeX + ((mapLowerRightDegreeX - mapTopLeftDegreeX) * ($event.offsetX / $event.srcElement.clientWidth ));
+                        var clickedMeridian = mapTopLeftDegreeY + ((mapLowerRightDegreeY - mapTopLeftDegreeY) * ($event.offsetY / $event.srcElement.clientHeight ));
 
-                    var $parallel = $("#parallel");
-                    var $meridian = $("#meridian");
+                        //TODO: the directive should not know anything about the input fields of the html(i think)
+                        var $parallel = $("#parallel");
+                        var $meridian = $("#meridian");
 
-                    $parallel.val(clickedParallel);
-                    scope.article.coordinate.parallel = clickedParallel;
+                        $parallel.val(clickedParallel);
 
-                    $meridian.val(clickedMeridian);
-                    scope.article.coordinate.meridian = clickedMeridian;
+                        scope.parallel = clickedParallel;
+                        $meridian.val(clickedMeridian);
+                        scope.meridian = clickedMeridian;
 
-                    var $pointer = $("#location-pointer");
-                    $pointer.ready(function () {
-                        var offsetToCenterX = $event.offsetX - parseInt($pointer.get(0).clientWidth / 2);
-                        var offsetToCenterY = $event.offsetY - parseInt($pointer.get(0).clientHeight * 0.86);
+                        var $pointer = $("#location-pointer");
+                        $pointer.ready(function () {
+                            var offsetToCenterX = $event.offsetX - parseInt($pointer.get(0).clientWidth / 2);
+                            var offsetToCenterY = $event.offsetY - parseInt($pointer.get(0).clientHeight * 0.86);
 
-                        $pointer.css("left", offsetToCenterX + 'px');
-                        $pointer.css("top", offsetToCenterY + 'px');
-                    })
-                };
+                            $pointer.css("left", offsetToCenterX + 'px');
+                            $pointer.css("top", offsetToCenterY + 'px');
+                        })
+                    }
+                }
             },
             templateUrl: 'app/directives/bulgariaMap/bulgariaMap-template.html'
         };

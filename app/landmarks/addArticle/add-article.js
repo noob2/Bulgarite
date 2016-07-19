@@ -15,11 +15,13 @@ angular.module('bulgarite.landmarks.addArticle', ['ngRoute'])
         '$location',
         function ($scope, article, $location) {
 
+            $scope.shouldSetCoordinates = true;
             $scope.addLandmarkArticle = function (art, parallel, meridian) {
-                article.addLandmarkArticle(art, parallel, meridian)
-                    .then(function (success) {
-                        console.log(success);
-                        $location.path('/landmarks');
-                    });
+                console.log(art)
+                // article.addLandmarkArticle(art, parallel, meridian)
+                //     .then(function (success) {
+                //         console.log(success);
+                //         $location.path('/landmarks');
+                //     });
             };
         }]);

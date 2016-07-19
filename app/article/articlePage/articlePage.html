@@ -3,5 +3,5 @@
     <h3 ng-if="article.year">{{article.year}}</h3>
     <img ng-src="{{article.imgUrl}}">
     <p>{{article.content}}</p>
-    <button ng-click="editArticle(article.category)">Редактирай</button>
+    <button ng-if="isLoggedIn" ng-click="editArticle(article.category)">Редактирай</button>
 </div>
