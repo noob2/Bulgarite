@@ -49,10 +49,10 @@ angular.module('bulgarite.factory.article', [])
             function getArticleById(id) {
                 var deferred = $q.defer();
 
-                $http.defaults.headers.common.Authorization = 'Basic ' + sessionStorage["UnauthorizedUserCredentials"];
+                $http.defaults.headers.common.Authorization = KINVEY_CONFIG['UnauthorizedUserCredentials'];
                 $http.get('https://baas.kinvey.com/appdata/kid_-kan4iP1b-/articles/' + id, {})
-                    .then(function (articles) {
-                        deferred.resolve(articles)
+                    .then(function (article) {
+                        deferred.resolve(article)
                     }, function (err) {
                         deferred.resolve(err)
                     });
@@ -63,44 +63,8 @@ angular.module('bulgarite.factory.article', [])
             function addArticle(article, articleCategory) {
                 var deferred = $q.defer();
                 article.category = articleCategory;
-                $http.defaults.headers.common.Authorization = KINVEY_CONFIG['UserCredentials'];
-                $http.post('https://baas.kinvey.com/appdata/kid_-kan4iP1b-/articles', article)
-                    .then(function (articles) {
-                        deferred.resolve(articles)
-                    }, function (err) {
-                        deferred.resolve(err)
-                    });
-
-                return deferred.promise;
-            }
-
-            //TODO: remove this finction and integrate it in function addArticle(article, articleCategory){...}
-            function addLandmarkArticle(article, parallel, meridian) {
-                var deferred = $q.defer();
-                article.category = 'landmarks';
-                article.coordinate = {};
-                article.coordinate.parallel = parallel;
-                article.coordinate.meridian = meridian;
-
-                $http.defaults.headers.common.Authorization = KINVEY_CONFIG['UserCredentials'];
-                $http.post('https://baas.kinvey.com/appdata/kid_-kan4iP1b-/articles', article)
-                    .then(function (articles) {
-                        deferred.resolve(articles)
-                    }, function (err) {
-                        deferred.resolve(err)
-                    });
-
-                return deferred.promise;
-            }
-
-            function editLandmarkArticle(article, parallel, meridian, id) {
-                var deferred = $q.defer();
-                article.coordinate = {};
-                article.coordinate.parallel = parallel;
-                article.coordinate.meridian = meridian;
-                
                 $http.defaults.headers.common.Authorization = 'Basic ' + sessionStorage["UserCredentials"];
-                $http.put('https://baas.kinvey.com/appdata/kid_-kan4iP1b-/articles/'+id , article)
+                $http.post('https://baas.kinvey.com/appdata/kid_-kan4iP1b-/articles', article)
                     .then(function (articles) {
                         deferred.resolve(articles)
                     }, function (err) {
@@ -109,11 +73,10 @@ angular.module('bulgarite.factory.article', [])
                 return deferred.promise;
             }
 
-            function editHistoryArticle(article) {
+            function editArticle(article, id) {
                 var deferred = $q.defer();
-                article.year = parseInt(article.year);
-                $http.defaults.headers.common.Authorization = KINVEY_CONFIG['UserCredentials'];
-                $http.put('https://baas.kinvey.com/appdata/kid_-kan4iP1b-/articles/'+article._id , article)
+                $http.defaults.headers.common.Authorization = 'Basic ' + sessionStorage["UserCredentials"];
+                $http.put('https://baas.kinvey.com/appdata/kid_-kan4iP1b-/articles/' + id, article)
                     .then(function (articles) {
                         deferred.resolve(articles)
                     }, function (err) {
@@ -128,9 +91,7 @@ angular.module('bulgarite.factory.article', [])
                 getLatestArticles: getLatestArticles,
                 getArticleById: getArticleById,
                 addArticle: addArticle,
-                addLandmarkArticle: addLandmarkArticle,
-                editLandmarkArticle: editLandmarkArticle,
-                editHistoryArticle: editHistoryArticle
+                editArticle: editArticle
             }
         }
     ]);

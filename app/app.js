@@ -8,18 +8,16 @@ angular.module('bulgarite', [
     'bulgarite.account',
     
     'bulgarite.history',
-    'bulgarite.history.addArticle',
-    'bulgarite.history.editArticle',
     
     'bulgarite.landmarks',
-    'bulgarite.landmarks.addArticle',
-    'bulgarite.landmarks.editArticle',
     
     'bulgarite.population',
     
     'bulgarite.economy',
     
     'bulgarite.article.page',
+    'bulgarite.article.addArticle',
+    'bulgarite.article.editArticle',
     'bulgarite.users.authentication',
 
     'bulgarite.factory.article',

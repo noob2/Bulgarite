@@ -18,7 +18,7 @@ angular.module('bulgarite.article.page', ['ngRoute'])
         '$routeParams',
         '$location',
         function ($scope, $rootScope, authentication, $route, article, $routeParams, $location) {
-        console.log(btoa("pesho:1234"))
+
             article.getArticleById($routeParams.id)
                 .then(function (article) {
                     $scope.article = article.data;
