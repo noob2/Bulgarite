@@ -27,6 +27,7 @@ angular.module('bulgarite.article.page', ['ngRoute'])
             });
 
             $scope.editArticle = function (category) {
+
                 $location.path(category + '/article/' + $routeParams.id + '/editArticle');
             }
         }]);

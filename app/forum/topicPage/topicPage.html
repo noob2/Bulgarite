@@ -1,0 +1,45 @@
+<div ng-controller="topicPageController">
+    <div id="topic">
+        <h2>{{topic.header}}</h2>
+        <p>{{topic.author}}</p>
+        <p>{{topic._kmd.lmt}}</p>
+        <p>{{topic.text}}</p>
+    </div>
+
+    <div ng-repeat="comment in comments">
+
+        <div class="comment">
+
+            <p>{{comment.author}}</p>
+            <p>{{comment._kmd.lmt}}</p>
+            <button ng-click="showReOptions(comment._id)" class="add-button">Коментирай</button>
+            <p>{{comment.text}}</p>
+
+            <div ng-if="showReOptionsID == comment._id" class="add-comment">
+
+                <textarea ng-model="reComment.text"></textarea>
+                <button ng-click="addReComment(reComment)">Добави коментар</button>
+
+            </div>
+
+        </div>
+
+        <div ng-repeat="reComment in comment.reComments" class="re-comment">
+
+            <p>{{reComment.author}}</p>
+            <p>{{reComment._kmd.lmt}}</p>
+            <p>{{reComment.text}}</p>
+
+        </div>
+
+    </div>
+
+    <button ng-if="isLoggedIn && !showOptions" ng-click="showAddCommentOptions()" class="add-button">Добави коментар
+    </button>
+
+    <div ng-if="showOptions" class="add-comment">
+        <textarea ng-model="comment.text"></textarea>
+        <button ng-click="addComment(comment)">Добави коментар</button>
+    </div>
+
+</div>

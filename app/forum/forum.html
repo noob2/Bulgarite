@@ -1,0 +1,23 @@
+<a ng-if="isLoggedIn" class="add-button" href="#/forum/addTopic">Нова Тема</a>
+
+<div id="all-categories">
+    <p>Категории:</p>
+    <a ng-click="getAllTopics()" class="add-button">Всички категории</a>
+
+    <div ng-repeat="category in categories">
+
+        <p >
+            {{category.name}}
+            <button ng-click="removeCategory(category._id)" ng-if="isLoggedIn">X</button>
+        </p>
+
+    </div>
+    <a ng-if="isLoggedIn" href="#/forum/addCategory" class="add-button">Добави категория</a>
+</div>
+
+<div class="post" ng-repeat="topic in topics" ng-click="goToTopicPageWithID(topic._id)">
+    <p>{{topic.header}}</p>
+    <p>{{topic.author}}</p>
+    <p>{{topic.category._obj.name}}</p>
+    <p>{{topic._kmd.lmt}}</p>
+</div>

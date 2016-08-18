@@ -2,7 +2,7 @@
 
 angular.module('bulgarite.economy', ['ngRoute'])
 
-    .config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
+    .config(['$routeProvider', '$locationProvider', function ($routeProvider) {
         $routeProvider.when('/economy', {
             templateUrl: 'app/economy/economy.html',
             controller: 'economyController'

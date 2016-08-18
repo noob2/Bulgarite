@@ -311,6 +311,165 @@ html body #wrapper #currentPage #bulgaria-map #location-pointer {
   height: 50px;
   position: absolute;
 }
+html body #wrapper #currentPage .add-button {
+  background-color: darkcyan;
+  padding: 2px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: gold;
+  font-weight: bold;
+  max-width: 200px;
+  margin: 5px;
+}
+html body #wrapper #currentPage .add-button:hover {
+  background-color: green;
+  color: black;
+  cursor: pointer;
+}
+html body #wrapper #currentPage #all-categories {
+  width: 200px;
+  position: absolute;
+  border: 2px solid black;
+  margin: 5px;
+}
+html body #wrapper #currentPage #all-categories p {
+  border-bottom: 1px solid #646486;
+  margin: 0 20px;
+}
+html body #wrapper #currentPage #all-categories p:first-child {
+  font-weight: bold;
+}
+html body #wrapper #currentPage #all-categories p:first-child:hover {
+  cursor: default;
+  background-color: transparent;
+}
+html body #wrapper #currentPage #all-categories p:hover {
+  cursor: pointer;
+  background-color: cadetblue;
+}
+html body #wrapper #currentPage #all-categories button {
+  display: inline-block;
+  margin: 0;
+  border: 0;
+  border-radius: 6px;
+  background-color: brown;
+}
+html body #wrapper #currentPage #all-categories button:hover {
+  cursor: pointer;
+}
+html body #wrapper #currentPage .post {
+  border: 3px solid black;
+  width: 77%;
+  margin: 0 20px 20px;
+  float: right;
+  background-color: darkcyan;
+}
+html body #wrapper #currentPage .post p {
+  display: inline-block;
+  border-right: 3px solid black;
+  width: 30%;
+  height: 30px;
+  margin: 0;
+}
+html body #wrapper #currentPage .post p:first-child {
+  display: block;
+  border-bottom: 3px solid black;
+  border-right: none;
+  width: auto;
+  margin-bottom: 0;
+}
+html body #wrapper #currentPage .post p:last-child {
+  border-right: none;
+}
+html body #wrapper #currentPage .post:hover {
+  background-color: cadetblue;
+  cursor: pointer;
+}
+html body #wrapper #currentPage #topic {
+  background-color: cadetblue;
+  border: 5px solid;
+  margin: 10px 10px;
+}
+html body #wrapper #currentPage #topic h2 {
+  margin: 0;
+  border-bottom: 5px solid;
+}
+html body #wrapper #currentPage #topic p {
+  display: inline-block;
+  margin: 0;
+}
+html body #wrapper #currentPage #topic p:nth-child(2) {
+  border-right: 5px solid;
+}
+html body #wrapper #currentPage #topic p:last-child {
+  border-top: 5px solid;
+  display: block;
+}
+html body #wrapper #currentPage .comment {
+  box-shadow: 2px 4px 4px darkgreen;
+  text-align: end;
+  width: 70%;
+  background-color: darkcyan;
+  border: 3px solid;
+  margin: 10px auto;
+  border-radius: 30px 5px 5px 0;
+}
+html body #wrapper #currentPage .comment p {
+  display: inline-block;
+  margin: 0;
+}
+html body #wrapper #currentPage .comment p:first-child {
+  border-right: 5px solid;
+}
+html body #wrapper #currentPage .comment p:nth-child(2) {
+  border-right: 5px solid;
+}
+html body #wrapper #currentPage .comment p:nth-child(3) {
+  display: block;
+  text-align: left;
+}
+html body #wrapper #currentPage .comment p:nth-child(4) {
+  display: block;
+  border-top: 5px solid;
+}
+html body #wrapper #currentPage .re-comment {
+  box-shadow: 2px 4px 4px darkgreen;
+  text-align: end;
+  width: 60%;
+  background-color: darkcyan;
+  border: 1px solid;
+  margin: 5px 25%;
+  border-radius: 0 5px 5px 25px;
+}
+html body #wrapper #currentPage .re-comment p {
+  display: inline-block;
+  margin: 0;
+}
+html body #wrapper #currentPage .re-comment p:first-child {
+  border-right: 5px solid;
+}
+html body #wrapper #currentPage .re-comment p:nth-child(3) {
+  display: block;
+  text-align: right;
+  border-top: 5px solid;
+}
+html body #wrapper #currentPage .add-comment textarea {
+  background-color: cadetblue;
+  border: 5px solid;
+  width: 70%;
+  height: 60px;
+}
+html body #wrapper #currentPage .add-comment button {
+  background-color: cadetblue;
+  width: 26%;
+  height: 74px;
+  border: 5px solid;
+  vertical-align: top;
+}
+html body #wrapper #currentPage .add-comment button:hover {
+  background-color: #7D9029;
+  cursor: pointer;
+}
 html body footer {
   height: 20px;
   background-color: #880000;

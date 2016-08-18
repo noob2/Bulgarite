@@ -10,10 +10,8 @@
 
 html {
   height: 100%;
-
   body {
     height: 100%;
-
     #wrapper {
       min-height: 100%;
       margin-bottom: -37px;
@@ -30,7 +28,6 @@ html {
           height: 50px;
           float: left;
         }
-
         li {
           display: inline-flex;
 
@@ -45,36 +42,30 @@ html {
             font-weight: bold;
             padding: 17px 20px;
             text-decoration: none;
-
             &:hover {
               background-color: #00A000;
             }
           }
         }
       }
-
       #currentPage {
         min-height: 90%;
         text-align: center;
-
-        table{
+        table {
           color: gold;
           display: inline-table;
           border: greenyellow;
           margin: 4px;
           border-spacing: 5px;
           background-color: green;
-
-          thead{
+          thead {
             color: floralwhite;
           }
         }
-
         #welcome-header {
           color: gold;
           margin-top: 0;
         }
-
         .first-element {
           margin: 0;
           padding: 13px;
@@ -84,11 +75,9 @@ html {
         .last-element {
           margin: 0;
         }
-
         h4 {
           color: gold;
         }
-
         #login, #register {
           height: 180px;
           display: inline-block;
@@ -119,7 +108,6 @@ html {
             }
           }
         }
-
         #login {
           background: #ffffff;
           background: -moz-linear-gradient(-45deg, #ffffff 0%, #ffffff 33%, #ffffff 33%, #fafafa 59%, #ffffff 63%, #ffffff 67%, #f3f3f3 68%, #f3f3f3 68%, #fbfbfb 100%); /* FF3.6-15 */
@@ -127,7 +115,6 @@ html {
           background: linear-gradient(135deg, #ffffff 0%, #ffffff 33%, #ffffff 33%, #fafafa 59%, #ffffff 63%, #ffffff 67%, #f3f3f3 68%, #f3f3f3 68%, #fbfbfb 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
           filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#fbfbfb', GradientType=1); /* IE6-9 fallback on horizontal gradient */
         }
-
         #register {
           background: #fb4e2f;
           background: -moz-linear-gradient(-45deg, #fb4e2f 0%, #f76d57 61%, #fa2508 67%, #f62d12 79%, #f02f1e 100%); /* FF3.6-15 */
@@ -135,7 +122,6 @@ html {
           background: linear-gradient(135deg, #fb4e2f 0%, #f76d57 61%, #fa2508 67%, #f62d12 79%, #f02f1e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
           filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fb4e2f', endColorstr='#f02f1e', GradientType=1); /* IE6-9 fallback on horizontal gradient */
         }
-
         .economy-article, .history-article, .landmarks-article, .population-article {
           height: 300px;
           width: 80%;
@@ -145,7 +131,6 @@ html {
           border: solid 1px;
           color: gold;
           box-shadow: 8px 8px 13px black;
-
           &:hover {
             background-color: brown;
             cursor: pointer;
@@ -155,13 +140,11 @@ html {
             color: white;
             border-bottom: solid gold 1px;
           }
-
           .image {
             width: 250px;
             float: left;
             vertical-align: top;
             margin: 7px 7px 7px 7px;
-
             img {
               width: inherit;
             }
@@ -169,7 +152,6 @@ html {
         }
         .economy-article {
         }
-
         .history-article {
           .year {
             position: absolute;
@@ -188,14 +170,10 @@ html {
             }
           }
         }
-
         .landmarks-article {
-
         }
-
         .population-article {
         }
-
         .rzslider .rz-pointer {
           cursor: w-resize;
           background-color: transparent;
@@ -214,7 +192,6 @@ html {
           width: 90%;
           border-radius: 30px;
           background-color: black;
-
           h2 {
             margin: 7px;
             color: gold;
@@ -255,15 +232,12 @@ html {
               color: floralwhite;
               margin: 4px;
             }
-
             img {
               height: 200px;
               max-width: 97%;
             }
           }
-
         }
-
         #add-article {
           @include green-button;
           text-decoration: none;
@@ -272,7 +246,6 @@ html {
             cursor: pointer;
           }
         }
-
         #add-article-form, #edit-article-form {
           input {
             display: block;
@@ -293,7 +266,6 @@ html {
             border: 7px solid black;
           }
         }
-
         #bulgaria-map {
           margin: 0 auto;
           width: 75%;
@@ -314,7 +286,6 @@ html {
               height: 50px;
               border-radius: 100%;
             }
-
             &:hover {
               cursor: pointer;
               p {
@@ -332,28 +303,184 @@ html {
               }
             }
           }
-
           #location-pointer {
             width: 50px;
             height: 50px;
             position: absolute;
           }
         }
+        .add-button {
+          background-color: darkcyan;
+          padding: 2px;
+          border-radius: 10px;
+          text-decoration: none;
+          color: gold;
+          font-weight: bold;
+          max-width: 200px;
+          margin: 5px;
+          &:hover {
+            background-color: green;
+            color: black;
+            cursor: pointer;
+          }
+        }
+        #all-categories {
+          p {
+            border-bottom: 1px solid #646486;
+            margin: 0 20px;
+            &:first-child {
+              font-weight: bold;
+              &:hover {
+                cursor: default;
+                background-color: transparent;
+              }
+            }
+            &:hover {
+              cursor: pointer;
+              background-color: cadetblue;
+            }
+          }
+          button {
+            display: inline-block;
+            margin: 0;
+            border: 0;
+            border-radius: 6px;
+            background-color: brown;
+            &:hover {
+              cursor: pointer;
+            }
+          }
+          width: 200px;
+          position: absolute;
+          border: 2px solid black;
+          margin: 5px;
+        }
+        .post {
+          border: 3px solid black;
+          width: 77%;
+          margin: 0 20px 20px;
+          float: right;
+          background-color: darkcyan;
+          p {
+            &:first-child {
+              display: block;
+              border-bottom: 3px solid black;
+              border-right: none;
+              width: auto;
+              margin-bottom: 0;
+            }
+            display: inline-block;
+            border-right: 3px solid black;
+            width: 30%;
+            height: 30px;
+            margin: 0;
+            &:last-child {
+              border-right: none;
+            }
+          }
+          &:hover {
+            background-color: cadetblue;
+            cursor: pointer;
+          }
+        }
+        #topic {
+          background-color: cadetblue;
+          border: 5px solid;
+          margin: 10px 10px;
+          h2 {
+            margin: 0;
+            border-bottom: 5px solid;
+          }
+          p {
+            display: inline-block;
+            margin: 0;
+            &:nth-child(2) {
+              border-right: 5px solid;
+            }
+            &:last-child {
+              border-top: 5px solid;
+              display: block;
+            }
+          }
+        }
+        .comment {
+          box-shadow: 2px 4px 4px darkgreen;
+          text-align: end;
+          width: 70%;
+          background-color: darkcyan;
+          border: 3px solid;
+          margin: 10px auto;
+          border-radius: 30px 5px 5px 0;
+          p {
+            display: inline-block;
+            margin: 0;
+            &:first-child {
+              border-right: 5px solid;
+            }
+            &:nth-child(2) {
+              border-right: 5px solid;
+            }
+            &:nth-child(3) {
+              display: block;
+              text-align: left;
+            }
+            &:nth-child(4) {
+              display: block;
+              border-top: 5px solid;
+            }
+          }
+        }
+        .re-comment {
+          box-shadow: 2px 4px 4px darkgreen;
+          text-align: end;
+          width: 60%;
+          background-color: darkcyan;
+          border: 1px solid;
+          margin: 5px 25%;
+          border-radius: 0 5px 5px 25px;
+          p {
+            display: inline-block;
+            margin: 0;
+            &:first-child {
+              border-right: 5px solid;
+            }
+            &:nth-child(3) {
+              display: block;
+              text-align: right;
+              border-top: 5px solid;
+            }
+          }
+        }
+        .add-comment {
+          textarea {
+            background-color: cadetblue;
+            border: 5px solid;
+            width: 70%;
+            height: 60px;
+          }
+          button {
+            background-color: cadetblue;
+            width: 26%;
+            height: 74px;
+            border: 5px solid;
+            vertical-align: top;
+            &:hover {
+              background-color: #7D9029;
+              cursor: pointer;
+            }
+          }
+        }
       }
-
-
     }
     footer {
       height: 20px;
       background-color: #880000;
       color: gold;
       border-top: solid white 3px;
-
       padding: 7px;
       text-align: center;
     }
   }
-
   .slide.ng-hide-add,
   .slide.ng-hide-remove {
     -webkit-transition: all linear 0.5s;
@@ -362,17 +489,14 @@ html {
     transition: all linear 0.5s;
     display: block !important;
   }
-
   .slide.ng-hide-add.ng-hide-add-active,
   .slide.ng-hide-remove {
     opacity: 0;
   }
-
   .slide.ng-hide-add,
   .slide.ng-hide-remove.ng-hide-remove-active {
     opacity: 1;
   }
-
   .slider {
     cursor: pointer;
     position: relative;
@@ -405,7 +529,6 @@ html {
       #left, #right {
         height: 58px;
       }
-
       #left {
         margin-left: 10px;
         float: left;
@@ -414,7 +537,6 @@ html {
         float: right;
       }
     }
-
   }
 }
 
