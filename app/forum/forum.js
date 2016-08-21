@@ -19,12 +19,11 @@ angular.module('bulgarite.forum', ['ngRoute'])
         '$location',
         'authentication',
         '$route',
-        function ($http, $q, KINVEY_CONFIG, $scope, forumTopic, forumCategory, $location, authentication,$route) {
+        function ($http, $q, KINVEY_CONFIG, $scope, forumTopic, forumCategory, $location, authentication, $route) {
 
 
             $scope.removeCategory = function (categoryID) {
-                forumCategory.RemoveCategory(categoryID).
-                then(function (response) {
+                forumCategory.RemoveCategory(categoryID).then(function (response) {
                     $route.reload();
                 })
             };
@@ -50,6 +49,7 @@ angular.module('bulgarite.forum', ['ngRoute'])
             var getAllTopics = function () {
                 forumTopic.GetAllTopics()
                     .then(function (topics) {
+                        console.log(topics)
                         topics.data.forEach(function (topic) {
                             topic._kmd.lmt = topic._kmd.lmt.substring(0, 19).replace('T', ' ');
                         });
@@ -63,6 +63,7 @@ angular.module('bulgarite.forum', ['ngRoute'])
 
             forumCategory.GetAllCategories()
                 .then(function (categories) {
+                    console.log(categories)
                     $scope.categories = categories.data;
                 });
 

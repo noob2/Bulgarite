@@ -1,9 +1,13 @@
-<p>Добавяне на нова тема</p>
+<h3>Добавяне на нова тема</h3>
 
-<input type="text" ng-model="topic.header" placeholder="Заглавие">
-<textarea ng-model="topic.text" placeholder="Съдържание"></textarea>
-<label for="category">Категория</label>
-<select id="category" ng-model="topic.category">
-    <option ng-repeat="category in categories" value="{{category._id}}">{{category.name}}</option>
-</select>
-<button ng-click="AddTopic(topic)">Добави</button>
+<form id="add-topic">
+
+    <input type="text" ng-model="topic.header" placeholder="Заглавие">
+    <textarea ng-model="topic.text" placeholder="Съдържание"></textarea>
+    <label for="category">Категория</label>
+    <select id="category" ng-model="topic.category">
+        <option ng-repeat="category in categories" value="{{category._id}}">{{category.name}}</option>
+    </select>
+    <button ng-click="AddTopic(topic)">Добави</button>
+
+</form>

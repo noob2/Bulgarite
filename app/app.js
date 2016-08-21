@@ -52,7 +52,8 @@ angular.module('bulgarite', [
         $rootScope.$on('$routeChangeStart', function (ev, current, previous, rejection) {
 
             $rootScope.isLoggedIn = !!authentication.isLoggedIn();
-
+            $rootScope.userID = sessionStorage['UserID'];
+console.log($rootScope.userID)
             if ($rootScope.isLoggedIn) {
                 $rootScope.logoutUser = function () {
                     authentication.logoutUser().then(function (response) {

@@ -27,6 +27,7 @@ angular.module('bulgarite.forum.topicPage', ['ngRoute'])
                 $scope.showOptions = true;
 
                 $scope.addComment = function (comment) {
+                    console.log(comment)
                     forumComment.AddCommentToTopic(comment, $routeParams.id)
                         .then(function (response) {
                             console.log(response);
@@ -47,6 +48,21 @@ angular.module('bulgarite.forum.topicPage', ['ngRoute'])
                             $route.reload();
                         })
                 }
+            };
+
+            $scope.removeTopic = function (topicID) {
+                forumTopic.RemoveTopic(topicID)
+                    .then(function (response) {
+                        console.log(response);
+                        history.back();
+                    })
+            };
+            $scope.deleteComment = function (commentID) {
+                forumComment.DeleteComment(commentID)
+                    .then(function (response) {
+                        console.log(response);
+                        $route.reload();
+                    })
             };
 
             forumTopic.GetTopicByID($routeParams.id)

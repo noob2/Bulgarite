@@ -4,6 +4,7 @@
         <p>{{topic.author}}</p>
         <p>{{topic._kmd.lmt}}</p>
         <p>{{topic.text}}</p>
+        <button ng-click="removeTopic(topic._id)" ng-if="userID === topic._acl.creator" class="remove-button">Изтрий темата</button>
     </div>
 
     <div ng-repeat="comment in comments">
@@ -12,7 +13,8 @@
 
             <p>{{comment.author}}</p>
             <p>{{comment._kmd.lmt}}</p>
-            <button ng-click="showReOptions(comment._id)" class="add-button">Коментирай</button>
+            <button ng-if="isLoggedIn" ng-click="deleteComment(comment._id)" class="remove-button">Изтрий коментара</button>
+            <button ng-if="isLoggedIn" ng-click="showReOptions(comment._id)" class="add-button">Коментирай</button>
             <p>{{comment.text}}</p>
 
             <div ng-if="showReOptionsID == comment._id" class="add-comment">
@@ -29,7 +31,7 @@
             <p>{{reComment.author}}</p>
             <p>{{reComment._kmd.lmt}}</p>
             <p>{{reComment.text}}</p>
-
+            <button ng-if="isLoggedIn" ng-click="deleteComment(reComment._id)" class="remove-button">Изтрий отговора</button>
         </div>
 
     </div>

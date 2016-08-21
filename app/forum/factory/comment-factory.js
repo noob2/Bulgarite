@@ -26,6 +26,19 @@ angular.module('bulgarite.factory.comment', [])
                 return deferred.promise;
             }
 
+            function DeleteComment(commentID) {
+                var deferred = $q.defer();
+
+                $http.defaults.headers.common.Authorization = KINVEY_CONFIG['CurrentUserCredentials'];
+                $http.delete(BASE_DATA_URL + 'forumComments/'+commentID)
+                    .then(function (articles) {
+                        deferred.resolve(articles)
+                    }, function (err) {
+                        deferred.resolve(err)
+                    });
+                return deferred.promise;
+            }
+
             function AddReCommentToComment(comment, commentID) {
                 var deferred = $q.defer();
                 comment.author = sessionStorage['name'];
@@ -73,6 +86,7 @@ angular.module('bulgarite.factory.comment', [])
 
             return {
                 AddCommentToTopic: AddCommentToTopic,
+                DeleteComment: DeleteComment,
                 AddReCommentToComment: AddReCommentToComment,
                 GetCommentsFromTopic: GetCommentsFromTopic,
                 GetReCommentsFromComment: GetReCommentsFromComment

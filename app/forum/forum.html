@@ -4,14 +4,14 @@
     <p>Категории:</p>
     <a ng-click="getAllTopics()" class="add-button">Всички категории</a>
 
-    <div ng-repeat="category in categories">
+    <ul ng-repeat="category in categories">
 
-        <p >
-            {{category.name}}
-            <button ng-click="removeCategory(category._id)" ng-if="isLoggedIn">X</button>
-        </p>
+        <li>
+            <p ng-click="getAllTopicsFromCategory(category._id)">{{category.name}}</p>
+            <button ng-click="removeCategory(category._id)" ng-if="userID === category._acl.creator" class="remove-button">X</button>
+        </li>
 
-    </div>
+    </ul>
     <a ng-if="isLoggedIn" href="#/forum/addCategory" class="add-button">Добави категория</a>
 </div>
 

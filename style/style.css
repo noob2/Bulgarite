@@ -1,49 +1,65 @@
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\0000311}}
 html {
   height: 100%;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\0000313}}
 html body {
   height: 100%;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\0000315}}
 html body #wrapper {
   min-height: 100%;
   margin-bottom: -37px;
   background-color: #00A000;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\0000318}}
 html body #wrapper:after {
   content: "";
   display: block;
   height: 142px;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\0000324}}
 html body #wrapper .menu {
   margin: 0;
   background-color: black;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\0000327}}
 html body #wrapper .menu img {
   height: 50px;
   float: left;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\0000331}}
 html body #wrapper .menu li {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\0000334}}
 html body #wrapper .menu li:first-of-type {
   margin-left: 55px;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\0000337}}
 html body #wrapper .menu li:nth-last-of-type(-n+2) {
   float: right;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\0000340}}
 html body #wrapper .menu li a {
   color: gold;
   font-weight: bold;
   padding: 17px 20px;
   text-decoration: none;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\0000345}}
 html body #wrapper .menu li a:hover {
   background-color: #00A000;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\0000351}}
 html body #wrapper #currentPage {
   min-height: 90%;
   text-align: center;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\0000354}}
 html body #wrapper #currentPage table {
   color: gold;
   display: inline-table;
@@ -52,25 +68,31 @@ html body #wrapper #currentPage table {
   border-spacing: 5px;
   background-color: green;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\0000361}}
 html body #wrapper #currentPage table thead {
   color: floralwhite;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\0000365}}
 html body #wrapper #currentPage #welcome-header {
   color: gold;
   margin-top: 0;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\0000369}}
 html body #wrapper #currentPage .first-element {
   margin: 0;
   padding: 13px;
   color: gold;
   font-weight: 900;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\0000375}}
 html body #wrapper #currentPage .last-element {
   margin: 0;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\0000378}}
 html body #wrapper #currentPage h4 {
   color: gold;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\0000381}}
 html body #wrapper #currentPage #login, html body #wrapper #currentPage #register {
   height: 180px;
   display: inline-block;
@@ -79,9 +101,11 @@ html body #wrapper #currentPage #login, html body #wrapper #currentPage #registe
   vertical-align: top;
   position: relative;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\0000389}}
 html body #wrapper #currentPage #login form, html body #wrapper #currentPage #register form {
   margin: auto;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\0000391}}
 html body #wrapper #currentPage #login form h3, html body #wrapper #currentPage #register form h3 {
   float: none;
   margin: 5px;
@@ -89,11 +113,16 @@ html body #wrapper #currentPage #login form h3, html body #wrapper #currentPage 
   text-align: center;
   color: darkgreen;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\0000398}}
 html body #wrapper #currentPage #login form input, html body #wrapper #currentPage #register form input {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   text-align: center;
   margin: 5px;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003103}}
 html body #wrapper #currentPage #login form button, html body #wrapper #currentPage #register form button {
   bottom: 0;
   margin: 5px auto;
@@ -106,28 +135,31 @@ html body #wrapper #currentPage #login form button, html body #wrapper #currentP
   width: 100%;
   position: absolute;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003111}}
 html body #wrapper #currentPage #login {
   background: #ffffff;
-  background: -moz-linear-gradient(-45deg, #ffffff 0%, #ffffff 33%, #ffffff 33%, #fafafa 59%, #ffffff 63%, #ffffff 67%, #f3f3f3 68%, #f3f3f3 68%, #fbfbfb 100%);
   /* FF3.6-15 */
   background: -webkit-linear-gradient(-45deg, #ffffff 0%, #ffffff 33%, #ffffff 33%, #fafafa 59%, #ffffff 63%, #ffffff 67%, #f3f3f3 68%, #f3f3f3 68%, #fbfbfb 100%);
   /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-linear-gradient(315deg, #ffffff 0%, #ffffff 33%, #ffffff 33%, #fafafa 59%, #ffffff 63%, #ffffff 67%, #f3f3f3 68%, #f3f3f3 68%, #fbfbfb 100%);
   background: linear-gradient(135deg, #ffffff 0%, #ffffff 33%, #ffffff 33%, #fafafa 59%, #ffffff 63%, #ffffff 67%, #f3f3f3 68%, #f3f3f3 68%, #fbfbfb 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#fbfbfb', GradientType=1);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#fbfbfb', GradientType=1)
   /* IE6-9 fallback on horizontal gradient */
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003118}}
 html body #wrapper #currentPage #register {
   background: #fb4e2f;
-  background: -moz-linear-gradient(-45deg, #fb4e2f 0%, #f76d57 61%, #fa2508 67%, #f62d12 79%, #f02f1e 100%);
   /* FF3.6-15 */
   background: -webkit-linear-gradient(-45deg, #fb4e2f 0%, #f76d57 61%, #fa2508 67%, #f62d12 79%, #f02f1e 100%);
   /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-linear-gradient(315deg, #fb4e2f 0%, #f76d57 61%, #fa2508 67%, #f62d12 79%, #f02f1e 100%);
   background: linear-gradient(135deg, #fb4e2f 0%, #f76d57 61%, #fa2508 67%, #f62d12 79%, #f02f1e 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fb4e2f', endColorstr='#f02f1e', GradientType=1);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fb4e2f', endColorstr='#f02f1e', GradientType=1)
   /* IE6-9 fallback on horizontal gradient */
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003125}}
 html body #wrapper #currentPage .economy-article, html body #wrapper #currentPage .history-article, html body #wrapper #currentPage .landmarks-article, html body #wrapper #currentPage .population-article {
   height: 300px;
   width: 80%;
@@ -138,33 +170,40 @@ html body #wrapper #currentPage .economy-article, html body #wrapper #currentPag
   color: gold;
   box-shadow: 8px 8px 13px black;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003134}}
 html body #wrapper #currentPage .economy-article:hover, html body #wrapper #currentPage .history-article:hover, html body #wrapper #currentPage .landmarks-article:hover, html body #wrapper #currentPage .population-article:hover {
   background-color: brown;
   cursor: pointer;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003138}}
 html body #wrapper #currentPage .economy-article h3, html body #wrapper #currentPage .history-article h3, html body #wrapper #currentPage .landmarks-article h3, html body #wrapper #currentPage .population-article h3 {
   margin: 5px;
   color: white;
   border-bottom: solid gold 1px;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003143}}
 html body #wrapper #currentPage .economy-article .image, html body #wrapper #currentPage .history-article .image, html body #wrapper #currentPage .landmarks-article .image, html body #wrapper #currentPage .population-article .image {
   width: 250px;
   float: left;
   vertical-align: top;
   margin: 7px 7px 7px 7px;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003148}}
 html body #wrapper #currentPage .economy-article .image img, html body #wrapper #currentPage .history-article .image img, html body #wrapper #currentPage .landmarks-article .image img, html body #wrapper #currentPage .population-article .image img {
   width: inherit;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003156}}
 html body #wrapper #currentPage .history-article .year {
   position: absolute;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003158}}
 html body #wrapper #currentPage .history-article .year img {
   position: absolute;
   top: -53px;
   left: -15px;
   width: 80px;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003164}}
 html body #wrapper #currentPage .history-article .year p {
   position: absolute;
   top: -28px;
@@ -172,18 +211,22 @@ html body #wrapper #currentPage .history-article .year p {
   color: black;
   width: 60px;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003177}}
 html body #wrapper #currentPage .rzslider .rz-pointer {
   cursor: w-resize;
   background-color: transparent;
   color: black;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003182}}
 html body #wrapper #currentPage .rzslider .rz-bar.rz-selection {
   background-color: brown;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003185}}
 html body #wrapper #currentPage #last-added-articles {
   color: white;
   margin-bottom: 0px;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003189}}
 html body #wrapper #currentPage #article-page {
   margin: 26px auto 0;
   color: gold;
@@ -191,23 +234,28 @@ html body #wrapper #currentPage #article-page {
   border-radius: 30px;
   background-color: black;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003195}}
 html body #wrapper #currentPage #article-page h2 {
   margin: 7px;
   color: gold;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003199}}
 html body #wrapper #currentPage #article-page h3 {
   margin: 7px;
   color: gold;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003203}}
 html body #wrapper #currentPage #article-page p {
   margin: 0 auto;
   color: gold;
   width: 90%;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003208}}
 html body #wrapper #currentPage #article-page img {
   width: 60%;
   border-radius: 10px;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003212}}
 html body #wrapper #currentPage #article-page button {
   color: gold;
   background-color: black;
@@ -215,27 +263,36 @@ html body #wrapper #currentPage #article-page button {
   font-weight: bold;
   margin: 20px;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003220}}
 html body #wrapper #currentPage .latest-articles {
   background-color: darkgreen;
   margin: 5px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   width: 380px;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003225}}
 html body #wrapper #currentPage .latest-articles:hover {
   background-color: #363636;
   cursor: pointer;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003229}}
 html body #wrapper #currentPage .latest-articles div {
   width: 100%;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003231}}
 html body #wrapper #currentPage .latest-articles div h3 {
   color: floralwhite;
   margin: 4px;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003235}}
 html body #wrapper #currentPage .latest-articles div img {
   height: 200px;
   max-width: 97%;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003241}}
 html body #wrapper #currentPage #add-article {
   bottom: 0;
   margin: 5px auto;
@@ -247,52 +304,70 @@ html body #wrapper #currentPage #add-article {
   text-decoration: none;
   display: inline-block;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003245}}
 html body #wrapper #currentPage #add-article:hover {
   cursor: pointer;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003250}}
 html body #wrapper #currentPage #add-article-form input, html body #wrapper #currentPage #edit-article-form input {
   display: block;
   margin: 5px auto;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003254}}
 html body #wrapper #currentPage #add-article-form textarea, html body #wrapper #currentPage #edit-article-form textarea {
   display: block;
   margin: 5px auto;
   width: 550px;
   height: 260px;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003260}}
 html body #wrapper #currentPage #add-article-form button, html body #wrapper #currentPage #edit-article-form button {
   display: block;
   margin: 5px auto;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003264}}
 html body #wrapper #currentPage #add-article-form #article-image, html body #wrapper #currentPage #edit-article-form #article-image {
   max-width: 80%;
   border: 7px solid black;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003269}}
 html body #wrapper #currentPage #bulgaria-map {
   margin: 0 auto;
   width: 75%;
   position: relative;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003273}}
 html body #wrapper #currentPage #bulgaria-map #map {
   position: relative;
   width: 100%;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003277}}
 html body #wrapper #currentPage #bulgaria-map div {
   position: absolute;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003279}}
 html body #wrapper #currentPage #bulgaria-map div p {
   display: none;
-  transition: width 2s;
+  -webkit-transition: width 2s;
+          transition: width 2s;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003283}}
+html body #wrapper #currentPage #bulgaria-map div img {
+  position: relative;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003286}}
 html body #wrapper #currentPage #bulgaria-map div .landmark-image {
-  transition: all .2s ease-in-out;
+  -webkit-transition: all .2s ease-in-out;
+          transition: all .2s ease-in-out;
   width: 50px;
   height: 50px;
   border-radius: 100%;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003292}}
 html body #wrapper #currentPage #bulgaria-map div:hover {
   cursor: pointer;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003294}}
 html body #wrapper #currentPage #bulgaria-map div:hover p {
   width: 200px;
   display: block;
@@ -303,15 +378,23 @@ html body #wrapper #currentPage #bulgaria-map div:hover p {
   left: -74px;
   top: -80px;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003304}}
 html body #wrapper #currentPage #bulgaria-map div:hover img {
-  transform: scale(3.5);
+  z-index: 1;
+  position: relative;
+  -webkit-transform: scale(3.5);
+      -ms-transform: scale(3.5);
+          transform: scale(3.5);
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003311}}
 html body #wrapper #currentPage #bulgaria-map #location-pointer {
   width: 50px;
   height: 50px;
   position: absolute;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003317}}
 html body #wrapper #currentPage .add-button {
+  display: block;
   background-color: darkcyan;
   padding: 2px;
   border-radius: 10px;
@@ -321,42 +404,65 @@ html body #wrapper #currentPage .add-button {
   max-width: 200px;
   margin: 5px;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003327}}
 html body #wrapper #currentPage .add-button:hover {
   background-color: green;
   color: black;
   cursor: pointer;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003333}}
 html body #wrapper #currentPage #all-categories {
   width: 200px;
   position: absolute;
   border: 2px solid black;
   margin: 5px;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003334}}
 html body #wrapper #currentPage #all-categories p {
-  border-bottom: 1px solid #646486;
+  display: inline-block;
   margin: 0 20px;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003337}}
 html body #wrapper #currentPage #all-categories p:first-child {
   font-weight: bold;
 }
-html body #wrapper #currentPage #all-categories p:first-child:hover {
-  cursor: default;
-  background-color: transparent;
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003341}}
+html body #wrapper #currentPage #all-categories ul {
+  padding: 0;
+  list-style-type: none;
 }
-html body #wrapper #currentPage #all-categories p:hover {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003347}}
+html body #wrapper #currentPage #all-categories ul li p:hover {
+  color: bisque;
+  border-radius: 4px;
+  padding: 0px 20px;
+  background-color: darkblue;
   cursor: pointer;
-  background-color: cadetblue;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003357}}
 html body #wrapper #currentPage #all-categories button {
-  display: inline-block;
+  right: 5px;
   margin: 0;
   border: 0;
   border-radius: 6px;
   background-color: brown;
+  position: absolute;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003364}}
 html body #wrapper #currentPage #all-categories button:hover {
   cursor: pointer;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003373}}
+html body #wrapper #currentPage .remove-button {
+  left: 2px;
+  border-radius: 7px;
+  background-color: brown;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003377}}
+html body #wrapper #currentPage .remove-button:hover {
+  cursor: pointer;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003381}}
 html body #wrapper #currentPage .post {
   border: 3px solid black;
   width: 77%;
@@ -364,6 +470,7 @@ html body #wrapper #currentPage .post {
   float: right;
   background-color: darkcyan;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003387}}
 html body #wrapper #currentPage .post p {
   display: inline-block;
   border-right: 3px solid black;
@@ -371,6 +478,7 @@ html body #wrapper #currentPage .post p {
   height: 30px;
   margin: 0;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003388}}
 html body #wrapper #currentPage .post p:first-child {
   display: block;
   border-bottom: 3px solid black;
@@ -378,33 +486,41 @@ html body #wrapper #currentPage .post p:first-child {
   width: auto;
   margin-bottom: 0;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003400}}
 html body #wrapper #currentPage .post p:last-child {
   border-right: none;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003404}}
 html body #wrapper #currentPage .post:hover {
   background-color: cadetblue;
   cursor: pointer;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003409}}
 html body #wrapper #currentPage #topic {
   background-color: cadetblue;
   border: 5px solid;
   margin: 10px 10px;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003413}}
 html body #wrapper #currentPage #topic h2 {
   margin: 0;
   border-bottom: 5px solid;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003417}}
 html body #wrapper #currentPage #topic p {
   display: inline-block;
   margin: 0;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003420}}
 html body #wrapper #currentPage #topic p:nth-child(2) {
   border-right: 5px solid;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003423}}
 html body #wrapper #currentPage #topic p:last-child {
   border-top: 5px solid;
   display: block;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003429}}
 html body #wrapper #currentPage .comment {
   box-shadow: 2px 4px 4px darkgreen;
   text-align: end;
@@ -414,24 +530,31 @@ html body #wrapper #currentPage .comment {
   margin: 10px auto;
   border-radius: 30px 5px 5px 0;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003437}}
 html body #wrapper #currentPage .comment p {
   display: inline-block;
   margin: 0;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003440}}
 html body #wrapper #currentPage .comment p:first-child {
-  border-right: 5px solid;
+  border-right: 3px solid;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003443}}
 html body #wrapper #currentPage .comment p:nth-child(2) {
-  border-right: 5px solid;
+  border-right: 3px solid;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003446}}
 html body #wrapper #currentPage .comment p:nth-child(3) {
   display: block;
   text-align: left;
+  border-top: 3px solid;
 }
-html body #wrapper #currentPage .comment p:nth-child(4) {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003451}}
+html body #wrapper #currentPage .comment p:last-child {
   display: block;
   border-top: 5px solid;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003457}}
 html body #wrapper #currentPage .re-comment {
   box-shadow: 2px 4px 4px darkgreen;
   text-align: end;
@@ -441,24 +564,49 @@ html body #wrapper #currentPage .re-comment {
   margin: 5px 25%;
   border-radius: 0 5px 5px 25px;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003465}}
 html body #wrapper #currentPage .re-comment p {
   display: inline-block;
   margin: 0;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003468}}
 html body #wrapper #currentPage .re-comment p:first-child {
   border-right: 5px solid;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003471}}
 html body #wrapper #currentPage .re-comment p:nth-child(3) {
   display: block;
   text-align: right;
   border-top: 5px solid;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003479}}
+html body #wrapper #currentPage #add-topic * {
+  background-color: greenyellow;
+  margin: 5px;
+  padding: 6px;
+  width: 73%;
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+  border: 1px solid;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003489}}
+html body #wrapper #currentPage #add-topic textarea {
+  height: 240px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003493}}
+html body #wrapper #currentPage #add-topic button:hover {
+  background: chartreuse;
+  cursor: pointer;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003500}}
 html body #wrapper #currentPage .add-comment textarea {
   background-color: cadetblue;
   border: 5px solid;
   width: 70%;
   height: 60px;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003506}}
 html body #wrapper #currentPage .add-comment button {
   background-color: cadetblue;
   width: 26%;
@@ -466,10 +614,12 @@ html body #wrapper #currentPage .add-comment button {
   border: 5px solid;
   vertical-align: top;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003512}}
 html body #wrapper #currentPage .add-comment button:hover {
   background-color: #7D9029;
   cursor: pointer;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003520}}
 html body footer {
   height: 20px;
   background-color: #880000;
@@ -478,22 +628,24 @@ html body footer {
   padding: 7px;
   text-align: center;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003529}}
 html .slide.ng-hide-add,
 html .slide.ng-hide-remove {
   -webkit-transition: all linear 0.5s;
-  -moz-transition: all linear 0.5s;
-  -o-transition: all linear 0.5s;
   transition: all linear 0.5s;
   display: block !important;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003537}}
 html .slide.ng-hide-add.ng-hide-add-active,
 html .slide.ng-hide-remove {
   opacity: 0;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003541}}
 html .slide.ng-hide-add,
 html .slide.ng-hide-remove.ng-hide-remove-active {
   opacity: 1;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003545}}
 html .slider {
   cursor: pointer;
   position: relative;
@@ -501,17 +653,20 @@ html .slider {
   margin: 0 auto;
   height: 550px;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003551}}
 html .slider .slide {
   position: absolute;
   top: 0;
   left: 0;
   overflow: hidden;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003556}}
 html .slider .slide img {
   height: 500px;
   margin: 0 auto;
   width: 800px;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003561}}
 html .slider .slide h3 {
   position: inherit;
   top: 30px;
@@ -520,17 +675,21 @@ html .slider .slide h3 {
   color: gold;
   background-color: rgba(70, 219, 73, 0.4);
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003570}}
 html .slider .arrows {
   position: inherit;
   top: 217px;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003574}}
 html .slider .arrows #left, html .slider .arrows #right {
   height: 58px;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003577}}
 html .slider .arrows #left {
   margin-left: 10px;
   float: left;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jo_jo\/Desktop\/Bulgarite\.git\/trunk\/style\/style\.scss}line{font-family:\00003581}}
 html .slider .arrows #right {
   float: right;
 }

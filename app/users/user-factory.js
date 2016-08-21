@@ -12,9 +12,11 @@ angular.module('bulgarite.users.authentication', [])
                 $http.defaults.headers.common.Authorization = KINVEY_CONFIG['MasterCredentials'];
                 $http.post(BASE_USER_URL + 'login', user, {})
                     .then(function (response) {
+                        console.log(response)
                         sessionStorage.setItem('authorisationToken', response.data._kmd.authtoken);
                         sessionStorage.setItem('name', response.data.name);
                         sessionStorage.setItem('UserCredentials', btoa(user.username + ':' + user.password));
+                        sessionStorage.setItem('UserID', response.data._id);
                         deferred.resolve(response);
                     }, function (err) {
                         deferred.reject(err);

@@ -63,9 +63,23 @@ angular.module('bulgarite.factory.topic', [])
                 return deferred.promise;
             }
 
+            function RemoveTopic(topicID) {
+                var deferred = $q.defer();
+
+                $http.defaults.headers.common.Authorization = KINVEY_CONFIG['CurrentUserCredentials'];
+                $http.delete(BASE_DATA_URL + 'forumTopics/' + topicID)
+                    .then(function (articles) {
+                        deferred.resolve(articles)
+                    }, function (err) {
+                        deferred.resolve(err)
+                    });
+                return deferred.promise;
+            }
+
             return {
                 GetTopicByID: GetTopicByID,
                 AddTopic: AddTopic,
+                RemoveTopic: RemoveTopic,
                 GetAllTopics: GetAllTopics,
                 GetAllTopicsFromCategory: GetAllTopicsFromCategory
             }
