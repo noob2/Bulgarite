@@ -2,7 +2,7 @@
 
 <div ng-show="isLoaded">
 
-    <h4>Данни за населението на България:</h4>
+    <h3>Данни за населението на България:</h3>
     <table border="1">
         <thead>
         <th colspan="2">Население на България</th>
@@ -104,7 +104,7 @@
         </tr>
     </table>
 
-    <h4>Последно добавени статии:</h4>
+    <h3>Последно добавени статии:</h3>
     <article ng-repeat="article in articles" class="population-article" ng-click="goToArticle(article._id)">
         <h3>{{article.header}}</h3>
         <div class="image">

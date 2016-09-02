@@ -1,10 +1,10 @@
 <h2 ng-hide="isLoaded">Моля изчакайте . . .</h2>
 
 <div ng-show="isLoaded">
-    <h4>Забележителности на картата:</h4>
+    <h3>Забележителности на картата:</h3>
     <div bulgaria-map></div>
 
-    <h4>Последно добавени:</h4>
+    <h3>Последно добавени:</h3>
 
     <article ng-repeat="article in articles" class="landmarks-article" ng-click="goToArticle(article._id)">
         <h3>{{article.header}}</h3>
