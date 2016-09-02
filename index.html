@@ -13,12 +13,15 @@
     <title>Bulgarite BG</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angularjs-slider/3.0.0/rzslider.min.css">
+    <link href="app/bower_components/angular-toasty/dist/angular-toasty.min.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="style/style.css">
-    <script src="app/bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+
 </head>
 <body>
+
 <div id="wrapper">
+
     <ul class="menu">
         <img ng-src="images/bulgarite-logo.jpg">
         <li><a href="#/">Начало</a></li>
@@ -62,6 +65,7 @@
 <script src="app/economy/economy.js"></script>
 
 <script src="app/directives/slideshow/slideshow.js"></script>
+
 <script src="app/directives/bulgariaMap/bulgariaMap.js"></script>
 <script src="app/directives/loginOrAddArticle/loginOrAddArticle.js"></script>
 
@@ -72,6 +76,12 @@
 <script src="app/forum/addTopic/addTopic.js"></script>
 <script src="app/forum/addCategory/addCategory.js"></script>
 <script src="app/forum/topicPage/topicPage.js"></script>
+
+<script src="app/bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+<script src="app/bower_components/angular-toasty/dist/angular-toasty.min.js"></script>
+<script src="app/directives/toastr/toastr.js"></script>
+
+<toasty></toasty>
 
 </body>
 </html>

@@ -3,7 +3,9 @@
 angular.module('bulgarite', [
     'ngRoute',
 
+    'angular-toasty',
     'rzModule',
+
     'bulgarite.home',
     'bulgarite.account',
 
@@ -36,16 +38,26 @@ angular.module('bulgarite', [
 
     'ngAnimate'
 ])
-    .config(['$routeProvider','$locationProvider', function ($routeProvider,$locationProvider) {
+    .config(['$routeProvider', '$locationProvider', 'toastyConfigProvider', function ($routeProvider, $locationProvider, toastyConfigProvider) {
         $routeProvider.otherwise({redirectTo: '/'});
+
+        toastyConfigProvider.setConfig({
+            sound: true,
+            shake: false,
+            showClose: false,
+            clickToClose: true,
+            timeout: 10000,
+            html: true,
+            theme: 'bootstrap'
+        })
     }])
     .constant('BASE_DATA_URL', 'https://baas.kinvey.com/appdata/kid_-kan4iP1b-/')
     .constant('BASE_USER_URL', 'https://baas.kinvey.com/user/kid_-kan4iP1b-/')
     .constant('KINVEY_CONFIG', {
         'MasterCredentials': 'Basic a2lkXy1rYW40aVAxYi06MDcyZjMwYjg4NjY1NDA0YmE4NjIyMTQ0YmM5OTQxMzc=',
         'UnauthorizedUserCredentials': 'Basic cGVzaG86MTIzNA==',
-        'CurrentUserCredentials':'Basic ' + sessionStorage['UserCredentials'],
-        'CurrentUserAuthToken':'Kinvey ' + sessionStorage['authorisationToken']
+        'CurrentUserCredentials': 'Basic ' + sessionStorage['UserCredentials'],
+        'CurrentUserAuthToken': 'Kinvey ' + sessionStorage['authorisationToken']
     })
     .run(['$rootScope', '$location', 'authentication', '$route', function ($rootScope, $location, authentication, $route) {
 
@@ -53,7 +65,6 @@ angular.module('bulgarite', [
 
             $rootScope.isLoggedIn = !!authentication.isLoggedIn();
             $rootScope.userID = sessionStorage['UserID'];
-console.log($rootScope.userID)
             if ($rootScope.isLoggedIn) {
                 $rootScope.logoutUser = function () {
                     authentication.logoutUser().then(function (response) {

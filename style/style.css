@@ -12,7 +12,7 @@ html body #wrapper {
 html body #wrapper:after {
   content: "";
   display: block;
-  height: 142px;
+  height: 47px;
 }
 html body #wrapper .menu {
   margin: 0;
@@ -67,8 +67,9 @@ html body #wrapper #currentPage table thead {
   color: floralwhite;
 }
 html body #wrapper #currentPage #welcome-header {
-  color: gold;
-  margin-top: 0;
+  color: black;
+  text-shadow: 2px 1px 5px white;
+  margin-top: 3px;
 }
 html body #wrapper #currentPage .last-element {
   margin: 0;
