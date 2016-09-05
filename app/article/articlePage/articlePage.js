@@ -26,8 +26,14 @@ angular.module('bulgarite.article.page', ['ngRoute'])
                 $scope.isLoaded = true;
             });
 
-            $scope.editArticle = function (category) {
+            $scope.editArticle = function (article) {
+                $location.path(article.category + '/article/' + $routeParams.id + '/editArticle');
+            };
 
-                $location.path(category + '/article/' + $routeParams.id + '/editArticle');
+            $scope.deleteArticle = function () {
+                article.deleteArticle($routeParams.id)
+                    .then(function (success) {
+                        history.back();
+                    })
             }
         }]);

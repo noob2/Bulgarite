@@ -26,6 +26,8 @@ angular.module('bulgarite.account', ['ngRoute'])
                     authentication.loginUser(user)
                         .then(function (data) {
                             history.back();
+                        },function (err) {
+                            console.log(err)
                         });
                 };
 

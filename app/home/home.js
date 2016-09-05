@@ -16,12 +16,7 @@ angular.module('bulgarite.home', ['ngRoute'])
         '$route',
         'article',
         '$location',
-        'toasty',
-        function ($scope, $rootScope, authentication, $route, article, $location, toasty) {
-            toasty.error({
-                title: 'User added!',
-                msg: ' has been added!'
-            });
+        function ($scope, $rootScope, authentication, $route, article, $location) {
 
             article.getLatestArticles(6)
                 .then(function (articles) {

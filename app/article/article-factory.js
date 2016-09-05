@@ -85,13 +85,26 @@ angular.module('bulgarite.factory.article', [])
                 return deferred.promise;
             }
 
+            function deleteArticle(articleID) {
+                var deferred = $q.defer();
+                $http.defaults.headers.common.Authorization = KINVEY_CONFIG['CurrentUserCredentials'];
+                $http.delete(BASE_DATA_URL + 'articles/' + articleID)
+                    .then(function (articles) {
+                        deferred.resolve(articles)
+                    }, function (err) {
+                        deferred.resolve(err)
+                    });
+                return deferred.promise;
+            }
+
             return {
                 getAllArticlesFromCategory: getAllArticlesFromCategory,
                 getAllHistoryArticlesFromPeriod: getAllHistoryArticlesFromPeriod,
                 getLatestArticles: getLatestArticles,
                 getArticleById: getArticleById,
                 addArticle: addArticle,
-                editArticle: editArticle
+                editArticle: editArticle,
+                deleteArticle: deleteArticle
             }
         }
     ]);
