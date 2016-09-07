@@ -7,82 +7,89 @@
 <html lang="en" ng-app="bulgarite" class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
 <html lang="en" ng-app="bulgarite" class="no-js"> <!--<![endif]-->
+
 <head>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Bulgarite BG</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angularjs-slider/3.0.0/rzslider.min.css">
-    <link href="app/bower_components/angular-toasty/dist/angular-toasty.min.css" rel="stylesheet" />
 
+    <link rel="stylesheet" href="app/bower_components/normalize-css/normalize.css">
+    <link rel="stylesheet" href="app/bower_components/angularjs-slider/dist/rzslider.css">
+    <link rel="stylesheet" href="app/bower_components/angular-toasty/dist/angular-toasty.css"/>
     <link rel="stylesheet" href="style/style.css">
 
 </head>
+
 <body>
 
-<div id="wrapper">
+    <div id="wrapper">
 
-    <ul class="menu">
-        <img ng-src="images/bulgarite-logo.jpg">
-        <li><a href="#/">Начало</a></li>
-        <li><a href="#/history">История</a></li>
-        <li><a href="#/landmarks">Забележителности</a></li>
-        <li><a href="#/population">Население</a></li>
-        <li><a href="#/economy">Икономика</a></li>
-        <li><a href="#/forum">Форум</a></li>
-        <li ng-hide="isLoggedIn"><a href="#/account">Вход</a></li>
-        <li ng-show="isLoggedIn"><a href="" ng-click="logoutUser()">Изход</a></li>
-    </ul>
-    <div ng-view id="currentPage"></div>
-</div>
-<footer>&copy; Всички права не са запазени &copy;</footer>
+        <ul class="menu">
+            <img ng-src="images/bulgarite-logo.jpg">
+            <li><a href="#/">Начало</a></li>
+            <li><a href="#/history">История</a></li>
+            <li><a href="#/landmarks">Забележителности</a></li>
+            <li><a href="#/population">Население</a></li>
+            <li><a href="#/economy">Икономика</a></li>
+            <li><a href="#/forum">Форум</a></li>
+            <li ng-hide="isLoggedIn"><a href="#/account">Вход</a></li>
+            <li ng-show="isLoggedIn"><a href="" ng-click="logoutUser()">Изход</a></li>
+        </ul>
+        <div ng-view id="currentPage"></div>
+    </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/angularjs-slider/3.0.0/rzslider.min.js"></script>
+    <script src="app/bower_components/jquery/dist/jquery.js"></script>
 
-<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-animate.js"></script>
+    <script src="app/bower_components/angular/angular.js"></script>
+    <script src="app/bower_components/angular-route/angular-route.js"></script>
+    <script src="app/bower_components/angular-animate/angular-animate.js"></script>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="app/bower_components/angularjs-slider/dist/rzslider.js"></script>
+    <script src="app/bower_components/angular-toasty/dist/angular-toasty.min.js"></script>
 
-<script src="app/app.js"></script>
+    <script src="app/app.js"></script>
 
-<script src="app/users/user-factory.js"></script>
-<script src="app/home/home.js"></script>
+    <script src="app/users/user-factory.js"></script>
 
-<script src="app/account/account.js"></script>
+    <script src="app/home/home.js"></script>
 
-<script src="app/article/article-factory.js"></script>
-<script src="app/article/articlePage/articlePage.js"></script>
-<script src="app/article/addArticle/addArticle.js"></script>
-<script src="app/article/editArticle/editArticle.js"></script>
+    <script src="app/account/account.js"></script>
 
-<script src="app/history/history.js"></script>
+    <script src="app/article/article-factory.js"></script>
+    <script src="app/article/articlePage/articlePage.js"></script>
+    <script src="app/article/addArticle/addArticle.js"></script>
+    <script src="app/article/editArticle/editArticle.js"></script>
 
-<script src="app/landmarks/landmarks.js"></script>
+    <script src="app/history/history.js"></script>
 
-<script src="app/population/population.js"></script>
-<script src="app/economy/economy.js"></script>
+    <script src="app/landmarks/landmarks.js"></script>
 
-<script src="app/directives/slideshow/slideshow.js"></script>
-<script src="node_modules/r/directives/slideshow/slideshow.js"></script>
+    <script src="app/population/population.js"></script>
 
-<script src="app/directives/bulgariaMap/bulgariaMap.js"></script>
-<script src="app/directives/loginOrAddArticle/loginOrAddArticle.js"></script>
+    <script src="app/economy/economy.js"></script>
 
-<script src="app/forum/factory/topic-factory.js"></script>
-<script src="app/forum/factory/category-factory.js"></script>
-<script src="app/forum/factory/comment-factory.js"></script>
-<script src="app/forum/forum.js"></script>
-<script src="app/forum/addTopic/addTopic.js"></script>
-<script src="app/forum/addCategory/addCategory.js"></script>
-<script src="app/forum/topicPage/topicPage.js"></script>
+    <script src="app/directives/slideshow/slideshow.js"></script>
+    <script src="app/directives/slideshow/slideshow.js"></script>
 
-<script src="app/bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
-<script src="app/bower_components/angular-toasty/dist/angular-toasty.min.js"></script>
-<script src="app/directives/toastr/toastr.js"></script>
+    <script src="app/directives/bulgariaMap/bulgariaMap.js"></script>
+    <script src="app/directives/loginOrAddArticle/loginOrAddArticle.js"></script>
 
-<toasty></toasty>
+    <script src="app/forum/factory/topic-factory.js"></script>
+    <script src="app/forum/factory/category-factory.js"></script>
+    <script src="app/forum/factory/comment-factory.js"></script>
+    <script src="app/forum/forum.js"></script>
+    <script src="app/forum/addTopic/addTopic.js"></script>
+    <script src="app/forum/addCategory/addCategory.js"></script>
+    <script src="app/forum/topicPage/topicPage.js"></script>
+
+
+
+
+
+    <footer>&copy; Всички права не са запазени &copy;</footer>
+
+    <toasty></toasty>
 
 </body>
 </html>
