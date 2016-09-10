@@ -2,12 +2,12 @@
 
 angular.module('bulgarite.home', ['ngRoute'])
 
-    .config(['$routeProvider','$locationProvider', function ($routeProvider,$locationProvider) {
-        $routeProvider.when('/', {
-            templateUrl: 'app/home/home.html',
-            controller: 'homeController'
-        });
-    }])
+    // .config(['$routeProvider', function ($routeProvider) {
+    //     $routeProvider.when('/', {
+    //         templateUrl: 'app/home/home.html',
+    //         controller: 'homeController'
+    //     });
+    // }])
 
     .controller('homeController', [
         '$scope',
