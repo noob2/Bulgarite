@@ -1,5 +1,5 @@
 'use strict';
-console.log(2);
+
 angular.module('bulgarite', [
     'ngRoute',
 
