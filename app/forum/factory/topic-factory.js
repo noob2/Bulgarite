@@ -1,4 +1,4 @@
-angular.module('bulgarite.factory.topic', [])
+angular.module('factory.topic', [])
     .factory('forumTopic', [
         '$http',
         '$q',

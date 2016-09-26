@@ -1,15 +1,6 @@
 'use strict';
 
-angular.module('bulgarite.history', ['ngRoute'])
-
-    .config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
-
-        $routeProvider.when('/history', {
-            templateUrl: 'app/history/history.html',
-            controller: 'historyController'
-        });
-
-    }])
+angular.module('history', ['ngRoute'])
     .controller('historyController', [
         '$scope',
         'article',
@@ -28,6 +19,7 @@ angular.module('bulgarite.history', ['ngRoute'])
                 $scope.isLoaded = false;
                 article.getAllHistoryArticlesFromPeriod($scope.slider.min, $scope.slider.max)
                     .then(function (articles) {
+                        console.log(articles)
                         $scope.articles = articles.data;
                     }).finally(function () {
                     $scope.isLoaded = true;

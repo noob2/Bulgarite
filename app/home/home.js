@@ -1,14 +1,6 @@
 'use strict';
 
-angular.module('bulgarite.home', ['ngRoute'])
-
-    // .config(['$routeProvider', function ($routeProvider) {
-    //     $routeProvider.when('/', {
-    //         templateUrl: 'app/home/home.html',
-    //         controller: 'homeController'
-    //     });
-    // }])
-
+angular.module('home', ['ngRoute'])
     .controller('homeController', [
         '$scope',
         '$rootScope',
@@ -26,7 +18,7 @@ angular.module('bulgarite.home', ['ngRoute'])
             });
 
             $scope.goToArticle = function (id) {
-                $location.path('article/'+id);
+                $location.path('article/' + id);
             };
 
             if ($scope.isLoggedIn) {

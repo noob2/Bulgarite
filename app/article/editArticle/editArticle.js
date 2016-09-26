@@ -1,13 +1,6 @@
 'use strict';
 
-angular.module('bulgarite.article.editArticle', ['ngRoute'])
-
-    .config(['$routeProvider', function ($routeProvider) {
-        $routeProvider.when('/:articleType/article/:id/editArticle', {
-            templateUrl: 'app/article/editArticle/editArticle.html',
-            controller: 'editArticleController'
-        });
-    }])
+angular.module('article.editArticle', ['ngRoute'])
 
     .controller('editArticleController', [
         '$scope',
@@ -16,8 +9,7 @@ angular.module('bulgarite.article.editArticle', ['ngRoute'])
         '$route',
         'article',
         '$routeParams',
-        '$location',
-        function ($scope, $rootScope, authentication, $route, article, $routeParams, $location) {
+        function ($scope, $rootScope, authentication, $route, article, $routeParams) {
             $scope.shouldSetCoordinates = true;
             var articleType = $routeParams.articleType;
             $scope.articleType = articleType;
@@ -39,7 +31,7 @@ angular.module('bulgarite.article.editArticle', ['ngRoute'])
                     art.coordinate.meridian = $meridian.val();
                 }
 
-                article.editArticle(art,$routeParams.id)
+                article.editArticle(art, $routeParams.id)
                     .then(function (success) {
                         history.back();
                     });

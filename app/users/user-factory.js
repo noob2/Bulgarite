@@ -1,4 +1,6 @@
-angular.module('bulgarite.users.authentication', [])
+'use strict';
+
+angular.module('factory.authentication', [])
     .factory('authentication', [
         '$http',
         '$q',
@@ -41,8 +43,6 @@ angular.module('bulgarite.users.authentication', [])
                             deferred.reject(err);
                         });
                 }
-
-
                 return deferred.promise;
             }
 

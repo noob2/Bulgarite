@@ -1,13 +1,6 @@
 'use strict';
 
-angular.module('bulgarite.forum', ['ngRoute'])
-
-    .config(['$routeProvider', '$locationProvider', function ($routeProvider) {
-        $routeProvider.when('/forum', {
-            templateUrl: 'app/forum/forum.html',
-            controller: 'forumController'
-        });
-    }])
+angular.module('forum.home', ['ngRoute'])
 
     .controller('forumController', [
         '$http',
@@ -49,7 +42,6 @@ angular.module('bulgarite.forum', ['ngRoute'])
             var getAllTopics = function () {
                 forumTopic.GetAllTopics()
                     .then(function (topics) {
-                        console.log(topics)
                         topics.data.forEach(function (topic) {
                             topic._kmd.lmt = topic._kmd.lmt.substring(0, 19).replace('T', ' ');
                         });
@@ -63,7 +55,6 @@ angular.module('bulgarite.forum', ['ngRoute'])
 
             forumCategory.GetAllCategories()
                 .then(function (categories) {
-                    console.log(categories)
                     $scope.categories = categories.data;
                 });
 

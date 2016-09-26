@@ -1,22 +1,12 @@
 'use strict';
 
-angular.module('bulgarite.account', ['ngRoute'])
-
-    .config(['$routeProvider','$locationProvider', function ($routeProvider) {
-        $routeProvider.when('/account', {
-            templateUrl: 'app/account/account.html',
-            controller: 'accountController'
-        });
-    }])
-
+angular.module('account', ['ngRoute'])
     .controller('accountController', [
         '$scope',
         '$rootScope',
         'authentication',
         '$route',
-        'article',
-        '$location',
-        function ($scope, $rootScope, authentication, $route, article, $location) {
+        function ($scope, $rootScope, authentication, $route) {
 
             if ($scope.isLoggedIn) {
                 $scope.user = sessionStorage['name'];
@@ -26,7 +16,7 @@ angular.module('bulgarite.account', ['ngRoute'])
                     authentication.loginUser(user)
                         .then(function (data) {
                             history.back();
-                        },function (err) {
+                        }, function (err) {
                             console.log(err)
                         });
                 };

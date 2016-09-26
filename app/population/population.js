@@ -1,13 +1,6 @@
 'use strict';
 
-angular.module('bulgarite.population', ['ngRoute'])
-
-    .config(['$routeProvider', '$locationProvider', function ($routeProvider) {
-        $routeProvider.when('/population', {
-            templateUrl: 'app/population/population.html',
-            controller: 'populationController'
-        });
-    }])
+angular.module('population', ['ngRoute'])
 
     .controller('populationController', [
         '$http',

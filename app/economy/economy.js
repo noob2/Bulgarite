@@ -1,13 +1,6 @@
 'use strict';
 
-angular.module('bulgarite.economy', ['ngRoute'])
-
-    .config(['$routeProvider', '$locationProvider', function ($routeProvider) {
-        $routeProvider.when('/economy', {
-            templateUrl: 'app/economy/economy.html',
-            controller: 'economyController'
-        });
-    }])
+angular.module('economy', ['ngRoute'])
 
     .controller('economyController', [
         '$http',

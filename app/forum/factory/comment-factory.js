@@ -1,4 +1,4 @@
-angular.module('bulgarite.factory.comment', [])
+angular.module('factory.comment', [])
     .factory('forumComment', [
         '$http',
         '$q',

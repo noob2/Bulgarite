@@ -1,4 +1,6 @@
-angular.module('bulgarite.directives.bulgariaMap', ['ngRoute'])
+'use strict';
+
+angular.module('directive.bulgariaMap', ['ngRoute'])
     .controller('bulgariaMapController', ['$scope', 'article', '$location', function ($scope, article, $location) {
 
         if (!($location.path().match('add-article'))) {

@@ -1,19 +1,22 @@
-<h2 ng-hide="isLoaded">Моля изчакайте . . .</h2>
+<ng-controller ng-controller="landmarksController">
 
-<div ng-show="isLoaded">
-    <h3>Забележителности на картата:</h3>
-    <div bulgaria-map></div>
+    <h2 ng-hide="isLoaded">Моля изчакайте . . .</h2>
 
-    <h3>Последно добавени:</h3>
+    <div ng-show="isLoaded">
+        <h3>Забележителности на картата:</h3>
+        <div bulgaria-map></div>
 
-    <article ng-repeat="article in articles" class="landmarks-article" ng-click="goToArticle(article._id)">
-        <h3>{{article.header}}</h3>
-        <div class="image">
-            <img ng-src="{{article.imgUrl}}">
-        </div>
-        <p>{{article.content}}</p>
-    </article>
+        <h3>Последно добавени:</h3>
 
-    <login-or-add-article>
-</div>
+        <article ng-repeat="article in articles" class="landmarks-article" ng-click="goToArticle(article._id)">
+            <h3>{{article.header}}</h3>
+            <div class="image">
+                <img ng-src="{{article.imgUrl}}">
+            </div>
+            <p>{{article.content}}</p>
+        </article>
 
+        <login-or-add-article>
+    </div>
+
+</ng-controller>

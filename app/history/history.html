@@ -1,25 +1,30 @@
-<h2 ng-hide="isLoaded">Моля изчакайте . . .</h2>
+<ng-controller ng-controller="historyController">
 
-<div ng-show="isLoaded">
-    <h3>Изберете период от историята:</h3>
-    <rzslider
-            rz-slider-model="slider.min"
-            rz-slider-high="slider.max"
-            rz-slider-options="slider.options">
-    </rzslider>
+    <h2 ng-hide="isLoaded">Моля изчакайте . . .</h2>
 
-    <article ng-repeat="article in articles" class="history-article" ng-click="goToArticle(article._id)">
-        <h3>{{article.header}}</h3>
-        <div class="year">
-            <img src="../../images/year_background.png">
-            <p>{{article.year}} г.</p>
-        </div>
-        <div class="image">
-            <img ng-src="{{article.imgUrl}}">
-        </div>
-        <p>{{article.content}}</p>
-    </article>
+    <div ng-show="isLoaded">
+        <h3>Изберете период от историята:</h3>
+        <rzslider
+                rz-slider-model="slider.min"
+                rz-slider-high="slider.max"
+                rz-slider-options="slider.options">
+        </rzslider>
 
-    <login-or-add-article>
-</div>
+        <article ng-repeat="article in articles" class="history-article" ng-click="goToArticle(article._id)">
+            <h3>{{article.header}}</h3>
+            <div class="year">
+                <img src="../../images/year_background.png">
+                <p>{{article.year}} г.</p>
+            </div>
+            <div class="image">
+                <img ng-src="{{article.imgUrl}}">
+            </div>
+            <p>{{article.content}}</p>
+        </article>
+
+        <login-or-add-article>
+    </div>
+
+</ng-controller>
+
 

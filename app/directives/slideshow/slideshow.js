@@ -1,4 +1,4 @@
-angular.module('bulgarite.directives.slider', ['ngRoute'])
+angular.module('directive.slideshow', ['ngRoute'])
     .controller('sliderController', ['$scope', 'article', function ($scope, article) {
         article.getLatestArticles(5)
             .then(function (articles) {

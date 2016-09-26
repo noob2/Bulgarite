@@ -1,13 +1,6 @@
 'use strict';
 
-angular.module('bulgarite.article.page', ['ngRoute'])
-
-    .config(['$routeProvider', function ($routeProvider) {
-        $routeProvider.when('/article/:id', {
-            templateUrl: 'app/article/articlePage/articlePage.html',
-            controller: 'articlePageController'
-        });
-    }])
+angular.module('article.page', ['ngRoute'])
 
     .controller('articlePageController', [
         '$scope',

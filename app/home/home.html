@@ -1,8 +1,13 @@
-﻿<div ng-if="isLoggedIn">
-    <h2 id="welcome-header" >Добре дошъл, {{user}}!</h2>
-</div>
+﻿<ng-controller ng-controller="homeController">
 
-<div ng-controller="sliderController">
-    <h1>Последно добавени статии</h1>
-    <div slider></div>
-</div>
+    <div ng-if="isLoggedIn">
+        <h2 id="welcome-header" >Добре дошъл, {{user}}!</h2>
+    </div>
+
+    <div ng-controller="sliderController">
+        <h1>Последно добавени статии</h1>
+        <div slider></div>
+    </div>
+
+</ng-controller>
+

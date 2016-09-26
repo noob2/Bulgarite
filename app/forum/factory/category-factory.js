@@ -1,4 +1,4 @@
-angular.module('bulgarite.factory.category', [])
+angular.module('factory.category', [])
     .factory('forumCategory', [
         '$http',
         '$q',

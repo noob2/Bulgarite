@@ -1,13 +1,8 @@
 'use strict';
 
-angular.module('bulgarite.landmarks', ['ngRoute'])
+angular.module('landmarks', ['ngRoute'])
 
-    .config(['$routeProvider', '$locationProvider', function ($routeProvider) {
-        $routeProvider.when('/landmarks', {
-            templateUrl: 'app/landmarks/landmarks.html',
-            controller: 'landmarksController'
-        });
-    }])
+
 
     .controller('landmarksController', [
         '$scope',

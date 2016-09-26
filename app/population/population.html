@@ -1,118 +1,121 @@
-<h2 ng-hide="isLoaded">Моля изчакайте . . .</h2>
+<ng-controller ng-controller="populationController">
 
-<div ng-show="isLoaded">
+    <h2 ng-hide="isLoaded">Моля изчакайте . . .</h2>
 
-    <h3>Данни за населението на България:</h3>
-    <table border="1">
-        <thead>
-        <th colspan="2">Население на България</th>
-        </thead>
+    <div ng-show="isLoaded">
 
-        <tr>
-            <td>Население</td>
-            <td>7 153 784</td>
-        </tr>
-        <tr>
-            <td>Прираст</td>
-            <td>−6.1 /1 000 души</td>
-        </tr>
-        <tr>
-            <td>Смъртност</td>
-            <td>15.3 /1 000 души</td>
-        </tr>
-        <tr>
-            <td>Продължителност на живота</td>
-            <td>74.5 години</td>
-        </tr>
-        <tr>
-            <td>–мъже</td>
-            <td>71.1 години</td>
-        </tr>
-        <tr>
-            <td>–жени</td>
-            <td>78.0 години</td>
-        </tr>
-        <tr>
-            <td>Плодовитост</td>
-            <td>1.53 деца/жена</td>
-        </tr>
-    </table>
+        <h3>Данни за населението на България:</h3>
+        <table border="1">
+            <thead>
+            <th colspan="2">Население на България</th>
+            </thead>
 
-    <table border="1">
-        <thead>
-        <th colspan="2">Възрастова структура</th>
-        </thead>
-        <tr>
-            <td>0-14 години</td>
-            <td>14.0 %</td>
-        </tr>
-        <tr>
-            <td>15-64 години</td>
-            <td>67.8 %</td>
-        </tr>
-        <tr>
-            <td>Над 65 години</td>
-            <td>20.4 %</td>
-        </tr>
-    </table>
+            <tr>
+                <td>Население</td>
+                <td>7 153 784</td>
+            </tr>
+            <tr>
+                <td>Прираст</td>
+                <td>−6.1 /1 000 души</td>
+            </tr>
+            <tr>
+                <td>Смъртност</td>
+                <td>15.3 /1 000 души</td>
+            </tr>
+            <tr>
+                <td>Продължителност на живота</td>
+                <td>74.5 години</td>
+            </tr>
+            <tr>
+                <td>–мъже</td>
+                <td>71.1 години</td>
+            </tr>
+            <tr>
+                <td>–жени</td>
+                <td>78.0 години</td>
+            </tr>
+            <tr>
+                <td>Плодовитост</td>
+                <td>1.53 деца/жена</td>
+            </tr>
+        </table>
 
-    <table border="1">
-        <thead>
-        <th colspan="2">Съотношение между половете</th>
-        </thead>
-        <tr>
-            <td>Общо</td>
-            <td>0.84 мъже/жени</td>
-        </tr>
-        <tr>
-            <td>При раждане</td>
-            <td>1.06 мъже/жени</td>
-        </tr>
-        <tr>
-            <td>До 15 години</td>
-            <td>1.05 мъже/жени</td>
-        </tr>
-        <tr>
-            <td>15-64 години</td>
-            <td>0.97 мъже/жени</td>
-        </tr>
-        <tr>
-            <td>Над 65 години</td>
-            <td>0.68 мъже/жени</td>
-        </tr>
-    </table>
+        <table border="1">
+            <thead>
+            <th colspan="2">Възрастова структура</th>
+            </thead>
+            <tr>
+                <td>0-14 години</td>
+                <td>14.0 %</td>
+            </tr>
+            <tr>
+                <td>15-64 години</td>
+                <td>67.8 %</td>
+            </tr>
+            <tr>
+                <td>Над 65 години</td>
+                <td>20.4 %</td>
+            </tr>
+        </table>
 
-    <table border="1">
-        <thead>
-        <th colspan="2">Произход</th>
-        </thead>
-        <tr>
-            <td>Българи</td>
-            <td>84.8%</td>
-        </tr>
-        <tr>
-            <td>Турци</td>
-            <td>8.8%</td>
-        </tr>
-        <tr>
-            <td>Роми</td>
-            <td>4.7%</td>
-        </tr>
-        <tr>
-            <td>Други</td>
-            <td>1.7%</td>
-        </tr>
-    </table>
+        <table border="1">
+            <thead>
+            <th colspan="2">Съотношение между половете</th>
+            </thead>
+            <tr>
+                <td>Общо</td>
+                <td>0.84 мъже/жени</td>
+            </tr>
+            <tr>
+                <td>При раждане</td>
+                <td>1.06 мъже/жени</td>
+            </tr>
+            <tr>
+                <td>До 15 години</td>
+                <td>1.05 мъже/жени</td>
+            </tr>
+            <tr>
+                <td>15-64 години</td>
+                <td>0.97 мъже/жени</td>
+            </tr>
+            <tr>
+                <td>Над 65 години</td>
+                <td>0.68 мъже/жени</td>
+            </tr>
+        </table>
 
-    <h3>Последно добавени статии:</h3>
-    <article ng-repeat="article in articles" class="population-article" ng-click="goToArticle(article._id)">
-        <h3>{{article.header}}</h3>
-        <div class="image">
-            <img ng-src="{{article.imgUrl}}">
-        </div>
-        <p>{{article.content}}</p>
-    </article>
+        <table border="1">
+            <thead>
+            <th colspan="2">Произход</th>
+            </thead>
+            <tr>
+                <td>Българи</td>
+                <td>84.8%</td>
+            </tr>
+            <tr>
+                <td>Турци</td>
+                <td>8.8%</td>
+            </tr>
+            <tr>
+                <td>Роми</td>
+                <td>4.7%</td>
+            </tr>
+            <tr>
+                <td>Други</td>
+                <td>1.7%</td>
+            </tr>
+        </table>
 
-    <login-or-add-article>
-</div>
+        <h3>Последно добавени статии:</h3>
+        <article ng-repeat="article in articles" class="population-article" ng-click="goToArticle(article._id)">
+            <h3>{{article.header}}</h3>
+            <div class="image">
+                <img ng-src="{{article.imgUrl}}">
+            </div>
+            <p>{{article.content}}</p>
+        </article>
 
+        <login-or-add-article>
+    </div>
+
+</ng-controller>

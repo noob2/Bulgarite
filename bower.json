@@ -1,9 +1,9 @@
 {
-  "name": "angular-seed",
-  "description": "Bulgaria's website",
-  "version": "2.2.3",
-  "homepage": "https://bulgarite.co.nf",
-  "license": "MIT",
+  "name": "bulgarite.BG",
+  "description": "AngularJS-based website",
+  "version": "0.0.0",
+  "homepage": "https://github.com/noob2/Bulgarite",
+  "license": "none",
   "private": true,
   "dependencies": {
     "angular": "~1.4.0",
@@ -16,5 +16,8 @@
     "angular-animate": "^1.5.8",
     "angular-toasty": "^1.0.5",
     "jquery": "^3.1.0"
+  },
+  "resolutions":{
+    "angular": "1.5.8"
   }
 }

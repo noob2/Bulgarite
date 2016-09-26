@@ -1,30 +1,34 @@
-<form id="edit-article-form">
-    <h2>Редактиране на статия</h2>
+<ng-controller ng-controller="editArticleController">
 
-    <label>Заглавие</label>
-    <input type="text" ng-model="article.header" placeholder="Заглавие" required/>
+    <form id="edit-article-form">
+        <h2>Редактиране на статия</h2>
 
-    <div ng-if="articleType == 'history'">
-        <label>Година</label>
-        <input type="text" ng-model="article.year" placeholder="Заглавие" required/>
-    </div>
+        <label>Заглавие</label>
+        <input type="text" ng-model="article.header" placeholder="Заглавие" required/>
 
-    <div ng-if="article.category == 'landmarks'">
-        <p>Изберете местоположение:</p>
-        <div bulgaria-map></div>
-        <p>Координати:</p>
-        <input type="text" ng-model="article.coordinate.parallel" id="parallel" placeholder="Широта" required/>
-        <input type="text" ng-model="article.coordinate.meridian" id="meridian" placeholder="Дължина" required/>
-    </div>
+        <div ng-if="articleType == 'history'">
+            <label>Година</label>
+            <input type="text" ng-model="article.year" placeholder="Заглавие" required/>
+        </div>
 
-    <label>URL на картинка</label>
-    <input type="text" ng-model="article.imgUrl" placeholder="URL на картинка" required/>
-    <img ng-src="{{article.imgUrl}}" id="article-image"/>
-    <br>
+        <div ng-if="article.category == 'landmarks'">
+            <p>Изберете местоположение:</p>
+            <div bulgaria-map></div>
+            <p>Координати:</p>
+            <input type="text" ng-model="article.coordinate.parallel" id="parallel" placeholder="Широта" required/>
+            <input type="text" ng-model="article.coordinate.meridian" id="meridian" placeholder="Дължина" required/>
+        </div>
 
-    <label>Съдържание на статията</label>
-    <textarea ng-model="article.content" placeholder="Съдържание на статията" required></textarea>
+        <label>URL на картинка</label>
+        <input type="text" ng-model="article.imgUrl" placeholder="URL на картинка" required/>
+        <img ng-src="{{article.imgUrl}}" id="article-image"/>
+        <br>
 
-    <button type="submit" ng-click="editArticle(article)" ng-disabled="articleForm.$invalid">Редактирай статията
-    </button>
-</form>
+        <label>Съдържание на статията</label>
+        <textarea ng-model="article.content" placeholder="Съдържание на статията" required></textarea>
+
+        <button type="submit" ng-click="editArticle(article)" ng-disabled="articleForm.$invalid">Редактирай статията
+        </button>
+    </form>
+
+</ng-controller>

@@ -1,8 +1,12 @@
-<div id="article-page">
-    <h2>{{article.header}}</h2>
-    <h3 ng-if="article.year">{{article.year}}</h3>
-    <img ng-src="{{article.imgUrl}}">
-    <p>{{article.content}}</p>
-    <button ng-if="userID === article._acl.creator" ng-click="editArticle(article)">Редактирай</button>
-    <button ng-if="userID === article._acl.creator" ng-click="deleteArticle()">Премахни</button>
-</div>
+<ng-controller ng-controller="articlePageController">
+
+    <div id="article-page">
+        <h2>{{article.header}}</h2>
+        <h3 ng-if="article.year">{{article.year}}</h3>
+        <img ng-src="{{article.imgUrl}}">
+        <p>{{article.content}}</p>
+        <button ng-if="userID === article._acl.creator" ng-click="editArticle(article)">Редактирай</button>
+        <button ng-if="userID === article._acl.creator" ng-click="deleteArticle()">Премахни</button>
+    </div>
+
+</ng-controller>

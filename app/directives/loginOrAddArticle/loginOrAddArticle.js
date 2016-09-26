@@ -1,4 +1,6 @@
-angular.module('bulgarite.directives.loginOrAddArticle', ['ngRoute'])
+'use strict';
+
+angular.module('directive.loginOrAddArticle', ['ngRoute'])
     .directive('loginOrAddArticle', ['$location', function ($location) {
         return {
             link: function (scope) {

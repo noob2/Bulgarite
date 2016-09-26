@@ -1,21 +1,25 @@
-<form id="add-article-form" name="articleForm">
-    <input type="text" ng-model="article.header" placeholder="Заглавие" required/>
+<ng-controller ng-controller="addArticleController">
 
-    <div ng-if="articleType == 'landmarks'">
-        <h4>Изберете местоположението на забележителността:</h4>
-        <div bulgaria-map></div>
-        <p>Координати:</p>
-        <input type="text" ng-model="article.parallel" id="parallel" placeholder="Широта" />
-        <input type="text" ng-model="article.meridian" id="meridian" placeholder="Дължина" />
-    </div>
+    <form id="add-article-form" name="articleForm">
+        <input type="text" ng-model="article.header" placeholder="Заглавие" required/>
 
-    <input ng-if="articleType == 'history'" type="number" ng-model="article.year" placeholder="Година" required/>
+        <div ng-if="articleType == 'landmarks'">
+            <h4>Изберете местоположението на забележителността:</h4>
+            <div bulgaria-map></div>
+            <p>Координати:</p>
+            <input type="text" ng-model="article.parallel" id="parallel" placeholder="Широта" />
+            <input type="text" ng-model="article.meridian" id="meridian" placeholder="Дължина" />
+        </div>
 
-    <input type="text" ng-model="article.imgUrl" placeholder="URL на картинка" required/>
+        <input ng-if="articleType == 'history'" type="number" ng-model="article.year" placeholder="Година" required/>
 
-    <img ng-src="{{article.imgUrl}}" id="article-image"/>
+        <input type="text" ng-model="article.imgUrl" placeholder="URL на картинка" required/>
 
-    <textarea ng-model="article.content" placeholder="Съдържание на статията" required></textarea>
+        <img ng-src="{{article.imgUrl}}" id="article-image"/>
 
-    <button type="submit" ng-click="addArticle(article)" ng-disabled="articleForm.$invalid">Добави статията</button>
-</form>
+        <textarea ng-model="article.content" placeholder="Съдържание на статията" required></textarea>
+
+        <button type="submit" ng-click="addArticle(article)" ng-disabled="articleForm.$invalid">Добави статията</button>
+    </form>
+
+</ng-controller>

@@ -1,11 +1,10 @@
 'use strict';
 
-angular.module('bulgarite.forum.addTopic', ['ngRoute'])
+angular.module('forum.addTopic', ['ngRoute'])
 
-    .config(['$routeProvider', '$locationProvider', function ($routeProvider) {
+    .config(['$routeProvider', function ($routeProvider) {
         $routeProvider.when('/forum/addTopic', {
-            templateUrl: 'app/forum/addTopic/addTopic.html',
-            controller: 'addTopicController'
+            templateUrl: 'app/forum/addTopic/addTopic.html'
         });
     }])
 
@@ -20,7 +19,6 @@ angular.module('bulgarite.forum.addTopic', ['ngRoute'])
         function ($http, $q, KINVEY_CONFIG, $scope, forumCategory, forumTopic) {
             forumCategory.GetAllCategories()
                 .then(function (categories) {
-                    console.log(categories);
                     $scope.categories = categories.data;
                 });
 

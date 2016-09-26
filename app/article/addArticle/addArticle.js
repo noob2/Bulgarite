@@ -1,14 +1,7 @@
 'use strict';
 
-angular.module('bulgarite.article.addArticle', ['ngRoute'])
+angular.module('article.addArticle', ['ngRoute'])
 
-    .config(['$routeProvider', '$locationProvider', function ($routeProvider) {
-
-        $routeProvider.when('/:articleType/add-article', {
-            templateUrl: 'app/article/addArticle/addArticle.html',
-            controller: 'addArticleController'
-        });
-    }])
     .controller('addArticleController', [
         '$scope',
         'article',
@@ -31,7 +24,7 @@ angular.module('bulgarite.article.addArticle', ['ngRoute'])
                 }
 
                 article.addArticle(art, articleType)
-                    .then(function (success) {
+                    .then(function () {
                         history.back();
                     });
             };

@@ -1,6 +1,7 @@
-<div ng-controller="addCategoryController">
-    <form name="category">
-        <input type="text" name="name" ng-model="categoryName" placeholder="Име на Нова Категория" required ng-minlength="3">
-    </form>
-    <button ng-show="category.name.$valid" ng-click="addCategory(categoryName)" class="add-article">Добави категория</button>
-</div>
+<form name="category">
+    <input type="text" name="name" ng-model="categoryName" placeholder="Име на Нова Категория" required
+           ng-minlength="3">
+</form>
+<button ng-show="category.name.$valid" ng-click="addCategory(categoryName)" class="add-article">Добави категория
+</button>
+
