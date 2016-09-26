@@ -29,4 +29,4 @@ require.config({
 
 require(['coreModule'], function () {
 });
-console.log(2)
+console.log(232)
