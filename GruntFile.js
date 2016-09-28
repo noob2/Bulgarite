@@ -1,41 +1,53 @@
-// module.exports = function (grunt) {
-//
-//     grunt.loadNpmTasks("grunt-contrib-uglify");
-//
-//     grunt.initConfig({
-//         uglify:{
-//             dev:{
-//                 files:{
-//                     "*.min.js":"app/*.js"
-//                 }
-//             }
-//         }
-//
-//     });
-//
-//
-// };
+module.exports = function (grunt) {
 
-module.exports = function(grunt) {
-
-    // Project configuration.
     grunt.initConfig({
-        uglify : {
-            yourTask : {
-                expand: true,
-                src : ['app/**/*.js','!app/bower_components/**/*.js'],
 
+        uglify: {
+
+            inSingleFile: {
+
+                files: {
+                    'build/app/app.min.js': ['app/**/*.js', '!app/bower_components/**/*.js']
+                }
+            },
+            inMultipleFiles: {
+
+                expand: true,
+                src: ['app/**/*.js', '!app/bower_components/**/*.js'],
                 dest: 'build/',
                 ext: '.min.js',
                 extDot: 'first'
             }
+        },
+
+        htmlmin: {
+
+            inMultipleFiles: {
+
+                options: {
+
+                    removeComments: true,
+                    collapseWhitespace: true
+                },
+                expand: true,
+                src: ['app/**/*.html', '!app/bower_components/**/*.html'],
+                dest: 'build/',
+                ext: '.html',
+                extDot: 'first'
+            },
+
+            indexHTML: {
+
+                files: {
+                    'build/index.html': 'index.html'// 'destination': 'source'
+                }
+            }
         }
     });
 
-    // Load the plugin that provides the "uglify" task.
     grunt.loadNpmTasks('grunt-contrib-uglify');
 
-    // Default task(s).
-    grunt.registerTask('default', ['uglify']);
+    grunt.loadNpmTasks('grunt-contrib-htmlmin');
 
+    grunt.registerTask('uglify js + html', ['uglify', 'htmlmin']);
 };
