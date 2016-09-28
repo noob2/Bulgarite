@@ -5,9 +5,8 @@ angular.module('article.addArticle', ['ngRoute'])
     .controller('addArticleController', [
         '$scope',
         'article',
-        '$location',
         '$routeParams',
-        function ($scope, article, $location, $routeParams) {
+        function ($scope, article, $routeParams) {
             $scope.shouldSetCoordinates = true;
             var articleType = $routeParams.articleType;
             $scope.articleType = articleType;

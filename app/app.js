@@ -37,9 +37,8 @@ angular.module('bulgarite', [
     .config([
         '$routeProvider',
         '$httpProvider',
-        '$locationProvider',
         'toastyConfigProvider',
-        function ($routeProvider, $httpProvider, $locationProvider, toastyConfigProvider) {
+        function ($routeProvider, $httpProvider, toastyConfigProvider) {
 
             $routeProvider.when('/', {
                 templateUrl: 'app/home/home.html'
@@ -63,6 +62,8 @@ angular.module('bulgarite', [
                 templateUrl: 'app/forum/forum.html'
             }).when('/forum/:id', {
                 templateUrl: 'app/forum/topicPage/topicPage.html'
+            }).when('/forum/addCategory', {
+                templateUrl: 'app/forum/addCategory/addCategory.html'
             }).otherwise({redirectTo: '/'});
 
             toastyConfigProvider.setConfig({
@@ -75,7 +76,7 @@ angular.module('bulgarite', [
                 theme: 'bootstrap'
             });
 
-            $httpProvider.interceptors.push(['$q', 'toasty', function ($q, toasty) {
+            $httpProvider.interceptors.push(['toasty', function (toasty) {
                 return {
                     'request': function (response) {
                         return response;
@@ -111,7 +112,6 @@ angular.module('bulgarite', [
                     // },
 
                     'responseError': function (rejection) {
-                        console.log(rejection)
 
                         if (rejection && rejection.data && rejection.data.description) {
                             toasty.error(rejection.data.description);
@@ -124,7 +124,7 @@ angular.module('bulgarite', [
                         if (rejection === 'Unauthorized Access') {
                             toasty.error(rejection);
                         }
-                        return $q.reject(rejection);
+                        return rejection;
                     }
                 }
             }]);
@@ -136,15 +136,15 @@ angular.module('bulgarite', [
         'UnauthorizedUserCredentials': 'Basic cGVzaG86MTIzNA==',
         'CurrentUserCredentials': 'Basic ' + sessionStorage['UserCredentials']
     })
-    .run(['$rootScope', '$location', 'authentication', '$route', function ($rootScope, $location, authentication, $route) {
+    .run(['$rootScope', 'authentication', '$route', function ($rootScope, authentication, $route) {
 
-        $rootScope.$on('$routeChangeStart', function (ev, current, previous, rejection) {
+        $rootScope.$on('$routeChangeStart', function () {
 
             $rootScope.isLoggedIn = !!authentication.isLoggedIn();
             $rootScope.userID = sessionStorage['UserID'];
             $rootScope.logoutUser = function () {
                 authentication.logoutUser()
-                    .then(function (response) {
+                    .then(function () {
                         $route.reload();
                     });
             };

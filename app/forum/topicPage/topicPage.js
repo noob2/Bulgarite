@@ -5,11 +5,10 @@ angular.module('forum.topicPage', ['ngRoute'])
     .controller('topicPageController', [
         '$scope',
         'forumTopic',
-        'forumCategory',
         'forumComment',
         '$routeParams',
         '$route',
-        function ($scope, forumTopic, forumCategory, forumComment, $routeParams, $route) {
+        function ($scope, forumTopic, forumComment, $routeParams, $route) {
 
             $scope.showAddCommentOptions = function () {
                 $scope.showOptions = true;
@@ -30,7 +29,7 @@ angular.module('forum.topicPage', ['ngRoute'])
 
                 $scope.addReComment = function (comment) {
                     forumComment.AddReCommentToComment(comment, commentID)
-                        .then(function (success) {
+                        .then(function () {
                             $route.reload();
                         })
                 }
@@ -38,14 +37,14 @@ angular.module('forum.topicPage', ['ngRoute'])
 
             $scope.removeTopic = function (topicID) {
                 forumTopic.RemoveTopic(topicID)
-                    .then(function (response) {
+                    .then(function () {
                         history.back();
                     })
             };
 
             $scope.deleteComment = function (commentID) {
                 forumComment.DeleteComment(commentID)
-                    .then(function (response) {
+                    .then(function () {
                         $route.reload();
                     })
             };

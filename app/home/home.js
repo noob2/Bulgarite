@@ -3,12 +3,9 @@
 angular.module('home', ['ngRoute'])
     .controller('homeController', [
         '$scope',
-        '$rootScope',
-        'authentication',
-        '$route',
         'article',
         '$location',
-        function ($scope, $rootScope, authentication, $route, article, $location) {
+        function ($scope, article, $location) {
 
             article.getLatestArticles(6)
                 .then(function (articles) {

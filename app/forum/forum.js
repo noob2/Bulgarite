@@ -3,21 +3,16 @@
 angular.module('forum.home', ['ngRoute'])
 
     .controller('forumController', [
-        '$http',
-        '$q',
-        'KINVEY_CONFIG',
         '$scope',
         'forumTopic',
         'forumCategory',
         '$location',
-        'authentication',
-        '$route',
-        function ($http, $q, KINVEY_CONFIG, $scope, forumTopic, forumCategory, $location, authentication, $route) {
+        function ($scope, forumTopic, forumCategory, $location) {
 
 
             $scope.removeCategory = function (categoryID) {
-                forumCategory.RemoveCategory(categoryID).then(function (response) {
-                    $route.reload();
+                forumCategory.RemoveCategory(categoryID).then(function () {
+                    $("#" + categoryID).remove();
                 })
             };
 

@@ -9,14 +9,10 @@ angular.module('forum.addTopic', ['ngRoute'])
     }])
 
     .controller('addTopicController', [
-        '$http',
-        '$q',
-        'KINVEY_CONFIG',
         '$scope',
         'forumCategory',
         'forumTopic',
-        '$location',
-        function ($http, $q, KINVEY_CONFIG, $scope, forumCategory, forumTopic) {
+        function ($scope, forumCategory, forumTopic) {
             forumCategory.GetAllCategories()
                 .then(function (categories) {
                     $scope.categories = categories.data;

@@ -3,10 +3,9 @@
 angular.module('account', ['ngRoute'])
     .controller('accountController', [
         '$scope',
-        '$rootScope',
         'authentication',
         '$route',
-        function ($scope, $rootScope, authentication, $route) {
+        function ($scope, authentication, $route) {
 
             if ($scope.isLoggedIn) {
                 $scope.user = sessionStorage['name'];

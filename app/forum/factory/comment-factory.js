@@ -4,7 +4,6 @@ angular.module('factory.comment', [])
         '$q',
         'KINVEY_CONFIG',
         'BASE_DATA_URL',
-        '$route',
         function ($http, $q, KINVEY_CONFIG, BASE_DATA_URL) {
 
             function AddCommentToTopic(comment, topicID) {

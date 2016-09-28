@@ -4,7 +4,6 @@ angular.module('factory.topic', [])
         '$q',
         'KINVEY_CONFIG',
         'BASE_DATA_URL',
-        '$route',
         function ($http, $q, KINVEY_CONFIG, BASE_DATA_URL) {
 
             function GetTopicByID(topicID) {

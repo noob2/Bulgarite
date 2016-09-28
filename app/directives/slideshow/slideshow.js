@@ -5,7 +5,7 @@ angular.module('directive.slideshow', ['ngRoute'])
                 $scope.latestArticles = articles.data;
             })
     }])
-    .directive('slider', function ($timeout) {
+    .directive('slider',['$timeout',function ($timeout) {
         return {
             restrict: 'AE',
             replace: true,
@@ -47,4 +47,4 @@ angular.module('directive.slideshow', ['ngRoute'])
             },
             templateUrl: 'app/directives/slideshow/slideshow-template.html'
         };
-    });
+    }] );

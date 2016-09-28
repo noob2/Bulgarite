@@ -4,13 +4,11 @@ angular.module('article.page', ['ngRoute'])
 
     .controller('articlePageController', [
         '$scope',
-        '$rootScope',
-        'authentication',
         '$route',
         'article',
         '$routeParams',
         '$location',
-        function ($scope, $rootScope, authentication, $route, article, $routeParams, $location) {
+        function ($scope, $route, article, $routeParams, $location) {
 
             article.getArticleById($routeParams.id)
                 .then(function (article) {
@@ -25,7 +23,7 @@ angular.module('article.page', ['ngRoute'])
 
             $scope.deleteArticle = function () {
                 article.deleteArticle($routeParams.id)
-                    .then(function (success) {
+                    .then(function () {
                         history.back();
                     })
             }

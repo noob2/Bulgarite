@@ -4,12 +4,10 @@ angular.module('article.editArticle', ['ngRoute'])
 
     .controller('editArticleController', [
         '$scope',
-        '$rootScope',
-        'authentication',
         '$route',
         'article',
         '$routeParams',
-        function ($scope, $rootScope, authentication, $route, article, $routeParams) {
+        function ($scope, $route, article, $routeParams) {
             $scope.shouldSetCoordinates = true;
             var articleType = $routeParams.articleType;
             $scope.articleType = articleType;

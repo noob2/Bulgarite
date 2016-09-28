@@ -3,9 +3,6 @@
 angular.module('directive.bulgariaMap', ['ngRoute'])
     .controller('bulgariaMapController', ['$scope', 'article', '$location', function ($scope, article, $location) {
 
-        if (!($location.path().match('add-article'))) {
-
-        }
     }])
     .directive('bulgariaMap', [
         'article',
@@ -24,8 +21,8 @@ angular.module('directive.bulgariaMap', ['ngRoute'])
                         scope.setCoordinates = function ($event) {
                             scope.clicked = true;
 
-                            var clickedParallel = mapTopLeftDegreeX + ((mapLowerRightDegreeX - mapTopLeftDegreeX) * ($event.offsetX / $event.srcElement.clientWidth ));
-                            var clickedMeridian = mapTopLeftDegreeY + ((mapLowerRightDegreeY - mapTopLeftDegreeY) * ($event.offsetY / $event.srcElement.clientHeight ));
+                            var clickedParallel = mapTopLeftDegreeX + ((mapLowerRightDegreeX - mapTopLeftDegreeX) * ($event.offsetX / $event.toElement.clientWidth ));
+                            var clickedMeridian = mapTopLeftDegreeY + ((mapLowerRightDegreeY - mapTopLeftDegreeY) * ($event.offsetY / $event.toElement.clientHeight ));
 
                             //TODO: the directive should not know anything about the input fields of the html(i think)
                             var $parallel = $("#parallel");
